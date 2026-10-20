@@ -118,9 +118,9 @@
                         </div>
 
 
-                        <div class="col-md-12" style="margin-bottom:15px;">
+                        @*<div class="col-md-12" style="margin-bottom:15px;">
                             <button type="button" class="btn btn-primary" style="float: left ;" id="addParameter" data-queryparam>Add Parameter Field</button>
-                        </div>
+                        </div>*@
 
                         <div class="box-body">
                             <table id="Addparamtbl" data-tablename="" class="table field-table-rows table-fields table-bordered table-striped">
@@ -845,6 +845,12 @@
                 text: "Addon Connection"
             }));
 
+
+            $("#connection").append($('<option>', {
+                value: "SAP",
+                text: "SAP Connection"
+            }));
+
             $("#connection-string").empty();
 
             $.post('FindConnectionString', {
@@ -863,10 +869,10 @@
             $('#Editparamtbl tbody tr').remove();
             $("#edit-connection").empty();
 
-            //$("#edit-connection").append($('<option>', {
-            //    value: "SAP",
-            //    text: "SAP Connection"
-            //}));
+            $("#edit-connection").append($('<option>', {
+                value: "SAP",
+                text: "SAP Connection"
+            }));
 
             $("#edit-connection").append($('<option>', {
                 value: "Addon",

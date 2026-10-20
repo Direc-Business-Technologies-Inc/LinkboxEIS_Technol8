@@ -54,5 +54,9 @@ namespace DomainLayer
 
         public DateTime? LastSync { get; set; }
         public string DestModule { get; set; }
+
+        [StringLength(30)]
+        public string QueryCode { get; set; }
+
     }
 }

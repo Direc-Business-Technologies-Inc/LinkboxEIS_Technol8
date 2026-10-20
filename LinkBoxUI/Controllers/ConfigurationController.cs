@@ -111,6 +111,9 @@ namespace LinkBoxUI.Controllers
                 case "primary-api-sap-submit":
                     partialViewName = "PartialViewMapping/PrimaryToSAPB1";
                     break;
+                case "sap-eis-submit":
+                    partialViewName = "PartialViewMapping/SAPb1ToBirEIS";
+                    break;
 
                 default:
                     partialViewName = "~/Views/Shared/Error.cshtml";

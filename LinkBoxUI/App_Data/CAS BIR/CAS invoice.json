@@ -1,0 +1,35 @@
+{
+  "CompInvoiceId": "SI-000123",
+  "IssueDtm": "20261007",
+  "EisUniqueId": "20261007A1B2C3D40000012F",
+  "DocType": "SI",
+  "TransClass": "VT",
+  "CorrYN": "N", "CorrectionCd": null, "PrevUniqueId": null, "Rmk1": "",
+  "SellerInfo": {
+    "Tin": "123456789", "BranchCd": "00000", "Type": "V",
+    "RegNm": "Sample Trading Corp.", "BusinessNm": "Sample Trading",
+    "Email": "billing@sample.ph", "RegAddr": "123 Ayala Ave, Makati City"
+  },
+  "BuyerInfo": {
+    "Tin": "987654321", "BranchCd": "00000",
+    "RegNm": "Example Retail Inc.", "BusinessNm": "Example Retail",
+    "Email": "ap@example.ph", "RegAddr": "45 Ortigas Ave, Pasig City", "DevAddr": "",
+    "AirNum": "", "AirNumDt": "", "LadNum": "", "LadNumDt": ""
+  },
+  "ItemList": [
+    { "Nm": "Thermal paper roll 80mm", "Desc": "Box of 50", "Qty": 100, "Unit": "box",
+      "UnitCost": 25.00, "SalesAmt": 2500.00, "RegDscntAmt": 0.00, "SpeDscntAmt": 0.00, "NetSales": 2500.00 },
+    { "Nm": "Receipt printer", "Desc": "USB/LAN", "Qty": 2, "Unit": "pc",
+      "UnitCost": 4750.00, "SalesAmt": 9500.00, "RegDscntAmt": 0.00, "SpeDscntAmt": 0.00, "NetSales": 9500.00 }
+  ],
+  "TotNetItemSales": 12000.00,
+  "Discount": { "ScAmt": 0.00, "PwdAmt": 0.00, "RegAmt": 0.00, "SpeAmt": 0.00, "Rmk2": "" },
+  "OtherTaxRev": 0.00,
+  "TotNetSalesAftDisct": 12000.00,
+  "VATAmt": 1440.00,
+  "WithholdIncome": 120.00, "WithholdBusVAT": 0.00, "WithholdBusPT": 0.00,
+  "OtherNonTaxCharge": 0.00,
+  "NetAmtPay": 13320.00,
+  "ForCur": { "Currency": "PHP", "ConvRate": 1.00, "ForexAmt": 0.00 },
+  "PtuNum": ""
+}

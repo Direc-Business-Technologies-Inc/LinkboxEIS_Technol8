@@ -1,27 +1,28 @@
-﻿using DomainLayer;
+﻿using DataAccessLayer.Class;
+using DocumentFormat.OpenXml.Bibliography;
+using DomainLayer;
 using DomainLayer.Models;
-using LinkBoxUI.Context;
-using InfrastructureLayer.Repositories;
 using DomainLayer.ViewModels;
+using InfrastructureLayer.Repositories;
+using LinkBoxUI.Context;
+using LinkBoxUI.Helpers;
+using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using NPOI.HSSF.Record.Chart;
+using Remotion.FunctionalProgramming;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using DataAccessLayer.Class;
-using Newtonsoft.Json.Linq;
-using System.Xml;
-using System.IO;
-using LinkBoxUI.Helpers;
-using System.Data.Entity.Validation;
-using Newtonsoft.Json;
 using System.Data.Entity;
-using Remotion.FunctionalProgramming;
+using System.Data.Entity.Validation;
+using System.IO;
+using System.Linq;
 using System.Security.Policy;
-using Microsoft.Ajax.Utilities;
-using DocumentFormat.OpenXml.Bibliography;
-using NPOI.HSSF.Record.Chart;
 using System.Threading.Tasks;
+using System.Web;
+using System.Web.Hosting;
+using System.Xml;
 
 namespace LinkBoxUI.Services
 {
@@ -169,6 +170,7 @@ namespace LinkBoxUI.Services
             {
                 Id = x.Id,
                 QueryCode = x.QueryCode,
+                ConnectionType = x.ConnectionType,
                 QueryName = x.QueryName,
                 QueryString = x.QueryString,
                 ConnectionString = x.ConnectionString,
@@ -176,6 +178,21 @@ namespace LinkBoxUI.Services
                 CreateDate = x.CreateDate,
                 CreateUserId = x.CreateUserId
             }).ToList();
+
+
+            var classFolder = HostingEnvironment.MapPath("~/App_Data/CAS BIR");
+
+            model.ClassificationFiles = (classFolder != null && Directory.Exists(classFolder))
+                ? Directory.EnumerateFiles(classFolder, "*.json", SearchOption.TopDirectoryOnly)
+                    .Select(path => Path.GetFileName(path))
+                    .OrderBy(name => name, StringComparer.OrdinalIgnoreCase)
+                    .Select(name => new MapCreateViewModel.ClassificationFile
+                    {
+                        FileName = name,
+                        DisplayName = Path.GetFileNameWithoutExtension(name)
+                    })
+                    .ToList()
+                : new List<MapCreateViewModel.ClassificationFile>();
 
 
             return model;

@@ -683,6 +683,10 @@
     <Compile Include="Migrations\202609150258469_updateAPISetupTable.Designer.cs">
       <DependentUpon>202609150258469_updateAPISetupTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202610200848256_AddQueryCode_FM.cs" />
+    <Compile Include="Migrations\202610200848256_AddQueryCode_FM.Designer.cs">
+      <DependentUpon>202610200848256_AddQueryCode_FM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -1273,6 +1277,7 @@
     <Content Include="Views\Configuration\FieldMappingConfig.cshtml" />
     <Content Include="Views\Configuration\FieldMappingConfig2.cshtml" />
     <Content Include="Views\Configuration\MappingConfig - Copy.cshtml" />
+    <Content Include="Views\Configuration\PartialViewMapping\SAPb1ToBirEIS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1327,6 +1332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202609150258469_updateAPISetupTable.resx">
       <DependentUpon>202609150258469_updateAPISetupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202610200848256_AddQueryCode_FM.resx">
+      <DependentUpon>202610200848256_AddQueryCode_FM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

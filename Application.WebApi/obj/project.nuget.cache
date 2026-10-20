@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u8uj17VfXps=",
+  "dgSpecHash": "zX79MELwD44=",
   "success": true,
-  "projectFilePath": "C:\\DBTI\\Project Files\\LB-Laura\\Application.WebApi\\Application.WebApi.csproj",
+  "projectFilePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramirez_andric\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ramirez_andric\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -55,10 +55,70 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "C:\\DBTI\\Project Files\\LB-Laura\\Application.WebApi\\Application.WebApi.csproj",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\DBTI\\Project Files\\LB-Laura\\Application.WebApi\\Application.WebApi.csproj",
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
       "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.12 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-gwg2-r3hj-4w44",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.12 has a known high severity vulnerability, https://github.com/advisories/GHSA-j3p4-wp97-rph4",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.12 has a known high severity vulnerability, https://github.com/advisories/GHSA-j9gm-c75j-xc9q",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.12 has a known high severity vulnerability, https://github.com/advisories/GHSA-jjfr-hcj7-qf5w",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.12 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wmxv-xphr-5c9g",
+      "projectPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\Application.WebApi\\Application.WebApi.csproj",
+      "libraryId": "SixLabors.ImageSharp",
       "targetGraphs": [
         "net8.0"
       ]

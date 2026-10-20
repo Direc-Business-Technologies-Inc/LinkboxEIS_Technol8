@@ -331,6 +331,13 @@ namespace DomainLayer.ViewModels
 
     public class MapCreateViewModel
     {
+        public List<ClassificationFile> ClassificationFiles { get; set; } = new List<ClassificationFile>();
+
+        public class ClassificationFile
+        {
+            public string FileName { get; set; }     // option value
+            public string DisplayName { get; set; }  // option text
+        }
         public List<DocumentMapView> DocumentMapViewList { get; set; }
         public class DocumentMapView
         {
