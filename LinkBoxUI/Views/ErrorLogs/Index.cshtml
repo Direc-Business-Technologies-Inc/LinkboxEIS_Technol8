@@ -1,0 +1,96 @@
+﻿@model DomainLayer.ViewModels.ErrorLogsViewModel
+
+<section class="content-header">
+    <h1>Error Logs</h1>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_platform" data-toggle="tab">Online Platform</a></li>
+                    <li><a href="#tab_primary" data-toggle="tab">Primary Account</a></li>
+                    <li><a href="#tab_other" data-toggle="tab">Other Error</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_platform">
+                        @Html.Partial("_ErrorTable", "platform")
+                    </div>
+                    <div class="tab-pane" id="tab_primary">
+                        @Html.Partial("_ErrorTable", "primary")
+                    </div>
+                    <div class="tab-pane" id="tab_other">
+                        @Html.Partial("_ErrorTable", "other")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        (function () {
+            var dataUrl = '@Url.Action("GetErrors", "ErrorLogs")';
+
+            function initErrorTable($table) {
+                if ($.fn.DataTable.isDataTable($table)) {
+                    $table.DataTable().columns.adjust();
+                    return;
+                }
+
+                var category = $table.data('category');
+
+                $table.DataTable({
+                    serverSide: true,
+                    processing: true,
+                    ordering: true,                 // sorting is on, but restricted below
+                    order: [[3, 'desc']],            // default sort: Create Date, newest first
+                    columnDefs: [
+                        { targets: [0, 1, 2, 4], orderable: false } // only Create Date (index 3) is sortable
+                    ],
+                    searchDelay: 400,
+                    pageLength: 10,
+                    lengthMenu: [10, 25, 50, 100],
+                    autoWidth: false,
+                    ajax: {
+                        url: dataUrl,
+                        type: 'POST',
+                        data: function (d) {
+                            var sortInfo = (d.order && d.order.length) ? d.order[0] : null;
+                            return {
+                                draw: d.draw,
+                                start: d.start,
+                                length: d.length,
+                                search: d.search.value,
+                                orderDir: sortInfo ? sortInfo.dir : 'desc',
+                                category: category
+                            };
+                        },
+                        error: function (xhr) {
+                            console.error('Error log load failed:', xhr.status, xhr.statusText);
+                            alert('Failed to load error logs. Please refresh and try again.');
+                        }
+                    },
+                    columns: [
+                        { data: 'id', name: 'id' },
+                        { data: 'task', name: 'task', render: $.fn.dataTable.render.text() },
+                        { data: 'errorMsg', name: 'errorMsg', render: $.fn.dataTable.render.text() },
+                        { data: 'createDate', name: 'createDate' },
+                        { data: 'module', name: 'module', render: $.fn.dataTable.render.text() }
+                    ]
+                });
+            }
+
+            $(function () {
+                initErrorTable($('#tab_platform table'));
+
+                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                    initErrorTable($($(e.target).attr('href')).find('table'));
+                });
+            });
+        })();
+    </script>
+}

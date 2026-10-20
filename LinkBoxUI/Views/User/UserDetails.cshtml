@@ -1,0 +1,793 @@
+﻿@*sherlock*@
+@model DomainLayer.ViewModels.UserDetailsViewModel
+
+<section class="content" id="uu">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">User Details</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="Users" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="hide1">Edit</th>
+                                <th>User Name</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody id="Usertb">
+                            @foreach (var user in Model.CreateUser)
+                            {
+                                var isDisabled = !Model.IsAdmin && user.AuthorizationId == 1 || user.UserName=="admin";
+
+                            <tr class="@(isDisabled ? "disabled-row" : "")">
+                                <td width="5%" class="hide1"><button type="button" data-user-cid="@user.UserId" class="@(!isDisabled? "btn-info fa fa-edit" : "hide")" data-toggle="modal" data-target="#edit-user-modal" id="btnEditUser"></button></td>
+                                <td>@user.UserName</td>
+                                <td>@user.FirstName  @user.MiddleName  @user.LastName</td>
+                                <td>@user.AuthorizationName</td>
+
+                                @if (user.IsActive == true)
+                                {
+                                    <td><span class="label label-success">Active</span></td>
+                                }
+                                else
+                                {
+                                    <td><span class="label label-danger">Inactive</span></td>
+                                }
+                              
+          
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href='@Url.Action("CreateUser", "User")' class="btn btn-primary btn-custom hide1" style="float:right">New</a>
+                </div>
+
+                <!-- /.box-body -->
+            </div>
+        </div>
+
+
+        <div class="col-md-6" id="userModules" style="display:none;">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">User Modules</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="UserModules" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="selectAll" value="unchecked"></th>
+                                <th>Module Code</th>
+                                <th>Module Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl-modules">
+
+                            @foreach (var mod in Model.ModulesList)
+                            {
+                                <tr>
+                                    <td width="5%"><input type="checkbox" id="@mod.ModId" value="unchecked" name="select" class="edit"></td>
+                                    <td><label for="@mod.ModId">@mod.ModCode</label></td>
+                                    <td><label for="@mod.ModId">@mod.ModName</label></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                    <button type="button" class="btn btn-primary btn-custom hide1 hvr-buzz" id="btnUserModuleSave" style="float: right;" data-toggle="modal" data-target="#create-modal">Save</button>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="edit-user-modal">
+    <div class="modal-dialog">
+        <form id="editUser">
+            @using (Html.BeginForm("UpdateUser", "User", FormMethod.Post, new { @class = "", role = "form" }))
+            {
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">User Setup</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="register-box-body">
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" id="editUName" class="form-control" placeholder="User Name" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="firstNameFormGroup">
+                                <label>*First Name:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                    <input type="text" id="editFName" class="form-control" placeholder="First Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="lastNameFormGroup">
+                                <label>*Last Name:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                    <input type="text" id="editLName" class="form-control" placeholder="Last Name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Middle Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                    <input type="text" id="editMName" class="form-control" placeholder="Middle Name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>*Authorizations:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                                    <select id="edit-auth" class="form-control select2" style="width: 100%;">
+                                       
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="checkbox" id="userIsActive" class="icheckbox_square-blue"> <label for="userIsActive">IsActive?</label>
+                                @*<input type="checkbox" id="editPwdChkbx" class="" value="unchecked"> <label for="editPwdChkbx">Update Password</label>*@
+
+                            </div>
+                            <div>
+                                <center><a><label id="lblUpdatePwd" value="unchecked">Update password</label></a></center>
+                            </div>
+                            <input type="hidden" id="hiddenOldPwd">
+                            <input type="hidden" id="hiddenLastPwd">
+
+                            <div class="form-group" style="display:none;" id="oldPwdDiv">
+                                <label>*Current Password:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" id="editCurrentPwd" class="form-control" placeholder="Current Password">
+                                    <div class="input-group-addon">
+                                        <a href="" id="passeye1"><i class="fa fa-eye" id="eye1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="display:none;" id="newPwdDiv">
+                                <label>*New Password:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" id="editNewPwd" class="form-control" placeholder="New Password">
+                                    <div class="input-group-addon">
+                                        <a href="" id="passeye2"><i class="fa fa-eye" id="eye2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="display:none;" id="confirmNewPwdDiv">
+                                <label>*Retype password:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-log-in"></i></span>
+                                    <input type="password" id="editConfirmPwd" class="form-control" placeholder="Retype Password">
+                                    <div class="input-group-addon">
+                                        <a href="" id="passeye3"><i class="fa fa-eye" id="eye3"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                            <button type="submit" id="btnEditUserSave" class="btn btn-primary btn-custom">Save changes</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+
+            }
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="view-api-key">
+    <form id="viewKey">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">User API Key</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+                        <div class="form-group" id="editAuthFormGroup">
+                            <label>Key:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                                <input type="text" class="form-control" placeholder="Key" value="API_KEY" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group" id="editAuthFormGroup">
+                            <label>Value:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                                <input type="text" id="userapikey" class="form-control" placeholder="Value" disabled>
+                                <span class="input-group-addon" id="copy-api-key"><i class="btn-info fa fa-copy"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    @*<button type="submit" class="btn btn-primary" id="btnEditAutSave">Save changes</button>*@
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        var text = $('label[for="editPwdChkbx"]').text();
+        var text = $('label[for="userIsActive"]').text();
+    </script>
+
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%', /* optional */
+                // checkedClass: 'checked',
+            });
+        });
+    </script>
+
+    <script>
+        $('input:checkbox[id = selectAll]').on('ifChecked', function (event) {
+            $('input:checkbox[name = select]').iCheck('check');
+        });
+
+        $('input:checkbox[id = selectAll]').on('ifUnchecked', function (event) {
+            $('input:checkbox[name = select]').iCheck('uncheck');
+        });
+
+        $("#editFName").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#firstNameFormGroup').hasClass('error'))) {
+                $('#firstNameFormGroup').append('<span class="help-block text-red">First Name is Required</span>');
+            }
+            $('#firstNameFormGroup').addClass('error');
+        });
+
+        $("#editLName").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#lastNameFormGroup').hasClass('error'))) {
+                $('#lastNameFormGroup').append('<span class="help-block text-red">Last Name is Required</span>');
+            }
+            $('#lastNameFormGroup').addClass('error');
+        });
+
+        $("#editCurrentPwd").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#oldPwdDiv').hasClass('error'))) {
+                $('#oldPwdDiv').append('<span class="help-block text-red">Required</span>');
+            }
+            $('#oldPwdDiv').addClass('error');
+        });
+
+        $("#editNewPwd").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#newPwdDiv').hasClass('error'))) {
+                $('#newPwdDiv').append('<span class="help-block text-red">Required</span>');
+            }
+            $('#newPwdDiv').addClass('error');
+        });
+
+        $("#editConfirmPwd").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#confirmNewPwdDiv').hasClass('error'))) {
+                $('#confirmNewPwdDiv').append('<span class="help-block text-red">Required</span>');
+            }
+            $('#confirmNewPwdDiv').addClass('error');
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var id = @Session["Id"];
+            console.log(id);
+            //if (id != 1) {
+            //    $(".edit").prop("disabled", true);
+            //    $(".hide1").hide();
+            //}
+            //else if(id == 1) {
+            //    $(".edit").prop("disabled", false);
+            //    $(".hide1").show();
+            //}
+        });
+    </script>
+
+    <script>
+        var moduleId, test, userId;
+        $(document)
+
+
+            .on('click', '#lblUpdatePwd', function () {
+
+                if ($('#lblUpdatePwd').val() == 'unchecked') {
+                    $('#oldPwdDiv').show();
+                    $('#newPwdDiv').show();
+                    $('#confirmNewPwdDiv').show();
+                    $('#lblUpdatePwd').val('checked');
+                    $('#lblUpdatePwd').text('Cancel Update Password');
+                    $('#editCurrentPwd').attr('required', true);
+                    $('#editNewPwd').attr('required', true);
+                    $('#editConfirmPwd').attr('required', true);
+                    //$('#oldPwdDiv').removeClass('has-error');
+                    //$('#newPwdDiv').removeClass('has-error');
+                    //$('#confirmNewPwdDiv').removeClass('has-error');
+                    //$('.help-block').remove();
+                }
+                else if ($('#lblUpdatePwd').val() == 'checked') {
+                    $('#oldPwdDiv').hide();
+                    $('#newPwdDiv').hide();
+                    $('#confirmNewPwdDiv').hide();
+                    $('#lblUpdatePwd').val('unchecked');
+                    $('#lblUpdatePwd').text('Update Password');
+                    $('#editCurrentPwd').attr('required', false);
+                    $('#editNewPwd').attr('required', false);
+                    $('#editConfirmPwd').attr('required', false);
+
+                }
+            })
+
+            .on('click', '#btnEditUser', function () {
+                $('#firstNameFormGroup').removeClass('has-error');
+                $('#lastNameFormGroup').removeClass('has-error');
+                $('#oldPwdDiv').removeClass('has-error');
+                $('#newPwdDiv').removeClass('has-error');
+                $('#confirmNewPwdDiv').removeClass('has-error');
+                $('.help-block').remove();
+                $('#oldPwdDiv').hide();
+                $('#newPwdDiv').hide();
+                $('#confirmNewPwdDiv').hide();
+                $('#lblUpdatePwd').val('unchecked');
+                $('#lblUpdatePwd').text('Update Password');
+
+                $('#editCurrentPwd').attr('type', 'password');
+                $('#eye1').addClass("fa-eye");
+                $('#eye1').removeClass("fa-eye-slash");
+
+                $('#editNewPwd').attr('type', 'password');
+                $('#eye2').addClass("fa-eye");
+                $('#eye2').removeClass("fa-eye-slash");
+
+                $('#editConfirmPwd').attr('type', 'password');
+                $('#eye3').addClass("fa-eye");
+                $('#eye3').removeClass("fa-eye-slash");
+
+                $("#editUser").trigger('reset');
+            })
+
+            //find user
+            .on('click', 'button[data-user-cid]', function () {
+                var id = $(this).data('user-cid');
+                userId = id;
+
+                $.post('FindUser', { Id: id })
+                    .done(function (result) {
+                        var user = result && result.CreateUser && result.CreateUser[0];
+
+                        if (!user) {
+                            console.error('FindUser: no user returned for id', id);
+                            return;
+                        }
+
+                        $('#editUName').val(user.UserName);
+                        $('#editFName').val(user.FirstName);
+                        $('#editLName').val(user.LastName);
+                        $('#editMName').val(user.MiddleName);
+                        $('#hiddenOldPwd').val(user.Password);
+                        $('#hiddenLastPwd').val(user.LastPassword);
+
+                        
+                        populateAuthSelect(result.Auths, user.AuthorizationId);
+
+                        var isActive = user.IsActive === true;
+                        $('#userIsActive')
+                            .iCheck(isActive ? 'check' : 'uncheck')
+                            .val(isActive ? 'checked' : 'unchecked');
+                    })
+                    .fail(function (jqXHR, textStatus) {
+                        console.error('FindUser failed:', textStatus);
+                        // consider surfacing this to the user instead of failing silently
+                    });
+            })
+
+            //find user api key
+            .on('click', 'button[data-userkey-cid]', function () {
+                var id = $(this).data('userkey-cid');
+                userId = id;
+
+                $.post('FindAPIKey', { Id: id }).done(result => {
+
+                    for (var x in result) {
+                        $('#userapikey').val(result[x].UserAPIKey);
+                    }
+
+                })
+            })
+
+
+            //update user
+            .on('submit', '#editUser', function (e) {
+
+                e.preventDefault();
+
+                var id = userId;
+                var UserName = $('#editUName').val();
+                var FirstName = $('#editFName').val();
+                var LastName = $('#editLName').val();
+                var MiddleName = $('#editMName').val();
+                var CurrentPassword = $('#editCurrentPwd').val();
+                var NewPassword = $('#editNewPwd').val();
+                var ConfirmPassword = $('#editConfirmPwd').val();
+                var IsActive = $('#userIsActive').is(':checked'); // reads native state directly, no longer dependent on iCheck .val() string convention
+                var pwdChkboxVal = $('#lblUpdatePwd').val();
+                var tempPass = $('#hiddenOldPwd').val();
+                var tempLast = $('#hiddenLastPwd').val();
+                var AuthId = $('#edit-auth').val();
+
+                // var valid = true; // re-enable once validation below is restored, or remove entirely if server-side validation is authoritative
+
+                // TODO: restore or remove — currently no client-side validation runs at all
+                // if ($.trim(FirstName) == '') {
+                //     $('#firstNameFormGroup').addClass('has-error')
+                //         .append('<span class="help-block">First Name is Required</span>');
+                //     valid = false;
+                // }
+                // if ($.trim(LastName) == '') {
+                //     $('#lastNameFormGroup').addClass('has-error')
+                //         .append('<span class="help-block">Last Name is Required</span>');
+                //     valid = false;
+                // }
+
+                swal({
+                    title: 'Are you sure you want to update User Details?',
+                    text: "You want to save the changes of the following data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then(function (result) {
+
+                    if (!result.value) {
+                        return; // cancelled — nothing below runs, for either branch
+                    }
+
+                    if (pwdChkboxVal == 'unchecked') {
+                        $.post('Update_User', {   // was $.getJSON — see note below
+                            Id: id,
+                            UserName: UserName,
+                            FirstName: FirstName,
+                            LastName: LastName,
+                            MiddleName: MiddleName,
+                            IsActive: IsActive,
+                            AuthId: AuthId,
+                           
+                        }).done(function (data) {
+                            if (data.success) {
+                                swal('Success!', '', 'success');
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500); // intentionally not reloading — confirm this is correct
+                            } else {
+                                swal('Error', data.message, 'warning');
+                            }
+                        }).fail(function (xhr, status, error) {
+
+                            //console.log("Status:", status);
+                            //console.log("Error:", error);
+                            //console.log("Response:", xhr.responseText);
+
+                            swal('Something went wrong.', xhr.responseText, 'warning');
+                        });
+                    }
+                    else if (pwdChkboxVal == 'checked') {
+
+                        // SECURITY: this comparison happens client-side against a plaintext
+                        // password already sitting in a hidden input. See prior notes —
+                        // this needs to move server-side against a real password hash.
+                    
+                     /*   if (tempPass == (UserName + CurrentPassword)) {*/
+                            if (NewPassword == ConfirmPassword) {
+                                //var newCurrentPassword = UserName + ConfirmPassword;
+
+                                $.post('Update_User', {   // was $.getJSON — see note below
+                                    Id: id,
+                                    UserName: UserName,
+                                    FirstName: FirstName,
+                                    LastName: LastName,
+                                    MiddleName: MiddleName,
+                                    IsActive: IsActive,
+                                    AuthId: AuthId,
+                                    Password: NewPassword,
+                                    ConfirmPassword: ConfirmPassword,
+                                }).done(function (data) {
+                                    if (data.success) {
+                                        swal('Success!', '', 'success');
+                                        $('.modal').modal('hide');
+                                        setTimeout(function () { window.location.href = ""; }, 1500);
+                                    } else {
+                                        swal('Warning!', data.message, 'warning');
+                                    }
+                                }).fail(function () {
+                                    swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                                });
+                            }
+                            else {
+                                swal('Password does not match the Confirm Password', 'Make sure passwords match', 'warning');
+                            }
+                       // }
+                        //else {
+                        //    swal('Incorrect Current Passwordz', 'Make sure passwords match', 'warning');
+                        //}
+                    }
+                });
+            })
+            //find user modules
+            .on('click', 'button[data-usermod-cid]', function () {
+                //if ($("#userModules").is(':visible')) {
+                //    $("#userModules").fadeOut();
+                //} else {
+                //    $("#userModules").fadeIn();
+                ////}
+
+                //$("#userModules").fadeOut();
+                //$("#userModules").fadeIn();
+                var id = $(this).data('usermod-cid');
+                $('#btnUserModuleSave').removeData('code');
+                $('#btnUserModuleSave').attr('data-usermod-id', id);
+                moduleId = [];
+                $.post('FindUserModule', { Id: id }).done(result => {
+                    for (var z in result.ModulesList) {
+                        $('input:checkbox[id = ' + result.ModulesList[z].ModId + ']').iCheck('uncheck');
+                    }
+
+                    for (var y in result.UserModuleList) {
+                        if (result.UserModuleList[y].IsActive == true) {
+                            $('input:checkbox[id = ' + result.UserModuleList[y].ModId + ']').iCheck('check');
+                        }
+                    }
+                    test = result;
+                });
+            })
+
+
+
+
+            //update user module
+            .on('click', 'button[data-usermod-id]', function () {
+
+
+                var id = $(this).data('usermod-id');
+                var activeMods = new Array();
+                var inactiveMods = new Array();
+                var UMId = new Array();
+
+                for (var x in test.ModulesList) {
+                    //wont work with pagination -> icheck('update')[0].checked
+                    if ($('input:checkbox[id = ' + test.ModulesList[x].ModId + ']').iCheck('update')[0].checked) {
+                        activeMods.push(test.ModulesList[x].ModId);
+                    }
+
+                    else if (!($('input:checkbox[id = ' + test.ModulesList[x].ModId + ']').iCheck('update')[0].checked)) {
+                        inactiveMods.push(test.ModulesList[x].ModId);
+                    }
+                }
+
+
+                for (var x in test.UserModuleList) {
+                    UMId.push(test.UserModuleList[x].UMId);
+                }
+
+                swal({
+                    title: 'Are you sure you want to update User Modules?',
+                    text: "You want to save the changes of the following data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateUserModule', {
+                            Id: id,
+                            activeMods: activeMods,
+                            inactiveMods: inactiveMods,
+                            UMId: UMId
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                                //$("#Users").load("UserDetails #Users");
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+    </script>
+    <script>
+        $('#copy-api-key').on('click', function () {
+            //var UserName = $('#userapikey').val();
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($('#userapikey').val()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        });
+        function populateAuthSelect(auths, selectedAuthId) {
+            var $select = $('#edit-auth');
+            // if select2 is already active, tear it down before rebuilding options
+            if ($select.hasClass('select2-hidden-accessible')) {
+                $select.select2('destroy');
+            }
+
+            $select.empty();
+
+            if (!auths || auths.length === 0) {
+                $select.append($('<option>', { value: '', text: 'No authorizations available', disabled: true }));
+            } else {
+                auths.forEach(function (auth) {
+                    $select.append($('<option>', {
+                        value: auth.AuthId,
+                        text: auth.Description
+                    }));
+                });
+                $select.val(String(selectedAuthId));
+            }
+
+            $select.select2({ width: '100%', placeholder: 'Select an authorization' });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("button#showUserModule").click(function () {
+                document.getElementById("userModules").style.display = "none";
+                $("#userModules").fadeIn();
+            });
+
+            $("a#passeye1").on('click', function (event) {
+                event.preventDefault();
+                if ($('#editCurrentPwd').attr("type") == "text") {
+                    $('#editCurrentPwd').attr('type', 'password');
+                    $('#eye1').addClass("fa-eye");
+                    $('#eye1').removeClass("fa-eye-slash");
+
+                } else if ($('#editCurrentPwd').attr("type") == "password") {
+                    $('#editCurrentPwd').attr('type', 'text');
+                    $('#eye1').removeClass("fa-eye");
+                    $('#eye1').addClass("fa-eye-slash");
+                }
+            });
+
+            $("a#passeye2").on('click', function (event) {
+                event.preventDefault();
+                if ($('#editNewPwd').attr("type") == "text") {
+                    $('#editNewPwd').attr('type', 'password');
+                    $('#eye2').addClass("fa-eye");
+                    $('#eye2').removeClass("fa-eye-slash");
+
+                } else if ($('#editNewPwd').attr("type") == "password") {
+                    $('#editNewPwd').attr('type', 'text');
+                    $('#eye2').removeClass("fa-eye");
+                    $('#eye2').addClass("fa-eye-slash");
+                }
+            });
+
+            $("a#passeye3").on('click', function (event) {
+                event.preventDefault();
+                if ($('#editConfirmPwd').attr("type") == "text") {
+                    $('#editConfirmPwd').attr('type', 'password');
+                    $('#eye3').addClass("fa-eye");
+                    $('#eye3').removeClass("fa-eye-slash");
+
+                } else if ($('#editConfirmPwd').attr("type") == "password") {
+                    $('#editConfirmPwd').attr('type', 'text');
+                    $('#eye3').removeClass("fa-eye");
+                    $('#eye3').addClass("fa-eye-slash");
+                }
+            });
+
+            $(function () {
+                $('#UserModules').DataTable({
+                    'paging': false,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+                    'columnDefs': [
+                        {
+                            'targets': 0,
+                            'orderable': false,
+                            'searchable': false,
+                        }
+                    ],
+                    //"serverSide": true,
+                    'serverSide': false
+                })
+            })
+
+            $(function () {
+                $('#Authorizations').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+                    'columnDefs': [
+                        {
+                            'targets': 0,
+                            'orderable': false,
+                            'searchable': false,
+                        }
+                    ],
+                })
+            })
+
+            $(function () {
+                $('#Users').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+                    'columnDefs': [
+                        {
+                            'targets': 0,
+                            'orderable': false,
+                            'searchable': false,
+                        }
+                    ],
+                })
+            })
+
+
+        });
+    </script>
+
+}

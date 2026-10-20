@@ -1,0 +1,2462 @@
+﻿@model DomainLayer.ViewModels.SyncViewModel
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="hidden"><a href="#tab_1" data-toggle="tab">Sync Setup</a></li>
+                    <li class="hidden"><a href="#tab_2" data-toggle="tab">Query Setup</a></li>
+                    <li class="hidden"><a href="#tab_3" data-toggle="tab">Sync Query Setup</a></li>
+                    <li class="hidden"><a href="#tab_5" data-toggle="tab">Report Setup</a></li>
+                    <li class="active"><a href="#tab_4" data-toggle="tab">API Sync Setup</a></li>
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="tab_1">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Sync Setup</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="syncs" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Sync Code</th>
+                                            <th>IP Address</th>
+                                            <th>DB Version</th>
+                                            <th>Db Name</th>
+                                            <th>Db UserName</th>
+                                            <th>Path</th>
+                                            <th>Port</th>
+                                            <th>File Type</th>
+                                            <th>IsActive</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sync in Model.SyncView)
+                                        {
+                                            <tr>
+                                                <td width="5%"><button type="button" data-user-cid="@sync.Id" class="btn-info fa fa-edit" data-toggle="modal" data-target="#edit-sync-modal" id="btnEditSync"></button></td>
+                                                <td>@sync.Code</td>
+                                                <td>@sync.IpAddress</td>
+                                                <td>@sync.DbVersion</td>
+                                                <td>@sync.DbName</td>
+                                                <td>@sync.DbUser</td>
+                                                @if (sync.Path != "")
+                                                {
+                                                    <td>@sync.Path</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@sync.FtpPath</td>
+                                                }
+                                                <td>@sync.ServerPort</td>
+                                                <td>@sync.FileType</td>
+                                                @if (sync.IsActive == true)
+                                                {
+                                                    <td><span class="label label-success">Active</span></td>
+                                                }
+                                                else
+                                                {
+                                                    <td><span class="label label-danger">Inactive</span></td>
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-sync-modal" id="btnCreateSync">New</button>
+                            </div>
+
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_2">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Query Setup</h3>
+                            </div>
+
+                            <div class="box-body">
+                                <table id="queries" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Query Code</th>
+                                            @*<th>Query String</th>*@
+                                            <th>IsActive</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var query in Model.ReportQueryView)
+                                        {
+                                            <tr>
+                                                <td width="5%"><button type="button" data-query-cid="@query.Id" class="btn-info fa fa-edit" data-toggle="modal" data-target="#edit-query-modal" id="btnEditQuery"></button></td>
+                                                <td>@query.Code</td>
+                                                @*<td title="@query.QueryString">
+
+                                                    @if (query.QueryString.Length <= 20)
+                                                    {@query.QueryString;
+                                                }
+                                                else if (query.QueryString.Length > 20)
+                                                {
+                                                    @String.Concat(@query.QueryString.Substring(0, 20), "...");
+                                                }
+                                                </td>*@
+                                                @if (query.IsActive == true)
+                                                {
+                                                    <td width="12%"><span class="label label-success">Active</span></td>
+                                                }
+                                                else
+                                                {
+                                                    <td width="12%"><span class="label label-danger">Inactive</span></td>
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-query-modal" id="btnCreateQuery">New</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab_3">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Sync Query Setup</h3>
+                            </div>
+
+                            <div class="box-body">
+                                <table id="syncQueries" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Sync Query Code</th>
+                                            <th>Query Code</th>
+                                            <th>Sync Code</th>
+                                            <th>IsActive</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var syncQuery in Model.SyncQueryView)
+                                        {
+                                            <tr>
+                                                <td width="5%"><button type="button" data-syncquery-cid="@syncQuery.Id" class="btn-info fa fa-edit" data-toggle="modal" data-target="#edit-syncquery-modal" id="btnEditSyncQuery"></button></td>
+                                                <td>@syncQuery.SyncQueryCode</td>
+                                                <td>@syncQuery.QueryCode</td>
+                                                <td>@syncQuery.SyncCode</td>
+                                                @if (syncQuery.IsActive == true)
+                                                {
+                                                    <td><span class="label label-success">Active</span></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-execute-cid="@syncQuery.Id">Execute</button>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td width="5%"><span class="label label-danger">Inactive</span></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-execute-cid="@syncQuery.Id" disabled>Execute</button>
+                                                    </td>
+                                                }
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-syncquery-modal" id="btnCreateSyncQuery">New</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+
+                    <div class="tab-pane active" id="tab_4">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">API Sync Setup</h3>
+                            </div>
+
+                            <div class="box-body">
+                                <table id="crystalExtract" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Name</th>
+                                            <th>Platform</th>
+                                            @*<th>Document Code</th>*@
+                                            <th>API Code</th>
+                                            <th>IsActive</th>
+                                            <th>@*Action*@</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var crystalExtract in Model.CrystalExtractView)
+                                        {
+                                            <tr>
+                                                <td width="5%"><button type="button" data-crystal-cid="@crystalExtract.Id" class="btn-info fa fa-edit" data-toggle="modal" data-target="#edit-crystalextract-modal" id="btnEditSyncQuery"></button></td>
+                                                <td>@crystalExtract.Name</td>
+                                                <td>@crystalExtract.QueryCode</td>
+                                                @*<td>@crystalExtract.DocumentCode</td>*@
+                                                <td>@crystalExtract.APICode</td>
+
+                                                @if (crystalExtract.IsActive == true)
+                                                {
+                                                    <td><span class="label label-success">Active</span></td>
+                                                    @*<td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-crystalexecute-cid="@crystalExtract.Id">Execute</button>
+                                                    </td>*@
+                                                }
+                                                else
+                                                {
+                                                    <td width="5%"><span class="label label-danger">Inactive</span></td>
+                                                    @*<td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-crystalexecute-cid="@crystalExtract.Id" disabled>Execute</button>
+                                                    </td>*@
+                                                }
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-crystalextract-modal" id="btnCreateExtract">New Setup</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+
+                    <div class="tab-pane" id="tab_5">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Report Setup</h3>
+                            </div>
+
+                            <div class="box-body">
+                                <table id="reportExtract" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Name</th>
+                                            <th>Query Code</th>
+                                            <th>Sync Code</th>
+                                            <th>API Code</th>
+                                            <th>IsActive</th>
+                                            @*<th>Action</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var reportView in Model.ReportExtractView)
+                                        {
+
+                                            <tr>
+                                                <td width="5%"><button type="button" data-report-cid="@reportView.Id" class="btn-info fa fa-edit" data-toggle="modal" data-target="#edit-reportextract-modal" id="btnEditSyncQuery"></button></td>
+                                                <td>@reportView.Name</td>
+                                                <td>@reportView.QueryCode</td>
+                                                <td>@reportView.DocumentCode</td>
+                                                <td>@reportView.APICode</td>
+
+                                                @if (reportView.IsActive == true)
+                                                {
+                                                    <td><span class="label label-success">Active</span></td>
+                                                    @*<td>
+                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-crystalexecute-cid="@reportView.Id">Execute</button>
+                                                        </td>*@
+                                                }
+                                                else
+                                                {
+                                                    <td width="5%"><span class="label label-danger">Inactive</span></td>
+                                                    @*<td>
+                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-reportexecute-cid="@reportView.Id" disabled>Execute</button>
+                                                        </td>*@
+                                                }
+
+                                            </tr>
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-reportextract-modal" id="btnReportExtract">New Report Extract</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+
+                </div>
+                <!-- /.tab-content -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="create-sync-modal">
+    <form id="createSync">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Sync Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="createSyncCodeFormgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+                                <input type="text" id="createSyncCode" class="form-control sync" placeholder="Sync Code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="create-sync-dbversion-formgroup">
+                            <label>*DB Version:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-database"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="createSyncDbVersion" required>
+                                    @foreach (var item in Model.SAPList)
+                                    {
+                                        <option value="@item.SAPDBVersion">@item.SAPDBVersion</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncIpAddressFormgroup">
+                            <label>*IP Address | Server:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-laptop"></i>
+                                </div>
+                                <!--data-inputmask="'alias': 'ip'" data-mask-->
+                                <input type="text" class="form-control" id="createSyncIpAddress" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncIpAddressFormgroup">
+                            <label>Server Port:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                              
+                                <input type="text" class="form-control" id="createSynPort">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncDbNameFormgroup">
+                            <label>*Database Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-database"></i></span>
+                                <input type="text" id="createSyncDbName" class="form-control" placeholder="Database Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncDbUserFormgroup">
+                            <label>*Database UserName:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="createSyncDbUser" class="form-control" placeholder="Database UserName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncDbPassFormgroup">
+                            <label>*Database Password:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" id="createSyncDbPass" class="form-control" placeholder="Database Password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group " id="radio">
+                            <center>
+                                <input type="radio" name="createradio" id="local" value="Local" class="form-control minimal" checked> Local
+                                <input type="radio" name="createradio" id="ftp" value="FTP" class="form-control minimal"> FTP
+                            </center>
+                        </div>
+
+                        <div class="form-group local" id="createSyncPathFormgroup">
+                            <label>Extraction Path:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                                <input type="text" id="createSyncPath" class="form-control" placeholder="Extraction Path">
+                            </div>
+                        </div>
+
+                        <div class="form-group ftp" id="createSyncPathFormgroup" hidden>
+                            <label>Ftp Path:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                                <input type="text" id="createSyncFTPPath" class="form-control" placeholder="FTP Path">
+                            </div>
+                        </div>
+
+                        <div class="form-group ftp" id="createSyncPathFormgroup" hidden>
+                            <label>Ftp Username:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="createSyncFTPUser" class="form-control" placeholder="FTP Username">
+                            </div>
+                        </div>
+
+                        <div class="form-group ftp" id="createSyncPathFormgroup" hidden>
+                            <label>Ftp Password:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="text" id="createSyncFTPPass" class="form-control" placeholder="FTP Password">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncFileNameFormgroup">
+                            <label>File Type:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                @*<input type="text" id="createSyncFileType" class="form-control" placeholder="File Type">*@
+
+                                <select class="form-control select2" style="width: 100%;" id="createSyncFileType" placeholder="File Type">
+                                    <option value="csv">csv</option>
+                                    <option value="xls">xls</option>
+                                    <option value="xlsx">xlsx</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnCreateSyncSave" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="edit-sync-modal">
+    <form id="editSync">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Sync Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="edit-sync-code-formgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+                                <input type="text" id="editSyncCode" class="form-control" placeholder="Sync Code" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-sync-dbversion-formgroup">
+                            <label>*DB Version:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-database"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="editSyncDbVersion" required>
+                                    @foreach (var item in Model.SAPList)
+                                    {
+                                        <option value="@item.SAPDBVersion">@item.SAPDBVersion</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncIpAddressFormgroup">
+                            <label>*IP Address | Server:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-laptop"></i>
+                                </div>
+                                <!--data-inputmask="'alias': 'ip'" data-mask-->
+                                <input type="text" class="form-control" id="editSyncIpAddress" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncIpAddressFormgroup">
+                            <label>Server Port:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-server"></i>
+                                </div>
+
+                                <input type="text" class="form-control" id="editSynPort">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group" id="editSyncDbNameFormgroup">
+                            <label>*Database Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-database"></i></span>
+                                <input type="text" id="editSyncDbName" class="form-control" placeholder="Database Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncDbUserFormgroup">
+                            <label>*Database UserName:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="editSyncDbUser" class="form-control" placeholder="Database UserName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncDbPassFormgroup">
+                            <label>*Database Password:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" id="editSyncDbPass" class="form-control" placeholder="Database Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group " id="edit-radio">
+                            <center>
+                                <input type="radio" name="edit-radio" value="Local" id="edit-local" class="form-control minimal" checked> Local
+                                <input type="radio" name="edit-radio" value="FTP" id="edit-ftp" class="form-control minimal"> FTP
+                            </center>
+                        </div>
+
+                        <div class="form-group edit-local" id="editSyncPathFormgroup">
+                            <label>Extraction Path:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                                <input type="text" id="editSyncPath" class="form-control" placeholder="Extraction Path">
+                            </div>
+                        </div>
+
+                        <div class="form-group edit-ftp" id="editSyncPathFormgroup">
+                            <label>Ftp Path:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                                <input type="text" id="editSyncFTPPath" class="form-control" placeholder="FTP Path">
+                            </div>
+                        </div>
+
+                        <div class="form-group edit-ftp" id="editSyncPathFormgroup">
+                            <label>Ftp Username:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="editSyncFTPUser" class="form-control" placeholder="FTP Username">
+                            </div>
+                        </div>
+
+                        <div class="form-group edit-ftp" id="editSyncPathFormgroup">
+                            <label>Ftp Password:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" id="editSyncFTPPass" class="form-control" placeholder="FTP Password">
+                            </div>
+                        </div>
+                        <div class="form-group" id="editSyncFileNameFormgroup">
+                            <label>*File Type:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                @*<input type="text" id="editSyncFileType" class="form-control" placeholder="File Name" required>*@
+
+                                <select class="form-control select2" style="width: 100%;" id="editSyncFileType" placeholder="File Type">
+                                    <option value="csv">csv</option>
+                                    <option value="xls">xls</option>
+                                    <option value="xlsx">xlsx</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                        <div>
+                            <label for="userIsActive"><input type="checkbox" id="syncIsActive" class=""> IsActive?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="btnEditSyncSave">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="create-query-modal">
+    <form id="createQuery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Query Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Query Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-bars"></i></span>
+                                <input type="text" id="createQueryCode" class="form-control query" placeholder="Query Code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryStringFormgroup">
+                            <label>*Query String:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></span>
+                                <textarea style="resize: vertical;" id="createQueryString" class="form-control" placeholder="Query String" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnCreateQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="edit-query-modal">
+    <form id="editQuery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Query Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="editQueryCodeFormgroup">
+                            <label>*Query Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-bars"></i></span>
+                                <input type="text" id="editQueryCode" class="form-control" placeholder="Query Code" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editQueryStringFormgroup">
+                            <label>*Query String:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></span>
+                                <textarea style="resize: vertical;" id="editQueryString" class="form-control" placeholder="Query String" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+
+                        <div>
+                            <label for="userIsActive"><input type="checkbox" id="queryIsActive" class=""> IsActive?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnEditQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="create-syncquery-modal">
+    <form id="createSyncQuery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Sync Query Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+                        <div class="form-group" id="createSyncQueryCodeFormgroup">
+                            <label>*Sync Query Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="createSyncQueryCode" class="form-control syncquery" placeholder="Sync Query Code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createSyncCodeFormgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-compressed"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectSyncCode" placeholder="Sync Code">
+
+                                    <option value="2">SyncCode1</option>
+                                    @*@foreach (var sync in Model.SyncView)
+                                {
+                                    <option value="@sync.Id">@sync.Code</option>
+                                }*@
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Query Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectQueryCode" placeholder="Query Code">
+
+
+                                    @foreach (var query in Model.QueryView)
+                                    {
+                                        <option value="@query.Id">@query.Code</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnCreateSyncQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>-->
+            <!-- /.modal-content -->
+        </div>
+         /.modal-dialog 
+    </form>
+</div>
+
+
+<div class="modal fade" id="create-crystalextract-modal">
+    <form id="crystalExtract">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">API Sync Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+                        <div class="form-group" id="createSyncQueryCodeFormgroup">
+                            <label>*Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="createCrystalName" class="form-control syncquery" placeholder="API Sync Code" required> 
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Platform:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectQueryCodeId" placeholder="Query Code">
+
+                                    <option value="Shopify">Shopify</option>
+                                    <option value="Lazada">Lazada</option>
+                                    <option value="Tiktok">Tiktok</option>
+                                    <option value="Zalora">Zalora</option>
+                                    <option value="Shopee">Shopee</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        @*<div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Document Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectDocumentCode" placeholder="Document Code">
+
+                                    @foreach (var query in Model.DocumentView)
+                                    {
+                                        <option value="@query.Id">@query.Code</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>*@
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectAPICode" placeholder="API Code">
+
+                                    @foreach (var query in Model.APIView)
+                                    {
+                                        <option value="@query.Id">@query.APICode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnCreateCrystalQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+          
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="create-reportextract-modal">
+    <form id="reportExtract">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Report Extract Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+                        <div class="form-group" id="createSyncQueryCodeFormgroup">
+                            <label>*Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="createReportName" class="form-control syncquery" placeholder="Crystal Extract Code" required> @*rename the ID*@
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Query Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></div>
+                                @*<select class="form-control select2" style="width: 100%;" id="selectQueryCodeId" placeholder="Query Code">*@
+                                <select class="form-control select2 featuremap" multiple="multiple" data-placeholder="Select a Query" style="width: 100%;" id="reportselectQueryCodeId" required>
+                                    @foreach (var query in Model.ReportQueryView)
+                                    {
+                                        <option value="@query.Id">@query.Code</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectPathCode" placeholder="Document Code">
+
+                                    @foreach (var sync in Model.ReportSyncView)
+                                    {
+                                        <option value="@sync.Id">@sync.Code</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="createQueryCodeFormgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <select class="form-control select2" style="width: 100%;" id="selectReportAPICode" placeholder="API Code">
+
+                                    @foreach (var query in Model.APIView)
+                                    {
+                                        <option value="@query.Id">@query.APICode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnReportQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+
+<div class="modal fade" id="edit-syncquery-modal">
+    <form id="editSyncQuery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Sync Query Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="edit-syncquerycode-formgroup">
+                            <label>*Sync Query Code:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="editSyncQueryCode" class="form-control" placeholder="Sync Query Code" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-compressed"></i></div>
+                                <input type="text" id="editSyncQuerySCode" class="form-control" placeholder="Sync Code" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncQueryQCodeFormgroup">
+                            <label>*Query Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></div>
+                                @*<input type="text" id="editSyncQueryQCode" class="
+                                       " placeholder="Query String" disabled>*@
+                                <select class="form-control select2 featuremap" multiple="multiple" data-placeholder="Select QueryCode" style="width: 100%;" id="editSyncQueryCodes" required>
+                                    @foreach (var path in Model.QueryView)
+                                    {
+                                        <option value="@path.Code">@path.Code</option>
+                                    }
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        </div>
+
+                        <div>
+                            <label for="userIsActive"><input type="checkbox" id="syncQueryIsActive" class=""> IsActive?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnEditSyncQuery" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+
+<div class="modal fade" id="edit-crystalextract-modal">
+    <form id="editCrystalExtract">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit API Sync Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="edit-syncquerycode-formgroup">
+                            <label>*Sync Setup Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="editCrystalName" class="form-control" placeholder="Setup Name" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*Platform:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-compressed"></i></div>
+                                <input type="text" id="editQueryCodeId" class="form-control" placeholder="Query Code" disabled>
+                            </div>
+                        </div>
+
+                        @*<div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*Document Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <input type="text" id="editDocumentCode" class="form-control" placeholder="Document Code" disabled>
+                            </div>
+                        </div>*@
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <input type="text" id="editAPICode" class="form-control" placeholder="API Code" disabled>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                        </div>
+
+                        <div>
+                            <label for="userIsActive"><input type="checkbox" id="crystaExtractlIsActive" class=""> IsActive?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnEditCrystalExtract" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+
+<div class="modal fade" id="edit-reportextract-modal">
+    <form id="editReportExtract">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Report Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="register-box-body">
+
+                        <div class="form-group" id="edit-syncquerycode-formgroup">
+                            <label>*Report Name:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                <input type="text" id="editReportName" class="form-control" placeholder="Report Name" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                                <label>*Query Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="glyphicon glyphicon-compressed"></i></div>
+                                    <input type="text" id="editReportQueryCodeId" class="form-control" placeholder="Query Code" disabled>
+                                </div>
+                            </div>
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*Sync Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <input type="text" id="editPathCode" class="form-control" placeholder="Path Code" disabled>
+
+                                @*<select class="form-control select2" style="width: 100%;" id="editPathCode" placeholder="Path Code">
+
+                                        @foreach (var query in Model.PathView)
+                                        {
+
+                                            <option value="@query.Id">@query.Code</option>
+                                        }
+                                    </select>*@
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="editSyncQuerySCodeFormgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-file"></i></div>
+                                <input type="text" id="editReportAPICode" class="form-control" placeholder="API Code" disabled>
+
+                                @*<select class="form-control select2" style="width: 100%;" id="editReportAPICode" placeholder="API Code">
+
+                                        @foreach (var query in Model.APIView)
+                                        {
+                                            <option value="@query.Id">@query.APICode</option>
+                                        }
+                                    </select>*@
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                        </div>
+
+                        <div>
+                            <label for="userIsActive"><input type="checkbox" id="ReportExtractlIsActive" class=""> IsActive?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" id="btnEditReportExtract" class="btn btn-primary btn-custom">Save</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </form>
+</div>
+
+<div class="modal fade" id="execute-query-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Executed Query</h4>
+            </div>
+            <div class="modal-body">
+                <table id="executeQueryTable" class="table table-bordered table-striped"></table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-custom" id="Export">Sync</button>
+                <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="loading-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="box box-warning box-solid">
+                <div class="box-header">
+                    <h3 class="box-title">Loading...</h3>
+                </div>
+                <div class="box-body">
+                    Trying to execute query
+                </div>
+                <!-- /.box-body -->
+                <!-- Loading (remove the following to stop the loading)-->
+                <div class="overlay">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
+                <!-- end loading -->
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $('#syncs').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+                    'scrollX': true,
+                })
+            })
+
+            $(function () {
+                $('#queries').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+
+                })
+            })
+
+            $(function () {
+                $('#syncQueries').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+
+                })
+            })
+
+            $(function () {
+                $('#reportExtract').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+
+                })
+            })
+
+            $(function () {
+                $('#crystalExtract').DataTable({
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+
+                })
+            })
+
+
+
+            //$(function () {
+            //    $('#executeQueryTable').DataTable({
+            //        'paging': true,
+            //        'lengthChange': true,
+            //        'searching': true,
+            //        'ordering': true,
+            //        'info': true,
+            //        'autoWidth': false
+            //    })
+            //})
+
+            $(function () {
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-blue',
+                    increaseArea: '20%' /* optional */
+                });
+            });
+
+            $(function () {
+                $('.select2').select2()
+            });
+            $('[data-mask]').inputmask();
+        });
+
+    </script>
+
+    <script>
+        var syncid, queryid, syncqueryid, syncqueryqid, syncquerysid,crystalid,reportid,crystalqueryqid,crystaldocumentid;
+        var d = new Date();
+        var exportid = 0;
+        var month = d.getMonth() + 1;
+        var day = d.getDate();
+        var checkpath = "";
+        var cdate = d.getFullYear() + '/' +
+            (('' + month).length < 2 ? '0' : '') + month + '/' +
+            (('' + day).length < 2 ? '0' : '') + day;
+
+        $(document).ready(function () {
+
+
+        $(document)
+            .on('submit', '#createSync', function (e) {
+                e.preventDefault();
+                var dbname = $('#createSyncDbName').val();
+                var dbuser = $('#createSyncDbUser').val();
+                var dbpass = $('#createSyncDbPass').val();
+                var path = $('#createSyncPath').val();
+                var port = $('#createSynPort').val();
+                var FTPPath = $('#createSyncFTPPath').val();
+                var FTPUser = $('#createSyncFTPUser').val();
+                var FTPPass = $('#createSyncFTPPass').val();
+                var code = $('#createSyncCode').val();
+                var filetype = $('#createSyncFileType').val();
+                var dbversion = $('#createSyncDbVersion').val();
+                var ipaddress = $('#createSyncIpAddress').val();
+                if (path == "" && FTPPath == "")
+                {
+                    swal('No Path directory.', 'Please input value on either FTP or Local directory.', 'warning')
+                }
+                else
+                {
+                    swal({
+                        title: 'Are you sure you want to save new Sync?',
+                        text: "You want to save this data?",
+                        type: 'info',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes'
+                    }).then((result) => {
+                        if (result.value) {
+
+                            $.post('CreateSync', {
+                                DbName: dbname,
+                                DbUser: dbuser,
+                                DbPass: dbpass,
+                                Path: path,
+                                Code: code,
+                                FileType: filetype,
+                                ServerPort : port,
+                                DbVersion: dbversion,
+                                IpAddress: ipaddress,
+                                FtpPath: FTPPath,
+                                FtpUser: FTPUser,
+                                FtpPass: FTPPass,
+                                CheckPath: checkpath,
+                            }).done(function (data) {
+                                if (data) {
+                                    swal('Success!', '', 'success')
+                                    //$("#syncs").load("Sync #syncs");
+                                    $('.modal').modal('hide');
+
+                                    $('.modal').on('hidden.bs.modal', function () {
+                                        $(this).find("input,textarea,select").val('').end();
+
+                                    });
+
+                                    setTimeout(function () { window.location.href = ""; }, 1500);
+                                }
+                            }).fail(function () {
+                                swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                            });
+                        }
+                    })
+                }
+
+            })
+
+            .on('click', 'button[data-user-cid]', function () {
+                var id = $(this).data('user-cid');
+                syncid = id;
+                $.post('FindSync', { Id: id }).done(result => {
+                    for (var x in result.SyncView) {
+                        $('#editSyncDbName').val(result.SyncView[x].DbName);
+                        $('#editSyncDbUser').val(result.SyncView[x].DbUser);
+                        $('#editSyncDbPass').val(result.SyncView[x].DbPass);
+                        $('#editSyncPath').val(result.SyncView[x].Path);
+                        $('#editSynPort').val(result.SyncView[x].ServerPort);
+                        $('#editSyncFTPPath').val(result.SyncView[x].FtpPath);
+                        $('#editSyncFTPUser').val(result.SyncView[x].FtpUser);
+                        $('#editSyncFTPPass').val(result.SyncView[x].FtpPass);
+                        $('#editSyncCode').val(result.SyncView[x].Code);
+                        $('#editSyncFileType').val(result.SyncView[x].FileType);
+                        $('#editSyncFileType').trigger('change');
+                        if (result.SyncView[x].Path != "")
+                        {
+                            checkpath = "Local";
+                            $("#edit-local").prop("checked", true);
+                            $(".edit-ftp").attr("hidden", true);
+                            $(".edit-local").attr("hidden", false);
+                        }
+                        else
+                        {
+                            checkpath = "FTP";
+                            $("#edit-ftp").prop("checked", true);
+                            $(".edit-ftp").attr("hidden", false);
+                            $(".edit-local").attr("hidden", true);
+                        }
+                        //$('#editSyncDbVersion').val(result.SyncView[x].DbVersion);
+                        $('#editSyncDbVersion option[value=' + result.SyncView[x].DbVersion + ']').prop("selected", "selected").change();
+                        //editSyncDbVersion IpAddress
+                        $('#editSyncIpAddress').val(result.SyncView[x].IpAddress);
+
+                        if (result.SyncView[x].IsActive == true) {
+                            $('input:checkbox[id = syncIsActive]').iCheck('check');
+                            $('input:checkbox[id = syncIsActive]').val('checked');
+                        }
+
+                        else {
+                            $('input:checkbox[id = syncIsActive]').iCheck('uncheck');
+                            $('input:checkbox[id = syncIsActive]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = syncIsActive]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = syncIsActive]').val('checked');
+                        });
+
+                        $('input:checkbox[id = syncIsActive]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = syncIsActive]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#editSync', function (e) {
+                e.preventDefault();
+                var dbname = $('#editSyncDbName').val();
+                var dbuser = $('#editSyncDbUser').val();
+                var dbpass = $('#editSyncDbPass').val();
+                var path = $('#editSyncPath').val();
+                var port = $('#editSynPort').val();
+                console.log(port)
+                var FTPPath = $('#editSyncFTPPath').val();
+                var FTPUser = $('#editSyncFTPUser').val();
+                var FTPPass = $('#editSyncFTPPass').val();
+                var code = $('#editSyncCode').val();
+                var filetype = $('#editSyncFileType').val();
+                var dbversion = $('#editSyncDbVersion').val();
+                var ipaddress = $('#editSyncIpAddress').val();
+                var id = syncid;
+                var isactive = $('#syncIsActive').val();
+                var isActive;
+                if (isactive == 'unchecked') {
+                    isActive = false;
+                }
+                else if (isactive == 'checked') {
+                    isActive = true;
+                }
+
+                swal({
+                    title: 'Are you sure you want to save Sync?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateSync', {
+                            Id: id,
+                            DbName: dbname,
+                            DbUser: dbuser,
+                            DbPass: dbpass,
+                            Path: path,
+                            ServerPort: port,
+                            Code: code,
+                            FileType: filetype,
+                            DbVersion: dbversion,
+                            IpAddress: ipaddress,
+                            FtpPath: FTPPath,
+                            FtpUser: FTPUser,
+                            FtpPass: FTPPass,
+                            IsActive: isActive,
+                            CheckPath: checkpath,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncs").load("Sync #syncs");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#createQuery', function (e) {
+                e.preventDefault();
+                var queryCode = $('#createQueryCode').val();
+                var queryString = $('#createQueryString').val();
+
+                swal({
+                    title: 'Are you sure you want to save new Query?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('CreateQuery', {
+                            Code: queryCode,
+                            QueryString: queryString,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#queries").load("Sync #queries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+
+            })
+
+            .on('click', 'button[data-query-cid]', function () {
+                var id = $(this).data('query-cid');
+                queryid = id;
+
+                $.post('FindQuery', { Id: id }).done(result => {
+                    for (var x in result.QueryView) {
+
+                        $('#editQueryCode').val(result.QueryView[x].Code);
+                        $('#editQueryString').val(result.QueryView[x].QueryString);
+
+                        if (result.QueryView[x].IsActive == true) {
+                            $('input:checkbox[id = queryIsActive]').iCheck('check');
+                            $('input:checkbox[id = queryIsActive]').val('checked');
+                        }
+
+                        else {
+                            $('input:checkbox[id = queryIsActive]').iCheck('uncheck');
+                            $('input:checkbox[id = queryIsActive]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = queryIsActive]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = queryIsActive]').val('checked');
+                        });
+
+                        $('input:checkbox[id = queryIsActive]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = queryIsActive]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#editQuery', function (e) {
+                e.preventDefault();
+                var queryCode = $('#editQueryCode').val();
+                var queryString = $('#editQueryString').val();
+                var id = queryid;
+                var isactive = $('#queryIsActive').val();
+                var isActive;
+                if (isactive == 'unchecked') {
+                    isActive = false;
+                }
+                else if (isactive == 'checked') {
+                    isActive = true;
+                }
+
+                swal({
+                    title: 'Are you sure you want to save Query?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateQuery', {
+                            Id: id,
+                            Code: queryCode,
+                            QueryString: queryString,
+                            IsActive: isActive,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#queries").load("Sync #queries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+
+            })
+
+            .on('submit', '#createSyncQuery', function (e) {
+
+                e.preventDefault();
+                var syncQueryCode = $('#createSyncQueryCode').val();
+                var selectSyncId = $('#selectSyncCode').val();
+                var selectQueryId = $('#selectQueryCode').val();
+                
+                swal({
+                    title: 'Are you sure you want to save new Sync Query?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('CreateSyncQuery', {
+                            SyncQueryCode: syncQueryCode,
+                            selectSyncId: selectSyncId,
+                            selectQueryId: selectQueryId,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#crystalExtract', function (e) {
+
+                e.preventDefault();
+                var crystalCode = $('#createCrystalName').val();
+                var selectQueryCode = $('#selectQueryCodeId').val();
+
+                //console.log(selectQueryId);
+                //var selectDocumentId = $('#selectDocumentCode').val();
+                var selectAPIId = $('#selectAPICode').val();
+
+
+                swal({
+                    title: 'Are you sure you want to save new API Sync Setup?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                   
+                    if (result.value) {
+                        $.post('CreateCrystalQuery', {
+                            crystalCode: crystalCode,
+                            selectQueryCode: selectQueryCode,
+                            selectAPIId: selectAPIId
+                        }).done(function (data) {
+                            console.log(data);
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                            else {
+                                swal('Has Duplicate Value.', 'Please Input Other Name.', 'warning')
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+            .on('submit', '#reportExtract', function (e) {
+
+                e.preventDefault();
+
+                var reportName = $('#createReportName').val();
+                var selectQueryId = $('#reportselectQueryCodeId').val();
+                var SyncId = $('#selectPathCode').val();
+                var selectAPIId = $('#selectReportAPICode').val();
+
+             
+                console.log('Report Name - '+reportName)
+                console.log("Query Code - "+selectQueryId)
+                console.log("Sync Code - "+SyncId)
+                console.log("API - "+selectAPIId)
+
+                swal({
+                    title: 'Are you sure you want to save new Report Setup?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('Create_ReportExtract', {
+                            Name: reportName,
+                            QueryId: selectQueryId,
+                            DocumentId: SyncId,
+                            APIId: selectAPIId
+                        }).done(function (data) {
+                            console.log(data);
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                            else {
+                                swal('Has Duplicate Value.', 'Please Input Other Name.', 'warning')
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+            .on('click', 'button[data-syncquery-cid]', function () {
+                var id = $(this).data('syncquery-cid');
+                syncqueryid = id;
+
+                $.post('FindSyncQuery', { Id: id }).done(result => {
+                    var arr = [];
+                    for (var x in result.SyncQueryMapsView) {
+                        arr.push(result.SyncQueryMapsView[x].QueryCode);
+                        $("#editSyncQueryCodes").val(arr);
+                        $("#editSyncQueryCodes").trigger('change');
+                    }
+
+                    for (var x in result.SyncQueryView) {
+                        $('#editSyncQueryCode').val(result.SyncQueryView[x].SyncQueryCode);
+                        $('#editSyncQuerySCode').val(result.SyncQueryView[x].SyncCode);
+                        $('#editSyncQueryQCode').val(result.SyncQueryView[x].QueryCode);
+
+                        syncqueryqid = result.SyncQueryView[x].QueryId;
+                        syncquerysid = result.SyncQueryView[x].SyncId;
+                        if (result.SyncQueryView[x].IsActive == true) {
+                            $('input:checkbox[id = syncQueryIsActive]').iCheck('check');
+                            $('input:checkbox[id = syncQueryIsActive]').val('checked');
+                        }
+
+                        else {
+                            $('input:checkbox[id = syncQueryIsActive]').iCheck('uncheck');
+                            $('input:checkbox[id = syncQueryIsActive]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = syncQueryIsActive]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = syncQueryIsActive]').val('checked');
+                        });
+
+                        $('input:checkbox[id = syncQueryIsActive]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = syncQueryIsActive]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('click', 'button[data-crystal-cid]', function () {
+                var id = $(this).data('crystal-cid');
+                crystalid = id;
+
+                $.post('FindCrystalExtract', { Id: id }).done(result => {
+                    for (var x in result.CrystalExtractView) {
+                        $('#editCrystalName').val(result.CrystalExtractView[x].Name);
+                        $('#editQueryCodeId').val(result.CrystalExtractView[x].QueryCode);
+                        $('#editDocumentCode').val(result.CrystalExtractView[x].DocumentCode);
+                        $('#editAPICode').val(result.CrystalExtractView[x].APICode);
+
+                        crystalqueryqid = result.CrystalExtractView[x].QueryId;
+                        crystaldocumentid = result.CrystalExtractView[x].DocumentId;
+                        if (result.CrystalExtractView[x].IsActive == true) {
+                            $('input:checkbox[id = crystaExtractlIsActive]').iCheck('check');
+                            $('input:checkbox[id = crystaExtractlIsActive]').val('checked');
+                        }
+
+                        else {
+                            $('input:checkbox[id = crystaExtractlIsActive]').iCheck('uncheck');
+                            $('input:checkbox[id = crystaExtractlIsActive]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = crystaExtractlIsActive]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = crystaExtractlIsActive]').val('checked');
+                        });
+
+                        $('input:checkbox[id = crystaExtractlIsActive]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = crystaExtractlIsActive]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('click', 'button[data-report-cid]', function () {
+                var id = $(this).data('report-cid');
+                reportid = id;
+                var pathcode = "";
+                var apicode = "";
+                $('.select2').select2();
+                $.post('FindCrystalExtract', { Id: id }).done(result => {
+                    console.log(result);
+                    for (var x in result.CrystalExtractView) {
+                        $('#editReportName').val(result.CrystalExtractView[x].Name);
+                        $('#editReportQueryCodeId').val(result.CrystalExtractView[x].QueryCode);
+
+                        $('#editPathCode').val(result.CrystalExtractView[x].DocumentCode)
+                        $('#editReportAPICode').val(result.CrystalExtractView[x].APICode)
+
+                        //crystalqueryqid = result.CrystalExtractView[x].QueryId;
+                        reportpathid = result.CrystalExtractView[x].DocumentId;
+                        if (result.CrystalExtractView[x].IsActive == true) {
+                            $('input:checkbox[id = ReportExtractlIsActive]').iCheck('check');
+                            $('input:checkbox[id = ReportExtractlIsActive]').val('checked');
+                        }
+
+                        else {
+                            $('input:checkbox[id = ReportExtractlIsActive]').iCheck('uncheck');
+                            $('input:checkbox[id = ReportExtractlIsActive]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = ReportExtractlIsActive]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = ReportExtractlIsActive]').val('checked');
+                        });
+
+                        $('input:checkbox[id = ReportExtractlIsActive]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = ReportExtractlIsActive]').val('unchecked');
+                        });
+                    }
+                    $('#editPathCode').trigger('change')
+                    $('#editReportAPICode').trigger('change')
+                })
+
+            })
+
+            .on('submit', '#editSyncQuery', function (e) {
+                e.preventDefault();
+                alert("Submit EditSyncQuery");
+
+                var syncQueryCode = $('#editSyncQueryCode').val();
+                var syncQuerySCode = $('#editSyncQuerySCode').val();
+                var syncQueryQCode = $('#editSyncQueryQCode').val();
+                var id = syncqueryid;
+                var isactive = $('#syncQueryIsActive').val();
+                var syncQueryQId = syncqueryqid;
+                var syncquerySId = syncquerysid;
+                var isActive;
+
+                if (isactive == 'unchecked') {
+                    isActive = false;
+                }
+                else if (isactive == 'checked') {
+                    isActive = true;
+                }
+
+                swal({
+                    title: 'Are you sure you want to save Sync Query?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateSyncQuery', {
+                            Id: id,
+                            SyncQueryCode: syncQueryCode,
+                            SyncCode: syncQuerySCode,
+                            QueryCode: syncQueryQCode,
+                            QueryId: syncQueryQId,
+                            SyncId: syncquerySId,
+                            IsActive: isActive,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+
+            })
+
+            .on('submit', '#editCrystalExtract', function (e) {
+                e.preventDefault();
+                //alert("editCrystalExtract")
+
+                var crystalName = $('#editCrystalName').val();
+                var crystalQueryCode = $('#editQueryCode').val();
+              /*  var crystalDocumentCode = $('#editDocumentCode').val();*/
+                var id = crystalid;
+                var isactive = $('#crystaExtractlIsActive').val();
+                var crystalQueryId = crystalqueryqid;
+                var crystalDocumentId = crystaldocumentid;
+                var isActive;
+                if (isactive == 'unchecked') {
+                    isActive = false;
+                }
+                else if (isactive == 'checked') {
+                    isActive = true;
+                }
+
+                swal({
+                    title: 'Are you sure you want to save API SyncSetup Extract?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateCrystalExtract', {
+                            Id: id,
+                            CrystalName: crystalName,
+                            CrystalQueryCode: crystalQueryCode,
+                           /* CrystalDocumentCode: crystalDocumentCode,*/
+                            QueryId: crystalQueryId,
+                            DocumentId: crystalDocumentId,
+                            IsActive: isActive,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+
+            })
+
+            .on('submit', '#editReportExtract', function (e) {
+                e.preventDefault();
+                //alert("editCrystalExtract")
+
+                var ReportName = $('#editReportName').val();
+
+                //var crystalQueryCode = 0;
+                var PathCode = $('#editPathCode').val();
+                var id = reportid;
+
+                var API = $('#editReportAPICode').val();
+                var isactive = $('#ReportExtractlIsActive').val();
+                var isActive;
+                if (isactive == 'unchecked') {
+                    isActive = false;
+                }
+                else if (isactive == 'checked') {
+                    isActive = true;
+                }
+
+                console.log(id)
+                console.log(PathCode)
+                console.log(API)
+                swal({
+                    title: 'Are you sure you want to save Crystal Extract?',
+                    text: "You want to save this data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('UpdateReportExtract', {
+                            Id: id,
+                            DocumentId: PathCode,
+                            APIId:API,
+                            IsActive: isActive,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#syncQueries").load("Sync #syncQueries");
+                                $('.modal').modal('hide');
+
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+
+            })
+
+
+
+
+
+
+
+        @*//data-sync-cid="@syncQuery.SyncQueryId">Sync</button>
+        //data-execute-cid="@syncQuery.SyncQueryId">Execute</button>*@
+
+            //.on('click', 'button[data-sync-cid]', function () {
+            //    var Id = syncqueryid;
+            //    $.post('TrySync', { Id: id }).done(function (data) {
+            //        if (data) {
+
+            //        }
+            //    }).fail(function () {
+            //        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+            //    });
+            //})
+
+            //AutoSync
+            //.on('click', 'button[data-execute-cid]', function () {
+            //    //var id = syncqueryid;
+            //    var id = $(this).data('execute-cid');
+            //    console.log(id);
+            //    $.post('TryExport', { Id: id }).done(result => {
+
+            //            swal('Success!', '', 'success')
+            //            $("#syncQueries").load("Sync #syncQueries");
+            //            $('.modal').modal('hide');
+
+            //            //$('#executeQueryTable').dataTable().clear().draw();
+            //            $('.modal').on('hidden.bs.modal', function () {
+            //                $(this).find("input,textarea,select").val('').end();
+
+            //            });
+
+            //    })
+
+            //})
+
+            .on('click', '#Export', function () {
+
+                var id = syncqueryid;
+                console.log(id);
+                $.post('TryExport', { Id: id }).done(result => {
+
+                        swal('Success!', '', 'success')
+                        //$("#syncQueries").load("Sync #syncQueries");
+                        $('.modal').modal('hide');
+
+                        //$('#executeQueryTable').dataTable().clear().draw();
+                        $('.modal').on('hidden.bs.modal', function () {
+                            $(this).find("input,textarea,select").val('').end();
+
+                        });
+
+                })
+
+            })
+
+
+
+
+            .on('click', 'button[data-execute-cid]', function () {
+                var id = $(this).data('execute-cid');
+
+                syncqueryid = id;
+                var newTable = '<thead><tr>';
+                $('#loading-modal').modal('show');
+                $.post('TryExecute', { Id: id }).done(function (data) {
+                    $('#loading-modal').modal('hide');
+                    if (data) {
+                        if (!data.success) {
+                            //<p class="text-red">Text red to emphasize danger</p>
+                            $("#execute-query").empty();
+                            //$('#execute-query').append('<p class="text-red">' + data.message + '</p>')
+                            //$('#execute-query-modal').modal('show');
+                            swal('Something went wrong.', data.message, 'warning')
+
+                        }
+                        else {
+                            $("#execute-query").empty();
+
+                            dataSet = data.JSONresult;
+                            var jsonobj = jQuery.parseJSON(dataSet);
+                            console.log(jsonobj[0])
+                            var my_columns = [];
+
+                            if (jsonobj == null || jsonobj == 0)
+                            {
+                                jsonobj = null;
+                            }
+                                //console.log(dataSet[0])
+                                $.each(jsonobj[0], function (key, value) {
+                                    var my_item = {};
+                                    my_item.data = key;
+                                    my_item.title = key;
+                                    my_columns.push(my_item);
+                                });
+
+                                $('#executeQueryTable').on('init.dt', function () {
+                                    $('#dismissBtn')
+                                        .attr('data-dismiss', 'modal');
+                                });
+                                $('#executeQueryTable').DataTable({
+                                    'destroy': true,
+                                    'paging': true,
+                                    'lengthChange': true,
+                                    'searching': true,
+                                    'ordering': true,
+                                    'info': true,
+                                    'autoWidth': false,
+                                    data: jsonobj,
+                                    "columns": my_columns,
+                                    "scrollCollapse": true,
+                                    "scrollY": 200,
+                                    "scrollX": true,
+
+                                })
+                                $('#execute-query-modal').modal('show');
+
+                        }
+
+                    }
+                }).fail(function () {
+                    swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                });
+            })
+
+
+
+            .on('click', 'button[data-crystalexecute-cid]', function () {
+
+                var id = $(this).data('crystalexecute-cid');
+
+                syncqueryid = id;
+                var newTable = '<thead><tr>';
+                $('#loading-modal').modal('show');
+                $.post(`/Linkbox/sap/crexport?id=${id}`).done(function (data) {
+                    $('#loading-modal').modal('hide');
+
+                    if (data) {
+                        const jsonString = JSON.stringify(data);
+                        console.log(jsonString);
+                        if (!(jsonString.includes("success"))) {
+                            //<p class="text-red">Text red to emphasize danger</p>
+                            $("#execute-query").empty();
+                            //$('#execute-query').append('<p class="text-red">' + data.message + '</p>')
+                            //$('#execute-query-modal').modal('show');
+                            swal('Something went wrong.', data.message, 'warning');
+
+                        }
+                        else {
+
+
+                                $("#execute-query").empty();
+                            swal('Successfully Done.', data.message, 'success');
+                            //    dataSet = data.JSONresult;
+                            //    var jsonobj = jQuery.parseJSON(dataSet);
+                            //    console.log(jsonobj[0])
+                            //    var my_columns = [];
+
+                            //    if (jsonobj == null || jsonobj == 0) {
+                            //        jsonobj = null;
+                            //    }
+                            //    //console.log(dataSet[0])
+                            //    $.each(jsonobj[0], function (key, value) {
+                            //        var my_item = {};
+                            //        my_item.data = key;
+                            //        my_item.title = key;
+                            //        my_columns.push(my_item);
+                            //    });
+
+                            //    $('#executeQueryTable').on('init.dt', function () {
+                            //        $('#dismissBtn')
+                            //            .attr('data-dismiss', 'modal');
+                            //    });
+                            //    $('#executeQueryTable').DataTable({
+                            //        'destroy': true,
+                            //        'paging': true,
+                            //        'lengthChange': true,
+                            //        'searching': true,
+                            //        'ordering': true,
+                            //        'info': true,
+                            //        'autoWidth': false,
+                            //        data: jsonobj,
+                            //        "columns": my_columns,
+                            //        "scrollCollapse": true,
+                            //        "scrollY": 200,
+                            //        "scrollX": true,
+
+                            //    })
+                            //    $('#execute-query-modal').modal('show');
+
+                            //}
+                        }
+                    }
+                }).fail(function () {
+                    swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                });
+            })
+
+            .on('ifClicked', 'input[name=createradio]', function (event) {
+                if ($(this).val() == "FTP")
+                {
+                    checkpath = "FTP";
+                    $(".ftp").attr("hidden", false);
+                    $(".local").attr("hidden", true);
+                }
+                else {
+                    checkpath = "Local"
+                    $(".ftp").attr("hidden", true);
+                    $(".local").attr("hidden", false);
+                }
+
+            })
+
+            .on('ifClicked', 'input[name=edit-radio]', function (event) {
+                if ($(this).val() == "FTP") {
+                    checkpath = "FTP";
+                    $(".edit-ftp").attr("hidden", false);
+                    $(".edit-local").attr("hidden", true);
+                }
+                else {
+                    checkpath = "Local"
+                    $(".edit-ftp").attr("hidden", true);
+                    $(".edit-local").attr("hidden", false);
+                }
+
+            })
+
+          $(".sync").focusout(function () {
+              var Code = $(this).val();
+              $.post('SyncValidateCode', { Code: Code }).done(result => {
+                  for (var x in result.SyncView) {
+
+                      if (result.SyncView[x].Code != "") {
+                          swal('Sync Code is already taken.', '', 'warning')
+                          $(this).val("");
+                          $(this).focus();
+                      }
+                  }
+              })
+          });
+
+          $(".query").focusout(function () {
+              var Code = $(this).val();
+              $.post('SyncValidateCode', { Code: Code }).done(result => {
+                  for (var x in result.QueryView) {
+
+                      if (result.QueryView[x].Code != "") {
+                          swal('Query Code is already taken.', '', 'warning')
+                          $(this).val("");
+                          $(this).focus();
+                      }
+                  }
+              })
+          });
+
+          $(".syncquery").focusout(function () {
+              var Code = $(this).val();
+              $.post('SyncValidateCode', { Code: Code }).done(result => {
+                  for (var x in result.SyncQueryView) {
+
+                      if (result.SyncQueryView[x].SyncQueryCode != "") {
+                          swal('Sync Query Code is already taken.', '', 'warning')
+                          $(this).val("");
+                          $(this).focus();
+                      }
+                  }
+              })
+          })
+        })//Andric
+    </script>
+
+    <script>
+        $("#createQueryCode").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createQueryCodeFormgroup').hasClass('error'))) {
+                $('#createQueryCodeFormgroup').append('<span class="help-block text-red">Query Code is Required</span>');
+            }
+            $('#createQueryCodeFormgroup').addClass('error');
+        });
+        $("#createQueryString").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createQueryStringFormgroup').hasClass('error'))) {
+                $('#createQueryStringFormgroup').append('<span class="help-block text-red">Query String is Required</span>');
+            }
+            $('#createQueryStringFormgroup').addClass('error');
+        });
+        $("#editQueryString").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editQueryStringFormgroup').hasClass('error'))) {
+                $('#editQueryStringFormgroup').append('<span class="help-block text-red">Query String is Required</span>');
+            }
+            $('#editQueryStringFormgroup').addClass('error');
+        });
+
+        $("#createSyncQueryCode").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncQueryCodeFormgroup').hasClass('error'))) {
+                $('#createSyncQueryCodeFormgroup').append('<span class="help-block text-red">Sync Query Code is Required</span>');
+            }
+            $('#createSyncQueryCodeFormgroup').addClass('error');
+        });
+
+        $("#createSyncCode").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncCodeFormgroup').hasClass('error'))) {
+                $('#createSyncCodeFormgroup').append('<span class="help-block text-red">Sync Code is Required</span>');
+            }
+            $('#createSyncCodeFormgroup').addClass('error');
+        });
+
+        $("#createSyncIpAddress").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncIpAddressFormgroup').hasClass('error'))) {
+                $('#createSyncIpAddressFormgroup').append('<span class="help-block text-red">Ip Address is Required</span>');
+            }
+            $('#createSyncIpAddressFormgroup').addClass('error');
+        });
+        $("#createSyncDbName").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncDbNameFormgroup').hasClass('error'))) {
+                $('#createSyncDbNameFormgroup').append('<span class="help-block text-red">Database Name is Required</span>');
+            }
+            $('#createSyncDbNameFormgroup').addClass('error');
+        });
+
+        $("#createSyncDbUser").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncDbUserFormgroup').hasClass('error'))) {
+                $('#createSyncDbUserFormgroup').append('<span class="help-block text-red">Database UserName is Required</span>');
+            }
+            $('#createSyncDbUserFormgroup').addClass('error');
+        });
+
+        $("#createSyncDbPass").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncDbPassFormgroup').hasClass('error'))) {
+                $('#createSyncDbPassFormgroup').append('<span class="help-block text-red">Database Pssword is Required</span>');
+            }
+            $('#createSyncDbPassFormgroup').addClass('error');
+        });
+        //$("#createSyncPath").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#createSyncPathFormgroup').hasClass('error'))) {
+        //        $('#createSyncPathFormgroup').append('<span class="help-block text-red">Extraction Path is Required</span>');
+        //    }
+        //    $('#createSyncPathFormgroup').addClass('error');
+        //});
+        $("#createSyncFileType").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#createSyncFileNameFormgroup').hasClass('error'))) {
+                $('#createSyncFileNameFormgroup').append('<span class="help-block text-red">File Type is Required</span>');
+            }
+            $('#createSyncFileNameFormgroup').addClass('error');
+        });
+        $("#editSyncIpAddress").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editSyncIpAddressFormgroup').hasClass('error'))) {
+                $('#editSyncIpAddressFormgroup').append('<span class="help-block text-red">IP Address is Required</span>');
+            }
+            $('#editSyncIpAddressFormgroup').addClass('error');
+        });
+        $("#editSyncDbName").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editSyncDbNameFormgroup').hasClass('error'))) {
+                $('#editSyncDbNameFormgroup').append('<span class="help-block text-red">Database Name is Required</span>');
+            }
+            $('#editSyncDbNameFormgroup').addClass('error');
+        });
+
+        $("#editSyncDbUser").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editSyncDbUserFormgroup').hasClass('error'))) {
+                $('#editSyncDbUserFormgroup').append('<span class="help-block text-red">Database UserName is Required</span>');
+            }
+            $('#editSyncDbUserFormgroup').addClass('error');
+        });
+
+        $("#editSyncDbPass").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editSyncDbPassFormgroup').hasClass('error'))) {
+                $('#editSyncDbPassFormgroup').append('<span class="help-block text-red">Database Password is Required</span>');
+            }
+            $('#editSyncDbPassFormgroup').addClass('error');
+        });
+
+        //$("#editSyncPath").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#editSyncPathFormgroup').hasClass('error'))) {
+        //        $('#editSyncPathFormgroup').append('<span class="help-block text-red">Extraction Path is Required</span>');
+        //    }
+        //    $('#editSyncPathFormgroup').addClass('error');
+        //});
+
+        $("#editSyncFileType").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#editSyncFileNameFormgroup').hasClass('error'))) {
+                $('#editSyncFileNameFormgroup').append('<span class="help-block text-red">File Type is Required</span>');
+            }
+            $('#editSyncFileNameFormgroup').addClass('error');
+        });
+
+        $('.modal').on('hidden.bs.modal', function (e) {
+            $('.form-group').removeClass('has-error');
+            $('.help-block').remove();
+            $("form").trigger('reset');
+            $("#editQueryString").attr('style', '');
+            $("#createQueryString").attr('style', '');
+        });
+    </script>
+
+
+}

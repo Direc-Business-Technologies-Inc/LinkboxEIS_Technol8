@@ -1,0 +1,600 @@
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DKT\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\ProjectFiles\DKT\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DKT\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DKT\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DKT\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DKT\LinkBox\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\DBTI\LinkBox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\NORTHTREND\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\NORTHTREND\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\Project\NORTHTREND\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\NORTHTREND\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\NORTHTREND\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\NORTHTREND\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\LinkBox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\Project\LinkBox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\LinkBox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\LinkBox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\LinkBox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csprojAssemblyReference.cache
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC_20220628_1015\Linkbox - NTMC\Linkbox - NTMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - QPAC\Linkbox - QPAC\Linkbox - QPAC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL07\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08-7649\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CopyComplete
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Project Files\DBTI\Linkbox_PL08\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_AMC\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\DomainLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+D:\Projects Visual Studio\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\DomainLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2 - GAVIN TEST\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\DomainLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_8.2_Strokes\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\DomainLayer.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\Linkbox_Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\InfrastructureLayer.pdb
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\DomainLayer.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Http.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Mvc.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Razor.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\DomainLayer.pdb
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.pdb
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Net.Http.Formatting.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Http.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Mvc.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.Razor.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.AssemblyReference.cache
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.csproj.CoreCompileInputs.cache
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\obj\Debug\Infrastr.B5BC0072.Up2Date
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.dll
+C:\DBTI\Project Files\LB-Laura\InfrastructureLayer\obj\Debug\InfrastructureLayer.pdb

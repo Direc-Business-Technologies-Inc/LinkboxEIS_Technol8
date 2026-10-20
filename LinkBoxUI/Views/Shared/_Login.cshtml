@@ -1,0 +1,51 @@
+﻿@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>LinkBox | Log in</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body class="login-page">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 mx-auto">
+                <div class="login-margin">
+                    <div class="login-box">
+                        @RenderBody()
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fix pull-right">
+            <img src="~/images/DBTI Logo PNG.png" class="img-responsive" width="100" height="100" alt="Direc">
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    @Styles.Render("~/Content/adminlogin/css")
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/adminlogin/bootstrap")
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

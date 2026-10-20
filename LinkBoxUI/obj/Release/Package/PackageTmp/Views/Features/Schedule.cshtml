@@ -1,0 +1,2257 @@
+﻿@model DomainLayer.ViewModels.SchedCreateViewMdel
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="hidden"><a href="#tab_1" data-toggle="tab">Upload Schedule Setup</a></li>
+                    <li class="active"><a href="#tab_2" data-toggle="tab">Email Schedule Setup</a></li>
+                    <li class="hidden"><a href="#tab_3" data-toggle="tab">Sync Schedule Setup</a></li>
+                    <li class="hidden"><a href="#tab_4" data-toggle="tab">API Schedule Setup</a></li>
+                    <li class=""><a href="#tab_5" data-toggle="tab">Upload Schedule Setup[One Per Sheet]</a></li>
+
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="tab_1">
+                        <div class="box">
+                            <div class="box-header">
+                                @*<h3 class="box-title">Upload Schedule Setup</h3>*@
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="uploadtable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Schedule Code</th>
+                                            <th>Frequency</th>
+                                            <th>Start Date</th>
+                                            <th>Start Time</th>
+                                            <th>Process</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sched in Model.SchedView)
+                                        {
+                                            if (sched.ScheduleType == "Upload")
+                                            {
+                                                <tr>
+                                                    <td width="5%"><button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal" data-sched-id="@sched.SchedId"></button></td>
+                                                    <td>@sched.SchedCode</td>
+                                                    <td>@sched.Frequency</td>
+                                                    <td>@sched.StartDateString</td>
+                                                    <td>@sched.StartTimeString</td>
+                                                    <td>@sched.Process</td>
+                                                    @if (sched.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                </tr>
+                                            }
+
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-modal">New</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane active" id="tab_2">
+
+                        <div class="box">
+                            <div class="box-header">
+                                @*<h3 class="box-title">Upload Schedule Setup</h3>*@
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="emailtable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Schedule Code</th>
+                                            <th>Frequency</th>
+                                            <th>Start Date</th>
+                                            <th>Start Time</th>
+                                            <th>Email Code</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sched in Model.SchedView)
+                                        {
+                                            if (sched.ScheduleType == "Email")
+                                            {
+                                                <tr>
+                                                    <td width="5%">
+                                                        <button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal-email" data-schedemail-id="@sched.SchedId"></button>
+                                                        <button type="button" class="btn-success btn-flat fa fa-play" id="sched-run" data-schedemail-id="@sched.SchedCode"></button>
+                                                    </td>
+                                                    <td>@sched.SchedCode</td>
+                                                    <td>@sched.Frequency</td>
+                                                    <td>@sched.StartDateString</td>
+                                                    <td>@sched.StartTimeString</td>
+                                                    <td>@sched.Process</td>
+                                                    @if (sched.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                </tr>
+                                            }
+
+                                        }
+                                    </tbody>
+                                </table>
+                                @*<button type="button" id="downloadExcelBtn">Download Excel</button>*@
+
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-modal-email">New</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab_3">
+                        <div class="box">
+                            <div class="box-header">
+                                @*<h3 class="box-title">Upload Schedule Setup</h3>*@
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="synctable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Schedule Code</th>
+                                            <th>Frequency</th>
+                                            <th>Start Date</th>
+                                            <th>Start Time</th>
+                                            <th>Sync Code</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sched in Model.SchedView)
+                                        {
+                                            if (sched.ScheduleType == "Sync")
+                                            {
+                                                <tr>
+                                                    <td width="5%"><button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal-sync" data-schedsync-id="@sched.SchedId"></button></td>
+                                                    <td>@sched.SchedCode</td>
+                                                    <td>@sched.Frequency</td>
+                                                    <td>@sched.StartDateString</td>
+                                                    <td>@sched.StartTimeString</td>
+                                                    <td>@sched.Process</td>
+                                                    @if (sched.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                </tr>
+                                            }
+
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-modal-sync">New</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane" id="tab_4">
+                        <div class="box">
+                            <div class="box-header">
+                                @*<h3 class="box-title">Upload Schedule Setup</h3>*@
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="crystaltable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Crystal Code</th>
+                                            <th>Frequency</th>
+                                            <th>Start Date</th>
+                                            <th>Start Time</th>
+                                            <th>Process</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sched in Model.SchedView)
+                                        {
+                                            if (sched.ScheduleType == "Crystal")
+                                            {
+                                                <tr>
+                                                    <td width="7%">
+                                                        <button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal" data-schedcrystal-id="@sched.SchedId"></button>
+                                                        <button type="button" class="btn-success btn-flat fa fa-play" id="crystal_sched-run" data-schedcrystal-id="@sched.SchedCode"></button>
+                                                    </td>
+                                                    <td>@sched.SchedCode</td>
+                                                    <td>@sched.Frequency</td>
+                                                    <td>@sched.StartDateString</td>
+                                                    <td>@sched.StartTimeString</td>
+                                                    <td>@sched.Process</td> 
+                                                    @if (sched.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                </tr>
+                                            }
+
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-modal-crystal">New</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+
+
+
+                    <div class="tab-pane" id="tab_5">
+                        <div class="box">
+                            <div class="box-header">
+                                @*<h3 class="box-title">Upload Schedule Setup</h3>*@
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="opstable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Process Code</th>
+                                            <th>Frequency</th>
+                                            <th>Start Date</th>
+                                            <th>Start Time</th>
+                                            <th>Process</th>
+                                            <th>Status</th>
+                                            <th>Run Task</th>
+                                            @*<th>Disable</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sched in Model.SchedView)
+                                        {
+                                            if (sched.ScheduleType == "OPS")
+                                            {
+                                                <tr>
+                                                    <td width="5%">
+                                                        <button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#OPSedit-modal" opsdata-sched-id="@sched.SchedId"></button>
+                                                    </td>
+                                                    <td>@sched.SchedCode</td>
+                                                    <td>@sched.Frequency</td>
+                                                    <td>@sched.StartDateString</td>
+                                                    <td>@sched.StartTimeString</td>
+                                                    <td>@sched.Process</td>
+                                                    @if (sched.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                <td>
+                                                    @*<button type="button" class="btn-success btn-flat fa fa-play" id="ops_sched-enable" data-schedops-id="@sched.SchedCode"></button>*@
+                                                    <button type="button" class="btn-success btn-flat fa fa-play" id="gvisched-run" data-schedgvi-id="@sched.SchedCode"></button>
+
+                                                </td>
+
+                                                    @*<td>
+                                                        <button type="button" class="btn-success btn-flat fa fa-stop-circle" id="ops_sched-disable" data-schedops-id="@sched.SchedCode"></button>
+                                                    </td>*@
+
+
+                                                </tr>
+                                            }
+
+                                        }
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#opscreate-modal">New</button>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- /.tab-pane --> 
+
+                </div>
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="create-modal">
+    <div class="modal-dialog">
+        <form id="sched-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="sched-code-formgroup">
+                            <label>*Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control sched" placeholder="Schedule Code" id="sched-code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="sched-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="sched-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="sched-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-module-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select a Process" id="sched-module" required>
+                                    @*@foreach (var mod in Model.ProcessList.Where(x=>x.ProcessType!="OPS"))
+                                    {
+                                        <option>@mod.ProcessCode</option>
+                                    }*@
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-save">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="opscreate-modal">
+    <div class="modal-dialog">
+        <form id="opssched-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Schedule Setup[OPS]</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="sched-code-formgroup">
+                            <label>*Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control sched" placeholder="Schedule Code" id="opssched-code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="opssched-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="opssched-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="opssched-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-module-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select a Process" id="opssched-module" required>
+                                    @foreach (var mod in Model.ProcessList)
+                                    {
+                                        <option>@mod.ProcessCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-save">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="create-modal-crystal">
+    <div class="modal-dialog">
+        <form id="crystalsched-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New API Sync Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="sched-code-formgroup">
+                            <label>*Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control sched" placeholder="Schedule Code" id="schedcrystal-code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="schedcrystal-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="schedcrystal-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="schedcrystal-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="sched-module-formgroup">
+                            <label>*API Setup Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select a Process" id="schedcrystal-module" required>
+                                    @foreach (var mod in Model.CrystalList)
+                                    {
+                                        <option>@mod.CrystalCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-save">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="edit-modal">
+    <div class="modal-dialog">
+        <form id="editschedcrystal-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Schedule Code" id="edit-schedcrystal-code" readonly>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="edit-schedcrystal-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="edit-schedcrystal-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="edit-schedcrystal-time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-sched-module-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" data-placeholder="Select a Process" id="edit-schedcrystal-module" required>
+                                    @foreach (var mod in Model.CrystalList)
+                                    {
+                                        <option>@mod.CrystalCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-schedcrystal-stat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="OPSedit-modal">
+    <div class="modal-dialog">
+        <form id="opseditsched-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Schedule Setup[OPS]</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Schedule Code" id="opsedit-sched-code" readonly>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="opsedit-sched-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="opsedit-sched-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="opsedit-sched-time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-sched-module-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" data-placeholder="Select a Process" id="opsedit-sched-module" required>
+                                    @foreach (var mod in Model.ProcessList)
+                                    {
+                                        <option>@mod.ProcessCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="opsedit-sched-stat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="create-modal-email">
+    <div class="modal-dialog">
+        <form id="schedemail-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Email Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="schedemail-code-formgroup">
+                            <label>*Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control sched" placeholder="Schedule Code" id="schedemail-code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="schedemail-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="schedemail-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="schedemail-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-module-formgroup">
+                            <label>*Email Credentials:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select Email Credentials" id="schedemail-cred" required>
+                                    @foreach (var mod in Model.EmailCred)
+                                    {
+                                        <option>@mod.EmailCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-module-formgroup">
+                            <label>*Email Template:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select Email Code" id="schedemail-module" required>
+                                    @foreach (var mod in Model.EmailList)
+                                    {
+                                        <option>@mod.EmailCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-api-formgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select API Code" id="schedemail-api" required>
+                                    @foreach (var mod in Model.APIList)
+                                    {
+                                        <option>@mod.APICode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-schedemail-save">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="edit-modal">
+    <div class="modal-dialog">
+        <form id="editsched-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Schedule Code" id="edit-sched-code" readonly>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="edit-sched-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="edit-sched-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-sched-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="edit-sched-time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-sched-module-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" data-placeholder="Select a Process" id="edit-sched-module" required>
+                                    @foreach (var mod in Model.ProcessList)
+                                    {
+                                        <option>@mod.ProcessCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-sched-stat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-sched-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="edit-modal-email">
+    <div class="modal-dialog">
+        <form id="editschedemail-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Schedule Code" id="edit-schedemail-code" readonly>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="edit-schedemail-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedemail-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="edit-schedemail-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedemail-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="edit-schedemail-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedemail-module-formgroup">
+                            <label>*Email Credentials:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select Email Credentials" id="edit-schedemail-cred" required>
+                                    @foreach (var mod in Model.EmailCred)
+                                    {
+                                        <option>@mod.EmailCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedemail-module-formgroup">
+                            <label>*Email Template:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" data-placeholder="Select Email Code" id="edit-schedemail-module" required>
+                                    @foreach (var mod in Model.EmailList)
+                                    {
+                                        <option>@mod.EmailCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedemail-api-formgroup">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select API Code" id="edit-schedemail-api" required>
+                                    @foreach (var mod in Model.APIList)
+                                    {
+                                        <option>@mod.APICode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-schedemail-stat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-schedemail-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+<div class="modal fade" id="create-modal-sync">
+    <div class="modal-dialog">
+        <form id="schedsync-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="schedsync-code-formgroup">
+                            <label>*Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control sched" placeholder="Schedule Code" id="schedsync-code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="schedsync-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedsync-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="schedsync-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedsync-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="schedsync-time" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="schedsync-module-formgroup">
+                            <label>*SyncQuery Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control  select2" style="width: 100%;" data-placeholder="Select SyncQuery Code" id="schedsync-module" required>
+                                    @foreach (var mod in Model.SyncList)
+                                    {
+                                        <option>@mod.SyncQueryCode</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-schedsync-save">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="edit-modal-sync">
+    <div class="modal-dialog">
+        <form id="editschedsync-submit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Schedule Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Schedule Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Schedule Code" id="edit-schedsync-code" readonly>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>*Frequency:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" id="edit-schedsync-frequency" required>
+                                    <option>One Time</option>
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedsync-date-formgroup">
+                            <label>*Start Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Breakdown Type" id="edit-schedsync-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" id="edit-schedsync-time-formgroup">
+                            <label>*Start Time:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Breakdown Type" id="edit-schedsync-time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-schedsync-module-formgroup">
+                            <label>*SyncQuery Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" style="width: 100%;" data-placeholder="Select SyncQuery Code" id="edit-schedsync-module" required>
+                                    @foreach (var mod in Model.SyncList)
+                                    {
+                                        <option>@mod.SyncQueryCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-schedsync-stat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-schedsync-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/admin/js/ScheduleValidation.js"></script>
+    <script>
+        $(function () {
+            $('[data-mask]').inputmask()
+
+            $('#uploadtable').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+
+
+            $('#crystaltable').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+
+
+            $('#opstable').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+            $('#emailtable').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+            $('#synctable').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+
+        $('.modal').on('hidden.bs.modal', function (e) {
+            //addon-submit
+            $("#sched-submit").trigger('reset');
+            $('#sched-module').val('').trigger('change');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.select2').select2()
+        });
+    </script>
+
+    <script>
+        var validate = "", ids = 0;
+        $(document)
+            .on('submit', '#sched-submit', function (e) {
+                e.preventDefault();
+                validate = "";
+                var SchedCode = $("#sched-code").val();
+                var SchedFrequency = $("#sched-frequency").val();
+                var SchedDate = $("#sched-date").val();
+                var SchedTime = $("#sched-time").val();
+                var SchedModule = $("#sched-module").val();
+                var type = "Upload";
+                module = SchedModule;
+                console.log(SchedModule);
+                swal({
+                    title: 'Are you sure you want to save new Schedule Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('CreateSchedule', {
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#opssched-submit', function (e) {
+                e.preventDefault();
+              
+                validate = "";
+                var SchedCode = $("#opssched-code").val();
+                var SchedFrequency = $("#opssched-frequency").val();
+                var SchedDate = $("#opssched-date").val();
+                var SchedTime = $("#opssched-time").val();
+                var SchedModule = $("#opssched-module").val();
+                var type = "OPS";
+                module = SchedModule;
+                console.log(SchedModule);
+                swal({
+                    title: 'Are you sure you want to save new Schedule Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    
+                    if (result.value) {
+
+                        $.post('CreateSchedule', {
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('click', '#crystal_sched-run', function () {
+                var code = $(this).data('schedcrystal-id');
+                $.post('/Features/RunSchedule', { Code: code }).done(result => {
+                    if (result) {
+                        swal('Success!', '', 'success')
+                    }
+                    else {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    }
+                })
+            })
+
+
+
+            //.on('click', '#downloadExcelBtn', function () {
+            //    alert("I Am click");
+            //    var reportName = 'PNReport'; // or get this from user input
+            //    var payrollPeriod = 'May26 Jun10 - AMC2024'; // or get this from user input
+            //    var urlToSend = `http://localhost:40711/Linkbox/PN/downloadFile?ReportName=${encodeURIComponent(reportName)}&payrollperiod=${encodeURIComponent(payrollPeriod)}`;
+
+            //    var req = new XMLHttpRequest();
+            //    req.open("GET", urlToSend, true);
+            //    req.responseType = "blob";
+            //    req.onload = function (event) {
+            //        var blob = req.response;
+            //        var fileName = 'instructor_report.xlsx'; // req.getResponseHeader(itemcode + '_report.xlsx'); if you have the fileName header available
+            //        var link = document.createElement('a');
+            //        link.href = window.URL.createObjectURL(blob);
+            //        link.download = fileName;
+            //        link.click();
+
+            //    };
+            //    req.onerror = function () {
+            //        reject({
+            //            status: this.status,
+            //            statusText: xhr.statusText
+            //        });
+            //    };
+            //    req.onprogress = function (event) {
+
+            //    };
+            //    req.send();
+            //})
+
+            .on('click', '#downloadExcelBtn', function () {
+                $('#preloader-modal').modal('show');
+                var baseUrl = 'http://192.168.2.32:8072'; // Change this as needed
+                var reportName = 'PNReport'; // or get this from user input
+                var payrollPeriod = 'May26 Jun10 - AMC2024'; // or get this from user input
+                var urlToSend = `${baseUrl}/Linkbox/PN/downloadFile?ReportName=${encodeURIComponent(reportName)}&payrollperiod=${encodeURIComponent(payrollPeriod)}`;
+
+                window.open(urlToSend, '_blank');
+
+                $('#preloader-modal').modal('hide');
+
+                //var req = new XMLHttpRequest();
+                //req.open("GET", urlToSend, true);
+                //req.responseType = "blob";
+                //req.onload = function (event) {
+                //    if (req.status === 200) { // Check if the response status is OK
+                      
+                      
+                //        var blob = req.response;
+                       
+                //        var disposition = req.getAllResponseHeaders('Content-Disposition');
+                      
+                //        var fileName = 'instructor_report.xlsx'; // Default filename
+                        
+                //        if (disposition) {
+                //            var matches = disposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/);
+                //            if (matches != null && matches[1]) {
+                //                fileName = matches[1].replace(/['"]/g, '').trim(); // Remove quotes and trim whitespace
+                //                // Additional cleanup to remove unwanted characters, if needed
+                //                fileName = fileName.replace(/_+$/, ''); // Remove trailing underscores, if any
+                //            }
+                //        }
+
+                //        var link = document.createElement('a');
+                //        link.href = window.URL.createObjectURL(blob);
+                //        link.download = fileName;
+                //        document.body.appendChild(link); // Append to body
+                //        link.click();
+                //        document.body.removeChild(link); // Remove the link after downloading
+                //    } else {
+                //        alert("Error: " + req.statusText); // Display error message if not 200 OK
+                //    }
+                //    $('#preloader-modal').modal('hide');
+                //};
+
+                //req.onerror = function () {
+                //    alert("An error occurred while trying to download the file."); // General error message
+                //};
+
+                //req.onprogress = function (event) {
+                //    // Optionally handle progress here (e.g., show a loading spinner)
+                //};
+
+                //req.send();
+            })
+
+            .on('submit', '#crystalsched-submit', function (e) {
+                e.preventDefault();
+                validate = "";
+                var SchedCode = $("#schedcrystal-code").val();
+                var SchedFrequency = $("#schedcrystal-frequency").val();
+                var SchedDate = $("#schedcrystal-date").val();
+                var SchedTime = $("#schedcrystal-time").val();
+                var SchedModule = $("#schedcrystal-module").val();
+                var type = "Crystal";
+                module = SchedModule;
+                //console.log(SchedCode);
+                //console.log(SchedFrequency)
+                //console.log(SchedDate)
+                //console.log(SchedTime)
+                //console.log(type);
+                //console.log(SchedModule);
+                swal({
+                    title: 'Are you sure you want to save new Schedule Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    console.log("DONE NA AKO")
+                    if (result.value) {
+
+                        $.post('CreateSchedule', {
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                swal('Success!', '', 'success')
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            } 
+
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }//end of result.value
+                })
+            })
+
+            .on('click', 'button[data-sched-id]', function () {
+                var id = $(this).data('sched-id');
+                var type = "Upload";
+                ids = id;
+                $.post('/Features/FindSchedule', { Id: id, Type: type }).done(result => {
+                    var i = 0;
+
+
+                    for (var x in result.SchedView) {
+
+                        var process = result.SchedView[x].Process;
+                        console.log(process);
+                        var arr = process.split(",");
+                        console.log(arr);
+                        $("#edit-sched-code").val(result.SchedView[x].SchedCode);
+                        $("#edit-sched-frequency").val(result.SchedView[x].Frequency);
+                        $('#edit-sched-frequency').trigger('change');
+                        $("#edit-sched-date").val(result.SchedView[x].StartDateString);
+                        $("#edit-sched-time").val(result.SchedView[x].StartTimeString);
+                        $("#edit-sched-module").val(arr);
+                        $('#edit-sched-module').trigger('change');
+
+                        if (result.SchedView[x].IsActive == true) {
+                            $('input:checkbox[id = edit-sched-stat]').iCheck('check');
+                            $('input:checkbox[id = edit-sched-stat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-sched-stat]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-sched-stat]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = edit-sched-stat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-sched-stat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-sched-stat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-sched-stat]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('click', 'button[opsdata-sched-id]', function () {
+                var id = $(this).attr('opsdata-sched-id');
+                var type = "OPS";
+                ids = id;
+                $.post('/Features/FindSchedule', { Id: id, Type: type }).done(result => {
+                    var i = 0;
+
+
+                    for (var x in result.SchedView) {
+
+                        var process = result.SchedView[x].Process;
+                        console.log("LOL");
+                        console.log(process);
+                        var arr = process.split(",");
+                        console.log(arr);
+                        $("#opsedit-sched-code").val(result.SchedView[x].SchedCode);
+                        $("#opsedit-sched-frequency").val(result.SchedView[x].Frequency);
+                        $('#opsedit-sched-frequency').trigger('change');
+                        $("#opsedit-sched-date").val(result.SchedView[x].StartDateString);
+                        $("#opsedit-sched-time").val(result.SchedView[x].StartTimeString);
+                        $("#opsedit-sched-module").val(arr);
+                        $('#opsedit-sched-module').trigger('change');
+
+                        if (result.SchedView[x].IsActive == true) {
+                            $('input:checkbox[id = opsedit-sched-stat]').iCheck('check');
+                            $('input:checkbox[id = opsedit-sched-stat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = opsedit-sched-stat]').iCheck('uncheck');
+                            $('input:checkbox[id = opsedit-sched-stat]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = opsedit-sched-stat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = opsedit-sched-stat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = opsedit-sched-stat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = opsedit-sched-stat]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('click', '#ops_sched-enable', function () {
+                var code = $(this).data('schedops-id');
+                $.post('/Features/EnableSchedule', { Code: code }).done(result => {
+                    if (result) {
+                        swal('Success!', '', 'success')
+                    }
+                    else {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    }
+                })
+            })
+
+
+            .on('click', '#ops_sched-disable', function () {
+                var code = $(this).data('schedops-id');
+                $.post('/Features/DisableSchedule', { Code: code }).done(result => {
+                    if (result) {
+                        swal('Success!', '', 'success')
+                    }
+                    else {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    }
+                })
+            })
+
+
+            .on('click', 'button[data-schedcrystal-id]', function () {
+                var id = $(this).data('schedcrystal-id');
+                var type = "Crystal";
+                ids = id;
+                $.post('/Features/FindSchedule', { Id: id, Type: type }).done(result => {
+                    var i = 0;
+
+
+                    for (var x in result.SchedView) {
+
+                        var process = result.SchedView[x].Process;
+                        console.log(process);
+                        var arr = process.split(",");
+                        console.log(arr);
+                        $("#edit-schedcrystal-code").val(result.SchedView[x].SchedCode);
+                        $("#edit-schedcrystal-frequency").val(result.SchedView[x].Frequency);
+                        $('#edit-schedcrystal-frequency').trigger('change');
+                        $("#edit-schedcrystal-date").val(result.SchedView[x].StartDateString);
+                        $("#edit-schedcrystal-time").val(result.SchedView[x].StartTimeString);
+
+                        $("#edit-schedcrystal-module").val(result.SchedView[x].Process);
+                        $('#edit-schedcrystal-module').trigger('change');
+
+                        if (result.SchedView[x].IsActive == true) {
+                            $('input:checkbox[id = edit-schedcrystal-stat]').iCheck('check');
+                            $('input:checkbox[id = edit-schedcrystal-stat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-schedcrystal-stat]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-schedcrystal-stat]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = edit-schedcrystal-stat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-schedcrystal-stat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-schedcrystal-stat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-schedcrystal-stat]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#editsched-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var SchedCode = $("#edit-sched-code").val();
+                var SchedFrequency = $("#edit-sched-frequency").val();
+                var SchedDate = $("#edit-sched-date").val();
+                var SchedTime = $("#edit-sched-time").val();
+                var SchedModule = $("#edit-sched-module").val();
+                var type = "Upload";
+                var i;
+                var mod = "";
+                for (i = 0; i < SchedModule.length; i++) {
+                    mod += SchedModule[i] + ",";
+                }
+                var IsActive;
+                var ChkboxVal = $('input:checkbox[id = edit-sched-stat]').val();
+                if (ChkboxVal == 'checked') { IsActive = true; }
+                else { IsActive = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "Are you sure you want to update Schedule Setup?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.getJSON('UpdateSchedule', {
+                            SchedId: id,
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            IsActive: IsActive,
+
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#opseditsched-submit', function (e) {
+                e.preventDefault();
+               
+                var id = ids;
+                var SchedCode = $("#opsedit-sched-code").val();
+                var SchedFrequency = $("#opsedit-sched-frequency").val();
+                var SchedDate = $("#opsedit-sched-date").val();
+                var SchedTime = $("#opsedit-sched-time").val();
+                var SchedModule = $("#opsedit-sched-module").val();
+                var type = "OPS";
+                var i;
+                var mod = "";
+                for (i = 0; i < SchedModule.length; i++) {
+                    mod += SchedModule[i] + ",";
+                }
+                var IsActive;
+                var ChkboxVal = $('input:checkbox[id = opsedit-sched-stat]').val();
+                if (ChkboxVal == 'checked') { IsActive = true; }
+                else { IsActive = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "Are you sure you want to update Schedule Setup?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    console.log(result);
+                    if (result.value) {
+                        $.getJSON('UpdateSchedule', {
+                            SchedId: id,
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            IsActive: IsActive,
+
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#editschedcrystal-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var SchedCode = $("#edit-schedcrystal-code").val();
+                var SchedFrequency = $("#edit-schedcrystal-frequency").val();
+                var SchedDate = $("#edit-schedcrystal-date").val();
+                var SchedTime = $("#edit-schedcrystal-time").val();
+                var SchedModule = $("#edit-schedcrystal-module").val();
+                var type = "Crystal";
+                var i;
+                var mod = "";
+                for (i = 0; i < SchedModule.length; i++) {
+                    mod += SchedModule[i] + ",";
+                }
+                var IsActive;
+                var ChkboxVal = $('input:checkbox[id = edit-schedcrystal-stat]').val();
+                if (ChkboxVal == 'checked') { IsActive = true; }
+                else { IsActive = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "Are you sure you want to update Schedule Setup?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.getJSON('UpdateSchedule', {
+                            SchedId: id,
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            IsActive: IsActive,
+
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#uploadtable").load("Schedule #uploadtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+
+            .on('submit', '#schedemail-submit', function (e) {
+                e.preventDefault();
+                validate = "";
+                var SchedCode = $("#schedemail-code").val();
+                var SchedFrequency = $("#schedemail-frequency").val();
+                var SchedDate = $("#schedemail-date").val();
+                var SchedTime = $("#schedemail-time").val();
+                var SchedModule = $("#schedemail-module").val();
+                var Schedcred = $("#schedemail-cred").val();
+                var api = $("#schedemail-api").val();
+                var type = "Email";
+                module = SchedModule;
+                console.log(SchedModule);
+                swal({
+                    title: 'Are you sure you want to save new Email Schedule Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('CreateSchedule', {
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            Api: api,
+                            Credential: Schedcred
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#emailtable").load("Schedule #emailtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+            .on('click', 'button[data-schedemail-id]', function () {
+                var id = $(this).data('schedemail-id');
+                var type = "Email";
+                ids = id;
+                $.post('/Features/FindSchedule', { Id: id, Type: type }).done(result => {
+                    var i = 0;
+
+
+                    for (var x in result.SchedView) {
+
+                        var process = result.SchedView[x].Process;
+                        var api = result.SchedView[x].Api;
+                        var cred = result.SchedView[x].Credential;
+                        var arr = process.split(",");
+                        var arr2 = api.split(",");
+                        var arr3 = cred.split(",");
+                        $("#edit-schedemail-code").val(result.SchedView[x].SchedCode);
+                        $("#edit-schedemail-frequency").val(result.SchedView[x].Frequency);
+                        $('#edit-schedemail-frequency').trigger('change');
+                        $("#edit-schedemail-date").val(result.SchedView[x].StartDateString);
+                        $("#edit-schedemail-time").val(result.SchedView[x].StartTimeString);
+                        $("#edit-schedemail-module").val(arr);
+                        $('#edit-schedemail-module').trigger('change');
+                        $("#edit-schedemail-cred").val(arr3);
+                        $('#edit-schedemail-cred').trigger('change');
+                        $("#edit-schedemail-api").val(arr2);
+                        $('#edit-schedemail-api').trigger('change');
+                        if (result.SchedView[x].IsActive == true) {
+                            $('input:checkbox[id = edit-schedemail-stat]').iCheck('check');
+                            $('input:checkbox[id = edit-schedemail-stat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-schedemail-stat]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-schedemail-stat]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = edit-schedemail-stat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-schedemail-stat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-schedemail-stat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-schedemail-stat]').val('unchecked');
+                        });
+                    }
+                })
+            })
+            .on('click', '#sched-run', function () { 
+                var code = $(this).data('schedemail-id');
+                $.post('/Features/RunSchedule', { Code: code }).done(result => {
+                    if (result) {
+                        swal('Success!', '', 'success')
+                    }
+                    else {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    }
+                })
+            })
+
+
+            .on('click', '#gvisched-run', function () {
+
+                var code = $(this).data('schedgvi-id');
+               
+                $.post('/Features/RunSchedule', { Code: code }).done(result => {
+                    if (result) {
+                        swal('Success!', '', 'success')
+                    }
+                    else {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    }
+                })
+            })
+
+            .on('submit', '#editschedemail-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var SchedCode = $("#edit-schedemail-code").val();
+                var SchedFrequency = $("#edit-schedemail-frequency").val();
+                var SchedDate = $("#edit-schedemail-date").val();
+                var SchedTime = $("#edit-schedemail-time").val();
+                var SchedModule = $("#edit-schedemail-module").val();
+                var Schedcred = $("#edit-schedemail-cred").val();
+                var api = $("#edit-schedemail-api").val();
+                var type = "Email";
+                var i;
+                var mod = "";
+                for (i = 0; i < SchedModule.length; i++) {
+                    mod += SchedModule[i] + ",";
+                }
+                var IsActive;
+                var ChkboxVal = $('input:checkbox[id = edit-schedemail-stat]').val();
+                if (ChkboxVal == 'checked') { IsActive = true; }
+                else { IsActive = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "Are you sure you want to update Schedule Setup?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.getJSON('UpdateSchedule', {
+                            SchedId: id,
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            IsActive: IsActive,
+                            Api: api,
+                            Credential: Schedcred
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                // $("#emailtable").load("Schedule #emailtable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+
+            .on('submit', '#schedsync-submit', function (e) {
+                e.preventDefault();
+                validate = "";
+                var SchedCode = $("#schedsync-code").val();
+                var SchedFrequency = $("#schedsync-frequency").val();
+                var SchedDate = $("#schedsync-date").val();
+                var SchedTime = $("#schedsync-time").val();
+                var SchedModule = $("#schedsync-module").val();
+                var type = "Sync";
+                module = SchedModule;
+                console.log(SchedModule);
+                swal({
+                    title: 'Are you sure you want to save new Schedule Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('CreateSchedule', {
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#synctable").load("Schedule #synctable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+            .on('click', 'button[data-schedsync-id]', function () {
+                var id = $(this).data('schedsync-id');
+                var type = "Sync";
+                ids = id;
+                $.post('/Features/FindSchedule', { Id: id, Type: type }).done(result => {
+                    var i = 0;
+
+
+                    for (var x in result.SchedView) {
+
+                        var process = result.SchedView[x].Process;
+                        var arr = process.split(",");
+                        console.log(arr);
+                        $("#edit-schedsync-code").val(result.SchedView[x].SchedCode);
+                        $("#edit-schedsync-frequency").val(result.SchedView[x].Frequency);
+                        $('#edit-schedsync-frequency').trigger('change');
+                        $("#edit-schedsync-date").val(result.SchedView[x].StartDateString);
+                        $("#edit-schedsync-time").val(result.SchedView[x].StartTimeString);
+                        $("#edit-schedsync-module").val(arr);
+                        $('#edit-schedsync-module').trigger('change');
+
+                        if (result.SchedView[x].IsActive == true) {
+                            $('input:checkbox[id = edit-schedsync-stat]').iCheck('check');
+                            $('input:checkbox[id = edit-schedsync-stat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-schedsync-stat]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-schedsync-stat]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = edit-schedsync-stat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-schedsync-stat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-schedsync-stat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-schedsync-stat]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#editschedsync-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var SchedCode = $("#edit-schedsync-code").val();
+                var SchedFrequency = $("#edit-schedsync-frequency").val();
+                var SchedDate = $("#edit-schedsync-date").val();
+                var SchedTime = $("#edit-schedsync-time").val();
+                var SchedModule = $("#edit-schedsync-module").val();
+                var type = "Sync";
+                var i;
+                var mod = "";
+                for (i = 0; i < SchedModule.length; i++) {
+                    mod += SchedModule[i] + ",";
+                }
+                var IsActive;
+                var ChkboxVal = $('input:checkbox[id = edit-schedsync-stat]').val();
+                if (ChkboxVal == 'checked') { IsActive = true; }
+                else { IsActive = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "Are you sure you want to update Schedule Setup?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.getJSON('UpdateSchedule', {
+                            SchedId: id,
+                            SchedCode: SchedCode,
+                            Frequency: SchedFrequency,
+                            StartDate: SchedDate,
+                            StartTime: SchedTime,
+                            Process: SchedModule,
+                            ScheduleType: type,
+                            IsActive: IsActive,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                // $("#synctable").load("Schedule #synctable");
+                                $('.modal').modal('hide');
+                                $('.modal').on('hidden.bs.modal', function () {
+                                    $(this).find("input,textarea,select").val('').end();
+
+                                });
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+
+        $(".sched").focusout(function () {
+            
+            var Code = $(this).val();
+            $.post('ValidateSchedule', { Code: Code }).done(result => {
+                for (var x in result.SchedView) {
+
+                    if (result.SchedView[x].SchedCode != "") {
+                        swal('Schedule Code is already taken.', '', 'warning')
+                        $(this).val("");
+                        $(this).focus();
+                    }
+
+                }
+            })
+        });
+
+    </script>
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/lazada/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/lazada/refresh",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.AuthController",
+    "Method": "Status",
+    "RelativePath": "api/auth/lazada/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.AuthController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/auth/lazada/token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Shopee.ShopeeAuthController",
+    "Method": "GetConfig",
+    "RelativePath": "api/auth/shopee/config",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Shopee.ShopeeAuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/shopee/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Shopee.ShopeeAuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/shopee/refresh",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Shopee.ShopeeAuthController",
+    "Method": "Status",
+    "RelativePath": "api/auth/shopee/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Shopee.ShopeeAuthController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/auth/shopee/token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.OrdersController",
+    "Method": "GetOrders",
+    "RelativePath": "api/lazada/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "createdAfter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.OrdersController",
+    "Method": "GetOrderById",
+    "RelativePath": "api/lazada/orders/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.OrdersController",
+    "Method": "GetOrderItems",
+    "RelativePath": "api/lazada/orders/{orderId}/items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.ProductsController",
+    "Method": "GetProducts",
+    "RelativePath": "api/lazada/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "offset",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.Lazada.ProductsController",
+    "Method": "TestImage",
+    "RelativePath": "api/lazada/products/test-image",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "GetAccessToken",
+    "RelativePath": "api/Netsuite/GetAccessToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "GetNetsuiteColumn",
+    "RelativePath": "api/Netsuite/GetNetsuiteColumn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "ItemQueryService",
+    "RelativePath": "api/Netsuite/ItemQueryData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "ColumnQueryService",
+    "RelativePath": "api/Netsuite/NetsuiteColumnData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "PostDataGet",
+    "RelativePath": "api/Netsuite/PostData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "NetsuitePost",
+    "RelativePath": "api/Netsuite/PostData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.NetsuiteController",
+    "Method": "QueryService",
+    "RelativePath": "api/Netsuite/QueryData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.ZaloraController",
+    "Method": "GetImageDetails",
+    "RelativePath": "api/Zalora/GetImageDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FileId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.ZaloraController",
+    "Method": "ViewImage",
+    "RelativePath": "api/Zalora/image/{sku}/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Application.WebApi.Controllers.ZaloraController",
+    "Method": "GetImages",
+    "RelativePath": "api/Zalora/images",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sku",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "internalIds",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

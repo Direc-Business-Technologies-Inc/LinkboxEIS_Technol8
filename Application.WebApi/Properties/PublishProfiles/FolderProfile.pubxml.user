@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\GAVIN DEPLOYMENT\WebApi</_PublishTargetUrl>
+    <History>True|2025-04-02T08:30:04.3821876Z;True|2025-03-15T11:22:20.7771182+08:00;True|2025-03-10T13:04:00.9555845+08:00;True|2025-03-07T16:52:16.8931089+08:00;True|2025-03-03T14:29:46.0290863+08:00;True|2025-02-25T09:37:39.1512294+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

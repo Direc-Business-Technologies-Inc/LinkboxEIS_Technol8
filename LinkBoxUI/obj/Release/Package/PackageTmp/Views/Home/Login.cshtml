@@ -1,0 +1,137 @@
+﻿@{Layout = "~/Views/Shared/_Login.cshtml"; }
+@model DomainLayer.ViewModels.LoginViewModels.Login
+
+@*<div class="login-box-container">
+
+    <div class="login-box-field">
+
+
+        <div class="row text-center middle">
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-5" style="margin-top:5%">
+                <img src="~/images/aqualogo.png" class="img-responsive" width="100%" height="100%" alt="Aqua">
+            </div>
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-5">
+                <img src="~/images/linkboxlogo.png" class="img-responsive" width="60%" height="100%" alt="Linkbox">
+
+            </div>
+
+        </div>
+        <br />
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <form action="../../Index" method="post">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group has-feedback">
+
+                    @Html.EditorFor(model => model.userName, new { htmlAttributes = new { @class = "form-control", placeholder = "User Name", id = "userName" } })
+                    @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+
+                    @Html.PasswordFor(model => model.password, new { @class = "form-control", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="submit" id="submit" class="btn btn-primary btn-block btn-flat  text-white" value="Login">Login</button>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>
+
+    <div class="login-box-body">
+
+    </div>
+</div>*@
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            <br />
+            <br />
+            <div class="fadeIn first">
+
+                <img src='@Url.Content("~/images/Laura's Logo.png")'
+                     id="icon"
+                     style="height: auto; position: sticky; max-width: 100%;"
+                     alt="User Icon" />
+
+            </div>
+            <br />
+
+            <!-- Login Form -->
+            @using (Html.BeginForm("Login", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.TextBoxFor(m => m.userName, new { @class = "fadeIn second txtlogin", @placeholder = "Username" })
+                <br />
+                @Html.ValidationMessageFor(m => m.userName, "", new { @class = "text-danger" })
+
+                @Html.PasswordFor(m => m.password, new { @class = "fadeIn third txtlogin", @placeholder = "Password" })
+                <br />
+                @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+                <br />
+                <input type="submit" id="submit" value="Log in" class="fadeIn fourth" />
+
+                @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+            }
+
+        </div>
+    </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).on('click', 'button[id = submit]', function () {
+        })
+
+        $(document).ready(function () {
+            if ("@ViewBag.WarningMessage" != "") {
+                swal('@ViewBag.WarningMessage', '', 'warning');
+            }
+            if ("@ViewBag.Attempt" != 0) {
+                if ("@ViewBag.Attempt" >= 3) {
+                    $('#submit').attr("disabled", "disabled");
+
+                    swal('Incorrect Username or Password', 'Login will be Disabled for 30 seconds because of 3 failed attempts', 'warning');
+                    var n = 30;
+                    setTimeout(countDown, 1000);
+
+                    function countDown() {
+                        n--;
+                        if (n > 0) {
+                            setTimeout(countDown, 1000);
+                            $('#submit').text("Login will be disabled for: " + n + " second(s)");
+                        }
+                        else {
+                            $('#submit').text("Login");
+                            $.post('SetCount')
+                        }
+                    }
+
+                    setTimeout(function () {
+                        $("#submit").removeAttr("disabled");
+                    }, 30000);
+                }
+            }
+
+        })
+    </script>
+}

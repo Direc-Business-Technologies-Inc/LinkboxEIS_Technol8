@@ -1,0 +1,171 @@
+﻿@model DomainLayer.ViewModels.MapCreateViewModel
+
+<section class="content-header">
+    <h1>
+        Field Mapping Configuration version
+    </h1>
+    <div class="row" id="map-selection">
+        <div class="register-box">
+            <div class="box">
+                <div class="register-box">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Field Mapping Option</h4>
+                    </div>
+                    <div class="register-box-body">
+                        <div class="social-auth-links text-center">
+                            <p>What data do you want to MAP?</p>
+
+                        </div>
+
+                        <select class="form-control" id="mdal-map-option" style="width: 100%;" required>
+
+                            <option value="mysql-sap-submit" hidden>Using MySQL Database to SAP</option>
+                            <option value="shopify-api-netsuite-submit" selected>Using Shopify API to Netsuite</option>
+                            <option value="one-map-submit" hidden>Using Data File to SAP [One Per Sheet]</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="mdal-btn-map-next">NEXT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="back-selection" hidden>
+        <div class="col-md-12">
+            <div class="box">
+                <div class="btn-group">
+                    <button class="btn btn-primary pull-left " id="btn-back-select">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="partial-view-container">
+
+    </div>
+</section>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#mdal-btn-map-next').click(function () {
+                var selectedOption = $('#mdal-map-option').val();
+
+                $.post('/Configuration/LoadMapping', { mappingOption: selectedOption }, function (result) {
+                    $('#map-selection').hide();
+                    $('#back-selection').show();
+                    $('#partial-view-container').html(result);
+                }).fail(function () {
+                    alert('Failed to load Partial. Please try again.');
+                });
+            });
+
+            $('#btn-back-select').click(function () {
+                $('#map-selection').show();
+                $('#back-selection').hide();
+                $('#partial-view-container').empty();
+            });
+        });
+    </script>
+    <script>
+
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.select2').select2()
+        });
+    </script>
+    <script>
+
+        function datatablereload() {
+            $('.tabledt').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': true
+            });
+            $('#db-db-header-table').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': true
+            });
+        };
+
+        $(function () {
+            $('.dt').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': true
+            });
+         
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+        //field-code-formgroup field-name-formgroup field-addon-formgroup field-sap-formgroup
+        //$("#field-path").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#field-path-formgroup').hasClass('error'))) {
+        //        $('#field-path-formgroup').append('<span class="help-block text-red">Path Code is Required</span>');
+        //    }
+        //    $('#field-path-formgroup').addClass('error');
+        //});
+
+        //$("#field-sap").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#field-sap-formgroup').hasClass('error'))) {
+        //        $('#field-sap-formgroup').append('<span class="help-block text-red">SAP Code is Required</span>');
+        //    }
+        //    $('#field-sap-formgroup').addClass('error');
+        //});
+        //$("#field-addon").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#field-addon-formgroup').hasClass('error'))) {
+        //        $('#field-addon-formgroup').append('<span class="help-block text-red">Addon Code is Required</span>');
+        //    }
+        //    $('#field-addon-formgroup').addClass('error');
+        //});
+        //$("#field-code").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#field-code-formgroup').hasClass('error'))) {
+        //        $('#field-code-formgroup').append('<span class="help-block text-red">Mapping Code is Required</span>');
+        //    }
+        //    $('#field-code-formgroup').addClass('error');
+        //});
+        //$("#field-name").on("invalid", function (e) {
+        //    e.preventDefault();
+        //    if (!($('#field-name-formgroup').hasClass('error'))) {
+        //        $('#field-name-formgroup').append('<span class="help-block text-red">Mapping Name is Required</span>');
+        //    }
+        //    $('#field-name-formgroup').addClass('error');
+        //});
+
+    </script>
+}

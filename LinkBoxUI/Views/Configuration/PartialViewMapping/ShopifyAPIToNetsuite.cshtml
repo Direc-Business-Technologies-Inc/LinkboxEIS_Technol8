@@ -1,0 +1,1510 @@
+﻿@model DomainLayer.ViewModels.MapCreateViewModel
+
+<form id="map-submit">
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid">
+
+                    <div class="box-body">
+                        <div class="col-md-6">
+                            <div class="form-group" id="field-code-formgroup">
+                                <label>Field Mapping Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <input type="text" class="form-control mapcode" placeholder="Code" id="field-code" required>
+                                    <div class="input-group-addon" id="open">
+                                        <button type="button" class="btn-info fa fa-search" style="float: right;" data-toggle="modal" data-target="#one-modal-field"></button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <div class="form-group" id="field-name-formgroup">
+                                <label>Field Mapping Name:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Name" id="field-name" required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+            <!-- /.box -->
+            <!--THIS IS THE START OF THE NEW ONE-->
+            <div class="col-md-6">
+                <h3>Source</h3>
+            </div>
+            <div class="col-md-6">
+                <h3>Destination</h3>
+            </div>
+
+
+
+            <!-- /.Source -->
+            <div class="col-md-6">
+
+                <div class="box box-solid">
+                    <div class="box-body">
+
+                        <div class="col-md-12">
+
+                            <div class="form-group" id="field-sap-formgroup">
+                                <label>API Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-server"></i>
+                                    </div>
+                                    <input type="text" class="form-control" maxlength="20" placeholder="API Code" id="api-field-s-source" readonly required>
+                                    <div class="input-group-addon" id="api-open">
+                                        <button type="button" class="btn-info fa fa-hand-o-right" style="float: right;" data-toggle="modal" data-target="#api-modal-source"></button>
+                                    </div>
+                                </div>
+
+                                @*<label class="" style="margin-bottom:0; margin-top:8px;">
+                                    API Posting Parameter
+                                </label>*@
+
+                                @*<div class="box-body">
+                                    <table id="api-param-s-table" class="table table-fields table-bordered table-striped field-table-s-rows">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Parameter Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="api-param-s-tbody"></tbody>
+                                    </table>
+                                    <div class="box-footer" style="padding-bottom:0px;">
+                                        <button type="button" class="btn margin btn-primary" style="float: right;" id="api-add-s-parameter">New Parameter</button>
+                                    </div>
+                                </div>*@
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <!--</div>-->
+                <!-- /.box -->
+                <!--THIS IS THE END OF THE NEW ONE-->
+
+            </div>
+
+
+            <!-- /.Destination -->
+            <div class="col-md-6 offset-md-6">
+                <div class="box box-solid">
+                    <div class="box-body">
+
+                        <div class="col-md-12">
+
+                            <div class="form-group" id="field-sap-formgroup">
+                                <label>API Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-server"></i>
+                                    </div>
+                                    <input type="text" class="form-control" maxlength="20" placeholder="API Code" id="api-field-d-source" readonly required>
+                                    <div class="input-group-addon" id="api-open">
+                                        <button type="button" class="btn-info fa fa-hand-o-right" style="float: right;" data-toggle="modal" data-target="#api-modal-dest"></button>
+                                    </div>
+                                </div>
+
+
+                                <label class="" style="margin-bottom:0; margin-top:8px;">
+                                    API Posting Parameter
+                                </label>
+
+                                <div class="box-body">
+                                    <table id="api-param-d-table" class="table table-fields table-bordered table-striped field-table-d-rows">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Parameter Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="api-param-d-tbody"></tbody>
+                                    </table>
+                                    <div class="box-footer" style="padding-bottom:0px;">
+                                        <button type="button" class="btn margin btn-primary" style="float: right;" id="api-add-d-parameter">New Parameter</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <!--</div>-->
+                <!-- /.box -->
+                <!--THIS IS THE END OF THE NEW ONE-->
+
+            </div>
+
+            <div class="col-xs-12">
+                <div class="nav-tabs-custom">
+
+                    <div style="margin-top:5px;margin-bottom:10px;padding-right:10px;padding-top:5px;">
+                        <ul style="list-style-type:none;float:right;">
+                            <li class="active"><button type="submit" class="btn btn-primary" id="field-save">Save</button></li>
+
+                        </ul>
+                    </div>
+
+
+                    <ul class="nav nav-tabs" id="field-tabs">
+                        <li class="active"><a href="#tab_1" data-toggle="tab">Header</a></li>
+                        <li><a href="#tab_2" data-toggle="tab">Row</a></li>
+                    </ul>
+
+
+
+                    <div class="tab-content" id="field-tab-content">
+
+                        <div class="tab-pane active" id="tab_1">
+                            <div class="box">
+
+                                <div class="box-body">
+                                    <table id="header-table" class="table table-fields table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+
+                                                <th></th>
+                                                <th>Source Field</th>
+                                                <th>Destination Field</th>
+                                                <th>Query</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="header-tbody"></tbody>
+                                    </table>
+                                </div>
+                                <div class="box-footer">
+
+                                    <button type="button" class="btn margin btn-primary" style="float: right;" id="add-headerfield">New Field</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="tab_2">
+                            <div class="box">
+                                @*<div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-database"></i> Table Name :
+                                        </h3>
+                                        <input type="text" placeholder="Table Name" id="row-tablename">
+
+                                    </div>*@
+                                <div class="box-body">
+                                    <table id="row-table" class="table table-fields table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+
+                                                <th></th>
+                                                <th>Source Field</th>
+                                                <th>Destination Field</th>
+                                                <th>Query</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="row-tbody"></tbody>
+                                    </table>
+                                </div>
+                                <div class="box-footer">
+                                    <button type="button" class="btn margin btn-primary" style="float: right;" id="add-rowfield">New Field</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+
+            </div>
+
+        </div><!---This is end of Row-->
+    </section>
+</form>
+
+
+<div class="modal fade" id="api-modal-source">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">API Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box-body">
+                    <table id="api-APIConfig" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Code</th>
+                                <th>Method</th>
+                                <th>URL</th>
+                                @*<th>Key</th>*@
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var apis in Model.APIView)
+                            {
+                                <tr>
+                                    <td>@apis.APIId</td>
+                                    <td>@apis.APICode</td>
+                                    <td>@apis.APIMethod</td>
+                                    <td>@apis.APIURL</td>
+                                    @*<td>@apis.APIKey</td>*@
+                                    <td><button class="btn-info fa fa-arrow-circle-o-right" data-api-apisourceid="@apis.APIId"></button></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-custom2 " data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="api-modal-dest">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">API Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box-body">
+                    <table id="api-APIConfig" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Code</th>
+                                <th>Method</th>
+                                <th>URL</th>
+
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var apis in Model.APIView)
+                            {
+                                <tr>
+                                    <td>@apis.APIId</td>
+                                    <td>@apis.APICode</td>
+                                    <td>@apis.APIMethod</td>
+                                    <td>@apis.APIURL</td>
+
+                                    <td><button class="btn-info fa fa-arrow-circle-o-right" data-api-apidestid="@apis.APIId"></button></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-custom2 " data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+<div class="modal modalz fade" id="one-modal-field">
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Field Mapping Details</h4>
+            </div>
+            <div class="modal-body">
+                <table id="FieldConfig" class="table table-bordered table-striped table-responsive w-100 dt">
+                    <thead>
+                        <tr>
+
+                            <th>Field Mapping Code</th>
+                            <th>Field Mapping Name </th>
+                            <th>SAP Code</th>
+                            <th>Module</th>
+                            @*<th>Path Code</th>*@
+
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var field in Model.FieldView)
+                        {
+                            <tr>
+                                <td>@field.MapCode</td>
+                                <td>@field.MapName</td>
+                                <td>@field.SAPCode</td>
+                                <td>@field.ModuleName</td>
+                                @*<td>@field.PathCode</td>*@
+                                @*<td>
+                                        <button type="button" class="btn-info fa fa-search" style="float: right;" data-toggle="modal" one-datamapid-search="@field.MapId" data-target="#one-modal-filename">Show</button>
+
+                                    </td>*@
+                                <td><button class="btn-info fa fa-arrow-circle-o-right" api-data-mapid="@field.MapId"></button></td>
+
+
+                                @*<td>@field.HeaderWorksheet</td>
+                                    <td>@field.RowWorksheet</td>*@
+                                @*<td>@field.FileName</td>
+                                    <td>@field.FileType</td>
+                                    <td><button class="btn-info fa fa-arrow-circle-o-right" data-mapid="@field.MapId"></button></td>*@
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-custom2 " data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+<script>
+    $(function () {
+        $('.select2').select2()
+    });
+
+</script>
+<script>
+
+    $(function () {
+        $('.dt').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'info': true,
+            'autoWidth': true
+        });
+
+    });
+
+</script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+        });
+    });
+</script>
+
+<script>
+    let destinationJson = [];
+    $(document).ready(function () {
+
+
+        @*$('#mysql-field-module').on('change', function () {
+
+            $('#preloader-modal').modal('show');
+            let fieldsap = $('#mysql-field-sap').val();
+            let fieldmodule = $('#mysql-field-module').val();
+
+            if (fieldsap != "" && $(this).val() != "") {
+                $.post("@Url.Action("FetchSAPAPIData", "Configuration")", {
+                    Code: fieldsap,
+                    Module: fieldmodule,
+                }).done(function (data) {
+                    if (data) {
+
+                        const myJSON = JSON.parse(data);
+                        destinationJson = myJSON;
+
+                        $(`#mysql-saptable`).empty();
+                        Object.entries(destinationJson.Rows).forEach(async ([key, value]) => {
+                            /*console.log(destinationJson);*/
+                            $(`#mysql-saptable`).append($('<option>', {
+                                value: key,
+                                text: key
+                            }));
+                        });
+
+                        $('#preloader-modal').modal('hide');
+
+                    }
+                }).fail(function () {
+                    swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                });
+            }
+
+        })*@
+
+
+
+    });
+</script>
+
+<script>
+
+
+    var SourceColumnValues = [];
+    var TableSaveValue = [];
+    var tabTextList = []
+    var createorupdate = 0, Mapid = 0;
+    var counth = 0, countr = 0;
+
+    var mapid = 0;
+    $(document)
+
+
+        .on('click', 'button[one-data-field-tablename]', async function () {
+
+            $(this).prop('disabled', true);
+
+            const tablename = $(this).attr('one-data-field-tablename');
+
+
+            const tbodytr = $(`#one-field-row-table-${tablename} tr`).length;
+            console.log(tbodytr)
+            let index = tbodytr;
+
+            countr = index;
+
+            filecomboid = "field-source-rowcombo_" + tablename + countr;
+            fileapicombo = "field-dest-rowapicombo_" + tablename + countr;
+            //datatypeid = "one-field-rowdata_" + tablename + countr;
+            conditionid = "field-rowcondition_" + tablename + countr;
+            checkid = "field-rowcheck_" + tablename + countr;
+
+
+            $(`#one-field-row-table-${tablename} tbody`).append('<tr id=""><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-headid = "" ></button></td>' +
+                '<td><select class="form-control select2 field-source-rowcombo" name ="" data-visorder="0" style="width: 100%;" id="' + filecomboid + '"></select></td>' +
+                '<td><select class="form-control select2 field-dest-apicombo" name="" style="width: 100%;" id="' + fileapicombo + '" data-table="' + tablename + '"></select></td>' +
+/*                '<td><input type="text" class="form-control ops-field-rowdatatype" placeholder="Data Type" id="' + datatypeid + '" readonly></td>' +*/
+                '<td><input type="text" class="form-control field-rowcondition" placeholder="Value" id="' + conditionid + '"readonly></td>' +
+                '<td style="display:flex; justify-content:center; align-items:center;"><input type="checkbox" style="transform: scale(2.0);" class="iCheck-helper headercheck" id="' + checkid + '" /></</td>' +
+                '</tr > ');
+
+
+            //Source Field
+
+            //populateCombo(filecomboid);
+
+
+            console.log("My Destination version 2")
+            console.log(destinationJson)
+            ///Destination Field
+
+                Object.entries(destinationJson.Rows[tablename]).forEach(async ([keyr, value]) => {
+                    ///console.log(`Key:${key} | KeyR:${keyr}`);
+                    $(`#${fileapicombo}`).append($('<option>', {
+                        value: keyr,
+                        text: keyr
+                    }));
+
+                });
+
+
+
+                $(this).prop('disabled', false);
+
+
+
+            $('.select2').select2();
+
+
+        })
+
+
+        .on('submit', '#map-submit', function (e) {
+            e.preventDefault();
+
+
+            //var sourceDestinationTb = [];
+
+            var mapping = [];
+            var check = createorupdate
+            var MapId = Mapid;
+
+            var sourceparam = [];
+            var destparam = [];
+
+
+
+            var FieldCode = $('#field-code').val();
+            var FieldName = $('#field-name').val();
+
+            var SourceAPICode = $('#api-field-s-source').val();
+            var DestAPICode = $('#api-field-d-source').val();
+
+
+
+            //var source_param = $('.field-table-s-rows');
+
+                $(`#api-param-s-tbody tr`, this).each(function () {
+                    //const sObject = {
+                    //    key: $('.api-param-s-key', this).val(),
+                    //    value: $('.api-param-s-value', this).val(),
+                    //    type:"source"
+                    //};
+                    //var key = $('.api-param-s-key', this).val();
+                    //var value = $('.api-param-s-value', this).val();
+                    //var type = "source";  // Add type "source"
+
+                    sourceparam.push([$('.api-param-s-key', this).val(), $('.api-param-s-value', this).val(), "source"]);
+                })
+
+            ///console.log(sourceparam)
+
+
+
+            $(`#api-param-d-tbody tr`, this).each(function () {
+                //const dObject = {
+                //    key: $('.api-param-d-key', this).val(),
+                //    value: $('.api-param-d-value', this).val(),
+                //    type: "dest"
+                //};
+                destparam.push([$('.api-param-d-key', this).val(), $('.api-param-d-value', this).val(), "dest"]);
+            })
+
+
+            var rowTables = $('.field-table-rows');
+            var IsRequired = false;
+            var i = 0;
+
+            $('#field-tabs li').each(function () {
+                let tabText = $(this).find('a').text().toLowerCase(); // Get the text of the <a> tag inside each <li>
+                let table = $(this).find('a').text();
+
+                // Loop through each row of the corresponding table
+                let visorder = 1;  // Reset visorder for each table row
+                $('#' + tabText + '-table tbody tr').each(function () {
+
+                    // Increment the order before assignment to track row order
+                    let order = visorder++;
+
+                    // Get the values of the source, dest, query, and check elements for this row
+                    let source = $('.' + tabText + 'source', this).val();
+                    let dest = $('.' + tabText + 'dest', this).val();
+                    let query = $('.' + tabText + 'query', this).val();
+                    let check = $('.' + tabText + 'check', this).prop('checked');
+
+                    if (check) {
+                        check = 1;
+                    } else {
+                        check = 0;
+                    }
+
+                    // Get the text from the row's <a> tag (may be redundant depending on the context)
+
+                    // Optional: mapid could be used or removed if not needed
+                      // Placeholder if needed later
+
+                    // Push the collected data into the mapping array
+                    mapping.push([source, dest, query, check, table, order, mapid]);
+
+                    // Log to console for debugging
+
+                });
+            });
+
+
+            console.log(mapping)
+
+
+            swal({
+                title: 'Are you sure you want to save this Field mapping Setup?',
+                text: "",
+                type: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+
+                if (result.value) {
+
+                    $('#preloader-modal').modal('show');
+
+                    $.post("@Url.Action("CreateMapping", "Configuration")", {
+
+                        MapId: MapId,
+                        MapCode: FieldCode,
+                        MapName: FieldName,
+                        APICode: SourceAPICode,
+                        SAPCode: DestAPICode,
+                        Source: sourceparam,
+                        Dest: destparam,
+                        MapFields: mapping
+                        }).done(function (data) {
+                        $('#preloader-modal').modal('hide');
+                        if (data) {
+                            swal({
+                                title: "Success!",
+                                text: "",
+                                type: "success",
+                                showConfirmButton: false,
+                                timer: 1500,
+                                onClose: () => {
+                                    window.location.href = "";
+                                }
+                            });
+                        }
+                    }).fail(function () {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    });
+
+                }
+
+            }) // end of Swal
+
+            $('#preloader-modal').modal('hide');
+
+        })
+
+
+        .on('click', 'button[api-data-mapid]', async function () {
+       
+           $(".modalz").modal('hide');
+            $('#preloader-modal').modal('show');
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            try {
+                table_array = [];
+                createorupdate = 1;
+
+                var id = $(this).attr('api-data-mapid');
+                Mapid = id;
+                $('#preloader-modal').modal('show');
+                $.post('APIFindMap', { Id: id }).done(result => {
+                    console.log(result);
+
+                    //$('#field-tabs').empty();
+
+                    $("#field-code").val(result.FieldView[0].MapCode).prop("readonly", true);
+                    $("#field-name").val(result.FieldView[0].MapName);
+
+                    $("#api-field-s-source").val(result.FieldView[0].APICode)
+                    $("#api-field-d-source").val(result.FieldView[0].SAPCode)
+
+
+
+                    $('#api-param-s-table tbody').empty();  // Clear existing rows in the s-table
+                    $('#api-param-d-table tbody').empty();
+                    for (var i = 0; i < result.DocumentMapViewList.length; i++) {
+                        var param = result.DocumentMapViewList[i];
+
+                        // Check for CreateUserId and append accordingly
+                        if (param.CreateUserId == "0") {
+                            var rowCount = $('#api-param-s-table tr').length;
+                            $('#api-param-s-table tbody').append(
+                                '<tr id="tr' + rowCount + '"><td width="5%"><button type="button" class="form-control btn-info btn-flat fa fa-trash" data-paramid="tr' + rowCount + '"></button></td>' +
+                                '<td><input type="text" class="form-control api-param-s-key" placeholder="Insert Parameter Key" id="paramkey-' + rowCount + '"></td>' +
+                                '<td><input type="text" class="form-control api-param-s-value" placeholder="Insert Value" id="paramval-' + rowCount + '"></td>' +
+                                '</tr>'
+                            );
+                            $(`#tr${rowCount} .fa-trash`).on('click', function () {
+                                $(this).closest('tr').remove(); // Removes the corresponding row
+                            });
+
+
+                            $(`#tr${rowCount} .api-param-s-key`).val(param.CrystalParam);
+                            $(`#tr${rowCount} .api-param-s-value`).val(param.QueryField);
+
+
+                        }
+
+                        if (param.CreateUserId == "1") {
+                            var rdowCount = $('#api-param-d-table tr').length;
+                            $('#api-param-d-table tbody').append(
+                                '<tr id="tr' + rdowCount + '"><td width="5%"><button type="button" class="form-control btn-info btn-flat fa fa-trash" data-paramid="tr' + rdowCount + '"></button></td>' +
+                                '<td><input type="text" class="form-control api-param-d-key" placeholder="Insert Parameter Key" id="paramkey-' + rdowCount + '"></td>' +
+                                '<td><input type="text" class="form-control api-param-d-value" placeholder="Insert Value" id="paramval-' + rdowCount + '"></td>' +
+                                '</tr>'
+                            );
+                            $(`#tr${rdowCount} .fa-trash`).on('click', function () {
+                                $(this).closest('tr').remove(); // Removes the corresponding row
+                            });
+
+                            $(`#tr${rdowCount} .api-param-d-key`).val(param.CrystalParam);
+                            $(`#tr${rdowCount} .api-param-d-value`).val(param.QueryField);
+                        }
+                    }
+
+                    $('#header-table tbody').empty();  // Clear existing rows in the s-table
+                    $('#row-table tbody').empty();
+
+
+
+                    (async function () {
+
+                        var SHopifyColumn = null;
+                        var NetsuiteColumn = null;
+                        var getsourceAPIValue = $('#api-field-s-source').val();
+                        var getdestAPIValue = $('#api-field-d-source').val();
+
+
+                        let sourceapiUrl = "";
+                        let destapiUrl = "";
+
+                         await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                             Code: getsourceAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+                             }).done(function (data) {
+                                 if (data.success) {
+                                     sourceapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                                 }
+                             }).fail(function () {
+                                 swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                             });
+
+                       await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                         Code: getdestAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+                       }).done(function (data) {
+                           if (data.success) {
+                               destapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                           }
+                       }).fail(function () {
+                           swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                       });
+
+
+
+
+
+                 // Use fetch to make the GET request
+                 await fetch(sourceapiUrl, {
+                     method: 'GET',
+                     headers: {
+                         'Content-Type': 'application/json',
+                     }
+                 })
+                     .then(response => response.json())
+                     .then(data => {
+                         if (data != null) {
+                             SHopifyColumn = data; // Assigning the fetched data to SHopifyColumn
+                             console.log(SHopifyColumn)
+                         }
+                     })
+                     .catch(error => {
+                         alert('There was a problem with the fetch operation for source API: ' + error);
+                     });
+
+                        console.log(destapiUrl);
+                 // Use fetch to make the GET request for destination API
+                 await fetch(destapiUrl, {
+                     method: 'GET',
+                     headers: {
+                         'Content-Type': 'application/json',
+                     }
+                 })
+                     .then(response => {
+                         if (!response.ok) {
+                             return response.text().then(text => { throw new Error(text); });
+                         }
+                         return response.text();
+                     })
+                     .then(text => {
+                         // Log the raw response for debugging
+                         //console.log('Raw response text:', text);
+                         // Check if the response is HTML
+                         if (text.trim().startsWith('<')) {
+                             alert('API returned HTML (error page or not found). Check the endpoint and server.');
+                             return;
+                         }
+                         try {
+
+                             const data = JSON.parse(text);
+                             NetsuiteColumn = data;
+
+                         } catch (error) {
+                             console.error('Error parsing JSON:', error);
+                             alert('Error parsing response JSON: ' + error);
+                         }
+                     })
+                     .catch(error => {
+                         alert('There was a problem with the fetch operation for destination API: ' + error);
+                     });
+
+
+
+                        if (SHopifyColumn != null && NetsuiteColumn != null) {
+
+                            for (var i = 0; i < result.Headers.length; i++) {
+
+                                var tablename = result.Headers[i].TableName.toLowerCase();
+
+                                if (tablename == "header") {
+
+                                    let h_sourcefield = result.Headers[i].SourceFieldId;
+                                    let h_destinationfield = result.Headers[i].DestinationField;
+                                    let h_ConditionalQuery = result.Headers[i].ConditionalQuery;
+                                    let h_isRequred = result.Headers[i].IsRequired;
+
+
+
+                                    counth = counth + 1;
+                                    console.log(counth)
+
+                                    sourceid = "source" + counth;
+                                    destinationid = "destination" + counth;
+                                    queryid = "queryfield" + counth;
+                                    checkid = "check" + counth;
+
+                                    var arr = [];
+                                    var disable = "";
+                                    $('#header-table tbody').append('<tr id="tr' + counth + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-headid = "tr' + counth + '" ></button></td>' +
+                                        '<td><select class="form-control select2 headersource" name ="' + sourceid + '" style="width: 100%;" id="' + sourceid + '"></select></td>' +
+                                        '<td><select class="form-control select2 headerdest" name="' + destinationid + '" style="width: 100%;" id="' + destinationid + '"></select></td>' +
+                                        '<td> <input type="text" class="form-control headerquery" placeholder="" id="' + queryid + '"></td>' +
+                                        '<td style="display:flex; justify-content:center; align-items:center;"><input type="checkbox" class="iCheck-helper headercheck" style="transform: scale(2.0);" value="unchecked" id="' + checkid + '" ' + disable + '/></</td></tr>');
+                                    $(`#tr${counth} .fa-trash`).on('click', function () {
+                                        $(this).closest('tr').remove(); // Removes the corresponding row
+                                    });
+
+                                    const $sel = $('#' + sourceid);
+
+                                    $sel.empty();
+
+                                    $('#' + sourceid).append(new Option('Query', 'Query'));
+                                    $('#' + sourceid).append(new Option('Static Value', 'Static Value'));
+
+                                    // Add dynamic Shopify options
+                                    for (var x in SHopifyColumn) {
+                                        const value = SHopifyColumn[x];
+                                        const isSelected = (h_sourcefield === value);
+
+                                        $sel.append(new Option(value, value, isSelected, isSelected));
+                                    }
+
+                                    if (h_sourcefield === "Query" || h_sourcefield === "Static Value") {
+                                        $sel.val(h_sourcefield);
+                                    }
+
+                                    $('#' + sourceid).select2();
+
+                                    const $des = $('#' + destinationid);
+                                    $des.empty();
+
+                                    for (var x in NetsuiteColumn) {
+                                        const value = NetsuiteColumn[x];
+                                        const isSelected = (h_destinationfield === value);
+
+                                        $des.append(new Option(value, value, isSelected, isSelected));
+                                    }
+
+                                    $('#' + destinationid).select2();
+
+                                    $('#' + queryid).val(h_ConditionalQuery);
+
+                                    if (h_isRequred == true) {
+                                        $('#' + checkid).prop("checked", true);
+
+                                    }
+
+                                }//end of if header
+                                else {
+
+                                    let r_sourcefield = result.Headers[i].SourceFieldId;
+                                    let r_destinationfield = result.Headers[i].DestinationField;
+                                    let r_ConditionalQuery = result.Headers[i].ConditionalQuery;
+                                    let r_isRequred = result.Headers[i].IsRequired;
+
+                                    countr = countr + 1;
+                                    console.log(countr)
+
+                                    sourceid = "source_r" + countr;
+                                    destinationid = "destination_r" + countr;
+                                    queryid = "queryfield_r" + countr;
+                                    checkid = "check_r" + countr;
+
+                                    var arr = [];
+                                    var disable = "";
+                                    $('#row-table tbody').append('<tr id="tr' + countr + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-headid = "tr' + countr + '" ></button></td>' +
+                                        '<td><select class="form-control select2 rowsource" name ="' + sourceid + '" style="width: 100%;" id="' + sourceid + '"></select></td>' +
+                                        '<td><select class="form-control select2 rowdest" name="' + destinationid + '" style="width: 100%;" id="' + destinationid + '"></select></td>' +
+                                        '<td> <input type="text" class="form-control rowquery" placeholder="" id="' + queryid + '"></td>' +
+                                        '<td style="display:flex; justify-content:center; align-items:center;"><input type="checkbox" class="iCheck-helper rowcheck" style="transform: scale(2.0);" value="unchecked" id="' + checkid + '" ' + disable + '/></</td></tr>');
+                                    $(`#tr${countr} .fa-trash`).on('click', function () {
+                                        $(this).closest('tr').remove(); // Removes the corresponding row
+                                    });
+
+
+
+                                    const $sel = $('#' + sourceid);
+
+                                    $sel.empty();
+
+                                    $('#' + sourceid).append(new Option('Query', 'Query'));
+                                    $('#' + sourceid).append(new Option('Static Value', 'Static Value'));
+
+                                    // Add dynamic Shopify options
+                                    for (var x in SHopifyColumn) {
+                                        const value = SHopifyColumn[x];
+                                        const isSelected = (r_sourcefield === value);
+
+                                        $sel.append(new Option(value, value, isSelected, isSelected));
+                                    }
+
+                                    if (r_sourcefield === "Query" || r_sourcefield === "Static Value") {
+                                        $sel.val(r_sourcefield);
+                                    }
+
+                                    $('#' + sourceid).select2();
+
+                                    const $des = $('#' + destinationid);
+                                    $des.empty();
+
+                                    for (var x in NetsuiteColumn) {
+                                        const value = NetsuiteColumn[x];
+                                        const isSelected = (r_destinationfield === value);
+
+                                        $des.append(new Option(value, value, isSelected, isSelected));
+                                    }
+
+                                    $('#' + destinationid).select2();
+
+                                    $('#' + queryid).val(r_ConditionalQuery);
+
+                                    if (r_isRequred == true) {
+                                        $('#' + checkid).prop("checked", true);
+
+                                    }
+
+
+                                }//end of else
+
+                            }//end of forloop
+
+
+                        }//end of if
+
+
+                    })()//end of async function
+
+
+                })
+
+                $('#preloader-modal').modal('hide');
+
+             
+            } catch (error) {
+                $('#preloader-modal').modal('hide');
+
+                $(".modalz").modal('hide');
+            }
+
+
+        })//end of one field map
+
+        .on('click', 'button[data-delete]', function (e) {
+            e.stopPropagation(); // prevent tab switching on click
+
+            const key = $(this).data('delete');
+
+            if (key.includes("Header")) {
+                swal("Fail", 'Cannot Remove Header', 'warning');
+                return;
+            }
+
+            swal({
+                title: 'Are you sure you want to Delete this Table?',
+                text: "",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+
+                if (result.value) {
+
+                    // Remove tab list item
+                    $(this).closest('li').remove();
+
+                    // Remove tab content
+                    $(`#one_tab_${key}`).remove();
+
+                    const tablename = $(this).data('delete')
+
+                    $(`#one-field-row-table-${key} tbody`).empty(); // This is cleaner than `.remove()`
+
+                    // Remove from tabTextList array
+                    const index = tabTextList.indexOf(key);
+                    if (index !== -1) {
+                        tabTextList.splice(index, 1);
+                    }
+
+                    // Activate the first tab if none is active
+                    if ($('#field-tabs li.active').length === 0) {
+                        $('#field-tabs li:first-child a').tab('show');
+                    }
+                }
+
+            })
+
+        })
+
+        .on('change', '.field-source-rowcombo', function () {
+
+
+            var selectedOption = $(this).find('option:selected');
+
+            // Get the text value of the selected option
+            var textValue = selectedOption.text();
+
+            var changedValue = $(this).val();
+
+            console.log(textValue)
+            var tblkey = $(this).data('table');
+
+            if (textValue === "Query" || textValue === "Static Value") {
+
+                $(this).closest('tr').find('.field-rowcondition').prop("readonly", false);
+                $(this).closest('tr').find('.field-rowcondition').val("");
+
+            } else {
+                $(this).closest('tr').find('.field-rowcondition').val("");
+                $(this).closest('tr').find('.field-rowcondition').prop("readonly", true);
+
+
+            }
+
+        })
+
+        .on('click', 'button[data-headid]', function (e) {
+            e.preventDefault();
+
+            const $row = $(this).closest('tr');
+            $row.remove();
+
+        })
+
+        .on('shown.bs.tab', '#field-tabs', function (event) {
+
+            var hreftext = $(event.target).text().trim();
+
+            $('#mysql-saptable').val(hreftext).trigger('change');
+
+        })
+
+        .on('click', 'button[data-api-apisourceid]', function () {
+            var id = $(this).data('api-apisourceid');
+            console.log(id)
+            $.post('FindAPI', { Id: id }).done(result => {
+                if (result.APIView.length > 0) {
+                    $('#api-field-s-source').val(result.APIView[0].APICode);
+                    //$('#api-field-s-source').val(result.APIView[0].APIModule);
+                    //$('#api-field-s-source').trigger('change');
+                }
+            })
+            $(".modal").modal('hide');
+        })
+
+        .on('click', 'button[data-api-apidestid]', function () {
+                var id = $(this).data('api-apidestid');
+                console.log(id)
+                $.post('FindAPI', { Id: id }).done(result => {
+                    if (result.APIView.length > 0) {
+                        $('#api-field-d-source').val(result.APIView[0].APICode);
+                        //$('#api-field-d-module').val(result.APIView[0].APIModule);
+                        //$('#api-field-d-module').trigger('change');
+
+                    }
+                })
+                $(".modal").modal('hide');
+        })
+
+        .on('click', '#api-add-s-parameter', function () {
+
+            var rowCount = $('#api-param-s-table tr').length;
+            $('#api-param-s-table tbody').append(
+                '<tr id="tr' + rowCount + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-paramid = "tr' + rowCount + '"></button></td>' +
+                '<td><input type="text" class="form-control api-param-s-key" placeholder="Insert Parameter Key" id="' + "paramkey-" + rowCount + '"></td>' +
+                '<td><input type="text" class="form-control api-param-s-value" placeholder="Insert Value" id="' + "paramval-" + rowCount + '"></td>'
+            )
+            $(`#tr${rowCount} .fa-trash`).on('click', function () {
+                $(this).closest('tr').remove(); // Removes the corresponding row
+            });
+
+        })
+
+        .on('click', '#api-add-d-parameter', async function () {
+
+            var rowCount = $('#api-param-d-table tr').length;
+            $('#api-param-d-table tbody').append(
+                '<tr id="tr' + rowCount + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-paramid = "tr' + rowCount + '"></button></td>' +
+                '<td><input type="text" class="form-control api-param-d-key" placeholder="Insert Parameter Key" id="' + "paramkey-" + rowCount + '"></td>' +
+                '<td><input type="text" class="form-control api-param-d-value" placeholder="Insert Value" id="' + "paramval-" + rowCount + '"></td>'
+            )
+            $(`#tr${rowCount} .fa-trash`).on('click', function () {
+                $(this).closest('tr').remove(); // Removes the corresponding row
+            });
+        })
+
+        .on('click', '#add-headerfield', async function () {
+            if ($.trim($('#field-code').val()) == '') {
+                swal('Field Mapping is empty.', 'Please input the Field Code Mapping', 'warning')
+            }
+            else if ($.trim($('#field-name').val()) == '') {
+                swal('Field Name is empty.', 'Please input the Field Mapping Name', 'warning')
+            }
+            else {
+
+               // var headertable = $("#field-module").find(':selected').data('htable');
+
+
+                var SHopifyColumn = null;
+                var NetsuiteColumn = null;
+                var getsourceAPIValue = $('#api-field-s-source').val();
+                var getdestAPIValue = $('#api-field-d-source').val();
+
+
+                let sourceapiUrl = "";
+                let destapiUrl = "";
+
+
+               await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                            Code: getsourceAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+                            }).done(function (data) {
+                                if (data.success) {
+                                    sourceapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                                }
+                            }).fail(function () {
+                                swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                            });
+
+              await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                Code: getdestAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+              }).done(function (data) {
+                  if (data.success) {
+                      destapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                  }
+              }).fail(function () {
+                  swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+              });
+                // Replace with your actual server URL
+
+
+                console.log(destapiUrl);
+
+                // Use fetch to make the GET request
+                await fetch(sourceapiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data != null) {
+                            SHopifyColumn = data; // Assigning the fetched data to SHopifyColumn
+                        }
+                    })
+                    .catch(error => {
+                        alert('There was a problem with the fetch operation for source API: ' + error);
+                    });
+
+                // Use fetch to make the GET request for destination API
+                await fetch(destapiUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.text().then(text => { throw new Error(text); });
+                        }
+                        return response.text();
+                    })
+                    .then(text => {
+                        // Log the raw response for debugging
+                        //console.log('Raw response text:', text);
+                        // Check if the response is HTML
+                        if (text.trim().startsWith('<')) {
+                            alert('API returned HTML (error page or not found). Check the endpoint and server.');
+                            return;
+                        }
+                        try {
+                            const data = JSON.parse(text);
+                            NetsuiteColumn = data;
+                            console.log('Parsed JSON:', data); // This should be your array
+                            // Use data as needed
+                        } catch (error) {
+                            console.error('Error parsing JSON:', error);
+                            alert('Error parsing response JSON: ' + error);
+                        }
+                    })
+                    .catch(error => {
+                        alert('There was a problem with the fetch operation for destination API: ' + error);
+                    });
+
+                // Now you can use SHopifyColumn and NetsuiteColumn
+                //console.log(SHopifyColumn, NetsuiteColumn);
+
+                //console.log(NetsuiteColumn)
+
+                if (SHopifyColumn != null && NetsuiteColumn!=null) {
+
+                    counth = counth + 1;
+                    sourceid = "source" + counth;
+                    destinationid = "destination" + counth;
+                    queryid = "queryfield" + counth;
+                    checkid = "check" + counth;
+
+                    var arr = [];
+                    var disable = "";
+                    $('#header-table tbody').append('<tr id="tr' + counth + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-headid = "tr' + counth + '" ></button></td>' +
+                        '<td><select class="form-control select2 headersource" name ="' + sourceid + '" style="width: 100%;" id="' + sourceid + '"></select></td>' +
+                        '<td><select class="form-control select2 headerdest" name="' + destinationid + '" style="width: 100%;" id="' + destinationid + '"></select></td>' +
+                        '<td> <input type="text" class="form-control headerquery" placeholder="" id="' + queryid + '"></td>' +
+                        '<td style="display:flex; justify-content:center; align-items:center;"><input type="checkbox" class="iCheck-helper headercheck" style="transform: scale(2.0);" value="unchecked" id="' + checkid + '" ' + disable + '/></</td></tr>');
+                    $(`#tr${counth} .fa-trash`).on('click', function () {
+                        $(this).closest('tr').remove(); // Removes the corresponding row
+                    });
+
+                    $('#' + sourceid).empty();
+                    $('#' + sourceid).append(new Option('Query', 'Query'));
+                    $('#' + sourceid).append(new Option('Static Value', 'Static Value'));
+                    for (var x in SHopifyColumn) {
+                        $('#' + sourceid).append($('<option>', {
+                            value: SHopifyColumn[x],
+                            text: SHopifyColumn[x]
+                        }));
+                    }
+                    $('#' + sourceid).select2();
+
+                    $('#' + destinationid).empty();
+                    for (var x in NetsuiteColumn) {
+                        $('#' + destinationid).append($('<option>', {
+                            value: NetsuiteColumn[x],
+                            text: NetsuiteColumn[x]
+                        }));
+                    }
+                    $('#' + destinationid).select2();
+
+                }
+            }
+        })
+
+        .on('click', '#add-rowfield', async function () {
+            if ($.trim($('#field-code').val()) == '') {
+                swal('Field Mapping is empty.', 'Please input the Field Code Mapping', 'warning')
+            }
+            else if ($.trim($('#field-name').val()) == '') {
+                swal('Field Name is empty.', 'Please input the Field Mapping Name', 'warning')
+            }
+            else {
+
+                // var headertable = $("#field-module").find(':selected').data('htable');
+                //var rowtable = $("#field-module").find(':selected').data('rtable');
+
+                var SHopifyColumn = null;
+                //const sourceapiUrl = 'http://localhost:40711/Linkbox/api/GetShopifyOrder';  // Replace with your actual server URL
+                var getsourceAPIValue = $('#api-field-s-source').val();
+                var getdestAPIValue = $('#api-field-d-source').val();
+
+                let sourceapiUrl = "";
+                let destapiUrl = "";
+
+
+                 await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                              Code: getsourceAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+                              }).done(function (data) {
+                                  if (data.success) {
+                                      sourceapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                                  }
+                              }).fail(function () {
+                                  swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                              });
+
+                await $.post("@Url.Action("FetchAPIUrl", "Configuration")", {
+                  Code: getdestAPIValue,  // Ensure `getAPIValue` is correctly defined and has a value
+                }).done(function (data) {
+                    if (data.success) {
+                        destapiUrl = data.data;  // Assuming data.data holds the URL value
+
+                    }
+                }).fail(function () {
+                    swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                });
+                  // Replace with your actual server URL
+
+
+                  console.log(destapiUrl);
+
+                  // Use fetch to make the GET request
+                  await fetch(sourceapiUrl, {
+                      method: 'GET',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      }
+                  })
+                      .then(response => response.json())
+                      .then(data => {
+                          if (data != null) {
+                              SHopifyColumn = data; // Assigning the fetched data to SHopifyColumn
+                          }
+                      })
+                      .catch(error => {
+                          alert('There was a problem with the fetch operation for source API: ' + error);
+                      });
+
+                  // Use fetch to make the GET request for destination API
+                  await fetch(destapiUrl, {
+                      method: 'GET',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      }
+                  })
+                      .then(response => {
+                          if (!response.ok) {
+                              return response.text().then(text => { throw new Error(text); });
+                          }
+                          return response.text();
+                      })
+                      .then(text => {
+                          // Log the raw response for debugging
+                          //console.log('Raw response text:', text);
+                          // Check if the response is HTML
+                          if (text.trim().startsWith('<')) {
+                              alert('API returned HTML (error page or not found). Check the endpoint and server.');
+                              return;
+                          }
+                          try {
+                              const data = JSON.parse(text);
+                              NetsuiteColumn = data;
+                              console.log('Parsed JSON:', data); // This should be your array
+                              // Use data as needed
+                          } catch (error) {
+                              console.error('Error parsing JSON:', error);
+                              alert('Error parsing response JSON: ' + error);
+                          }
+                      })
+                      .catch(error => {
+                          alert('There was a problem with the fetch operation for destination API: ' + error);
+                      });
+
+                  // Now you can use SHopifyColumn and NetsuiteColumn
+                  //console.log(SHopifyColumn, NetsuiteColumn);
+
+                  //console.log(NetsuiteColumn)
+
+             if (SHopifyColumn != null && NetsuiteColumn!=null) {
+                    console.log("ITs TIME row")
+                    countr = countr + 1;
+                    sourceid = "source_r" + countr;
+                    destinationid = "destination_r" + countr;
+                    queryid = "queryfield_r" + countr;
+                    checkid = "check_r" + countr;
+
+                    var arr = [];
+                    var disable = "";
+                    $('#row-table tbody').append('<tr id="tr' + countr + '"><td width="5%"><button type="button" class=" form-control btn-info btn-flat fa fa-trash" data-headid = "tr' + countr + '" ></button></td>' +
+                        '<td><select class="form-control select2 rowsource" name ="' + sourceid + '" style="width: 100%;" id="' + sourceid + '"></select></td>' +
+                        '<td><select class="form-control select2 rowdest" name="' + destinationid + '" style="width: 100%;" id="' + destinationid + '"></select></td>' +
+                        '<td> <input type="text" class="form-control rowquery" placeholder="" id="' + queryid + '"></td>' +
+                        '<td style="display:flex; justify-content:center; align-items:center;"><input type="checkbox" class="iCheck-helper rowcheck" style="transform: scale(2.0);" value="unchecked" id="' + checkid + '" ' + disable + '/></</td></tr>');
+                    $(`#tr${countr} .fa-trash`).on('click', function () {
+                        $(this).closest('tr').remove(); // Removes the corresponding row
+                    });
+
+                 $('#' + sourceid).empty();
+                 $('#' + sourceid).append(new Option('Query', 'Query'));
+                 $('#' + sourceid).append(new Option('Static Value', 'Static Value'));
+                 for (var x in SHopifyColumn) {
+                     $('#' + sourceid).append($('<option>', {
+                         value: SHopifyColumn[x],
+                         text: SHopifyColumn[x]
+                     }));
+                 }
+                 $('#' + sourceid).select2();
+
+                 $('#' + destinationid).empty();
+                 for (var x in NetsuiteColumn) {
+                     $('#' + destinationid).append($('<option>', {
+                         value: NetsuiteColumn[x],
+                         text: NetsuiteColumn[x]
+                     }));
+                 }
+                 $('#' + destinationid).select2();
+
+                }
+            }
+        })
+
+
+</script>
+
+<script>
+    function populateCombo(comboId) {
+        const $combo = $(`#${comboId}`);
+        $combo.empty(); // remove any existing options
+
+        // Add options from SourceColumnValues
+        SourceColumnValues.forEach(value => {
+            $combo.append(`<option value="${value}">${value}</option>`);
+        });
+
+        // Add the two static options
+        $combo.append(`<option value="Query">Query</option>`);
+        $combo.append(`<option value="Static Value">Static Value</option>`);
+    }
+</script>

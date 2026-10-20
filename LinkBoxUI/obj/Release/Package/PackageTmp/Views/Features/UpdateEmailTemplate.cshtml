@@ -1,0 +1,502 @@
+﻿@model DomainLayer.ViewModels.EmailCreateViewModel
+@*
+
+    @{
+        ViewBag.Title = "CreateEmailTemplate";
+        Layout = "~/Views/Shared/_Header.cshtml";
+    } *@
+
+<section class="content ">
+    <form id="email-form" class="form-horizontal">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Update Email Template</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+
+                        <div class="container modal-body">
+                            <div class="col-lg-12">
+
+                                <div class="form-group">
+                                    <label>*Email Code</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-copyright-mark"></i></span>
+                                        <input id="email-code" class="form-control" autocomplete="off" value="@Model.EmailTemplateDetails.Code" readonly />
+                                        <span class="input-group-addon">
+
+                                            @*@if (Model.EmailTemplateDetails.IsActive)
+                                                {
+                                                    <input type="checkbox" checked="@Model.EmailTemplateDetails.IsActive" id="email-isActive" onclick="handleCheckboxClick()" />
+                                                }*@
+
+                                            <input type="checkbox" checked="@Model.EmailTemplateDetails.IsActive" id="email-isActive" onclick="clickIsActive()" />
+
+                                            &nbsp;Active
+                                        </span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-copyright-mark"></i></span>
+                                            <textarea id="email-description" class="textarea form-control" autocomplete="off" style="resize: none;" rows="3" cols="80" placeholder="Enter description ...">@Model.EmailTemplateDetails.Description</textarea>
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                            <label>Company</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                                <select class="form-control custom-select tokenizationSelect2" id="email-company">
+                                                    <option value="">N/A</option>
+                                                    @foreach (var x in Model.CompanyList)
+                                                    {
+                                                        if (x.Id == Convert.ToDouble(Model.EmailTemplateDetails.Company))
+                                                        {
+                                                            <option value="@x.Id" selected>@x.CompanyName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@x.Id">@x.CompanyName</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>File Code</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                                <select class="form-control custom-select tokenizationSelect2" id="email-file">
+                                                    <option value="">N/A</option>
+                                                    @foreach (var x in Model.DocumentList)
+                                                    {
+                                                        if (x.Id == Convert.ToDouble(Model.EmailTemplateDetails.FileCode))
+                                                        {
+                                                            <option value="@x.Id" selected>@x.Code</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@x.Id">@x.Code</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>*@
+                                    <div class="form-group">
+                                        <label>Email Subject</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-header"></i></span>
+                                            <input id="email-subject" class="form-control" autocomplete="off" value="@Model.EmailTemplateDetails.Subject" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Query Data</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <select class="form-control tokenizationSelect2" id="email-connection-query">
+                                                <option value="">N/A</option>
+                                                @foreach (var x in Model.QueryManagerView)
+                                                {
+                                                    if (x.Id == Convert.ToDouble(Model.EmailTemplateDetails.QueryCode))
+                                                    {
+                                                        <option value="@x.Id" selected>@x.QueryCode</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@x.Id">@x.QueryCode</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    @*<div class="form-group">
+                                            <label>To Query</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                <select class="form-control tokenizationSelect2" id="email-connection-to">
+                                                    <option value="">N/A</option>
+                                                    @foreach (var x in Model.QueryManagerView)
+                                                    {
+                                                        if (x.Id == Convert.ToDouble(Model.EmailTemplateDetails.QueryTo))
+                                                        {
+                                                            <option value="@x.Id" selected>@x.QueryCode</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@x.Id">@x.QueryCode</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>*@
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>*To:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <select class="form-control custom-select tokenizationSelect2" id="email-to" multiple="multiple">
+                                                @foreach (var x in Model.EmailTemplateDetails.To)
+                                                {
+                                                    <option value="@x" selected>@x</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label>Cc:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+
+                                            <select class="form-control custom-select tokenizationSelect2" id="email-cc" multiple="multiple">
+                                                @foreach (var x in Model.EmailTemplateDetails.CC)
+                                                {
+                                                    <option value="@x" selected>@x</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--<div class="col-lg-2">-->
+                                @*<div class="form-group">
+                                        <label>To Query</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <select class="form-control tokenizationSelect2" id="email-connection-to">
+                                            </select>
+                                        </div>
+                                    </div>*@
+
+                                @*<div class="form-group">
+                                        <label>CC Query</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <select class="form-control tokenizationSelect2" id="email-connection-cc">
+                                                <option value="">N/A</option>
+                                                @foreach (var x in Model.QueryManagerView)
+                                                {
+                                                    if (x.Id == Convert.ToDouble(Model.EmailTemplateDetails.QueryCC))
+                                                    {
+                                                        <option value="@x.Id" selected>@x.QueryCode</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@x.Id">@x.QueryCode</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>*@
+                                @*</div>*@
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Email Content</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
+                                            <textarea id="email-body" class="textarea form-control collapse" autocomplete="off" style="resize: none;" rows="15" cols="80" placeholder="Enter text ...">
+                                         @Model.EmailTemplateDetails.Body
+                                        </textarea>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input type="submit" id="btn-submit" value="Update" class="btn btn-primary btn-custom2 pull-right" />
+                                        <a href='@Url.Action("Email", "Features")' class="btn btn-default btn-custom2 pull-right" style="margin-right:10px">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+            </div>
+    </form>
+</section>
+
+@section Scripts{
+    <script>
+        $(document).on('submit', '#email-form', function (e) {
+            e.preventDefault();
+
+            var emailCode = $("#email-code").val();
+
+            var IsActive;
+
+            //var ChkboxVal = $('input:checkbox[id = email-isActive]').val();
+
+            var checkbox = document.getElementById('email-isActive');
+            var ChkboxVal = checkbox.checked ? 'checked' : 'unchecked';
+
+            //console.log("ChkboxVal" + ChkboxVal);
+
+            if (ChkboxVal == 'checked') { IsActive = true; }
+            else { IsActive = false; }
+
+            //console.log("Active " + IsActive);
+
+            var emaildescription = $("#email-description").val();
+            var emailsubject = $("#email-subject").val();
+            var emailto = $("#email-to").val();
+            var emailcc = $("#email-cc").val();
+            var emailfile = $("#email-file").val();
+            var emailcompany = $("#email-company").val();
+            var emailconnectionto = $("#email-connection-to").val();
+            var emailquery = $("#email-connection-query").val();
+            var emailconnectioncc = $("#email-connection-cc").val();
+            var emailbody = $("#email-body").val();
+
+                swal({
+                    title: 'Are you sure you want to update this email template?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $.post('/Features/EmailTemplateUpdate', {
+                            Code: emailCode,
+                            Description: emaildescription,
+                            IsActive: IsActive,
+                            Subject: emailsubject,
+                            FileCode: emailfile,
+                            To: emailto,
+                            CC: emailcc,
+                            QueryTo: emailconnectionto,
+                            QueryCC: emailconnectioncc,
+                            QueryCode: emailquery,
+                            Body: emailbody,
+                            Company:emailcompany
+                        }).done(function (data) {
+                            if (data && data.success) {
+                                $('.modal').modal('hide');
+                                swal('Success!', '', 'success');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            } else {
+                                swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                            }
+                        }).fail(function (jqXHR, textStatus, errorThrown) {
+                            console.error('Request failed:', textStatus, errorThrown);
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                        });
+                        //    .fail(function (data) {
+                        //        console.error('Request failed:', data);
+                        //        swal('Something went wrong.', 'Please contact the administrator.', 'warning');
+                        //});
+                    }
+                })
+        });
+    </script>
+    @Scripts.Render("~/Scripts/tinymce/tinymce.min.js")
+    <script>
+        function clickIsActive() {
+            var checkbox = document.getElementById('email-isActive');
+            var status = checkbox.checked ? 'checked' : 'unchecked';
+            alert('Checkbox is ' + status);
+        };
+
+        function loadFunction() {
+            $.post('/Features/ListConnectionString').done(result => {
+                $("#email-connection-to").empty();
+                $("#email-connection-query").empty();
+                $("#email-connection-cc").empty();
+                $("#email-file").empty();
+                $("#email-connection-to").append($('<option>', {
+                    value: "",
+                    text: "N/A"
+                }));
+                $("#email-connection-query").append($('<option>', {
+                    value: "",
+                    text: "N/A"
+                }));
+                $("#email-connection-cc").append($('<option>', {
+                    value: "",
+                    text: "N/A"
+                }));
+                $("#email-file").append($('<option>', {
+                    value: "",
+                    text: "N/A"
+                }));
+
+                for (var x in result.QueryManagerView) {
+                    $("#email-connection-to").append($('<option>', {
+                        value: result.QueryManagerView[x].Id,
+                        text: result.QueryManagerView[x].QueryCode
+                    }));
+                }
+
+                for (var x in result.QueryManagerView) {
+                    $("#email-connection-query").append($('<option>', {
+                        value: result.QueryManagerView[x].Id,
+                        text: result.QueryManagerView[x].QueryCode
+                    }));
+                }
+
+                for (var x in result.QueryManagerView) {
+                    $("#email-connection-cc").append($('<option>', {
+                        value: result.QueryManagerView[x].Id,
+                        text: result.QueryManagerView[x].QueryCode
+                    }));
+                }
+
+                for (var x in result.DocumentList) {
+                    $("#email-file").append($('<option>', {
+                        value: result.DocumentList[x].Id,
+                        text: result.DocumentList[x].Code
+                    }));
+                }
+            });
+
+            $.post('/Features/FindEmailTemplate', { Id: '@ViewBag.Id' }).done(result => {
+
+
+               $("#email-code").val(result.EmailTemplateDetails.Code);
+               $("#email-description").val(result.EmailTemplateDetails.Description);
+               $("#email-subject").val(result.EmailTemplateDetails.Code);
+                $("#email-connection-to").val(result.EmailTemplateDetails.QueryTo).trigger('change');
+                $("#email-connection-cc").val(result.EmailTemplateDetails.QueryCC).trigger('change');
+                $("#email-to").val(result.EmailTemplateDetails.To);
+               $("#email-cc").val(result.EmailTemplateDetails.CC);
+               $("#email-file").val(result.EmailTemplateDetails.FileCode).trigger('change');
+               $("#email-connection-query").val(result.EmailTemplateDetails.QueryCode).trigger('change');
+               $("#email-body").val(result.EmailTemplateDetails.Body);
+            });
+
+        };
+
+        tinymce.init({
+
+            selector: '#email-body',
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table contextmenu paste',
+                'wordcount template textcolor spellchecker',
+            ],
+            bbcode_dialect: "punbb",
+            browser_spellcheck: true,
+            paste_as_text: true,
+            image_advtab: true,
+            toolbar: "undo redo | template preview  | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+
+            templates: [
+                {
+                    title: 'Client Name',
+                    description: 'The client name who you address',
+                    content: '<span contenteditable="false">#CUSTOMERNAME#</span>'
+                },
+                {
+                    title: 'Email Data thru Query',
+                    description: 'Query to generate table',
+                    content: '<span contenteditable="false">#EMAILQUERY#</span>'
+                },
+                {
+                    title: 'Attachment',
+                    description: 'Query to generate table',
+                    content: '<span contenteditable="false">#ATTACHMENT#</span>'
+                },
+                {
+                    title: 'System URL',
+                    description: 'Sends the link of the system. If applicable',
+                    content: '<span contenteditable="false"><a href="#SYSTEM URL#">here</a></span>'
+                },
+                {
+                    title: 'Header with Company Logo',
+                    description: 'Header',
+                    content: '<table style="height: 89px; width: 150px; border-collapse: collapse;" contenteditable="false"><tbody><tr style="height: 89px;"><td style="width: 14.8094%; height: 89px;"><img src="cid:#LOGO#" alt="Company Logo" width="101" height="88" />'
+                },
+                {
+                    title: 'Footer with Company Logo',
+                    description: 'Footer',
+                    content: '<table style="height: 89px; width: 100%; border-collapse: collapse;" contenteditable="false"><tbody><tr style="height: 89px;"><td style="width: 14.8094%; height: 89px;"><img src="cid:#LOGO#" alt="Company Logo" width="101" height="88" /></td><td style="width: 85.1906%; height: 89px;"><p><strong>#COMPANYNAME#</strong></p><p>#COMPANYADDRESS#</p></td></tr></tbody></table>'
+                }
+            ],
+            setup: function (ed) {
+                ed.on('keydown', function (event) {
+                    if (event.keyCode == 9) { // tab pressed
+                        if (event.shiftKey) {
+                            ed.execCommand('Outdent');
+                        }
+                        else {
+                            ed.execCommand('Indent');
+                        }
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        $(document).ready(function () {
+             //loadFunction();
+            $('#email-table').DataTable({
+                columnDefs: [{ targets: 'no-sort', orderable: false }],
+                paging: false,
+            });
+            $(".tokenizationSelect2").select2({
+                tags: true,
+                tokenSeparators: ['/', ',', ';', " "]
+            });
+            $('.btn-edit-email').on('click', function () {
+                var id = $(this).data('id');
+                var code = $(document).find('#email-code');
+                var description = $(document).find('#email-description');
+                var subject = $(document).find('#email-subject');
+                var body = $(document).find('#email-body_ifr').children();
+
+                var isActive = $(document).find('#email-isActive');
+
+
+                var emailTo = [];
+                var emailCc = [];
+                //set email code to read only
+                code.attr('readonly', true);
+                //empty the dropdowns
+                $('#email-to').val(null).trigger('change');;
+                $('#email-cc').val(null).trigger('change');
+                $.post('/Email/FindEmail', { Id: id })
+                    .done(function (result) {
+                        console.log(result)
+                        code.val(result.EmailContent.Code);
+                        description.val(result.EmailContent.Description);
+                        subject.val(result.EmailContent.Subject);
+                        $(tinymce.get('email-body').getBody()).html(result.EmailContent.Body);
+
+                        //load data for check box
+                        if (result.EmailContent.IsActive) {
+                            isActive.attr("checked", true);
+                        }
+                        else {
+                            isActive.removeAttr("checked");
+                        }
+                        //put the emails to an array to be loaded in the drop down
+                        for (item in result.SelectedAccountEmailToArr) {
+                            emailTo.push(result.SelectedAccountEmailToArr[item].EmailAddress)
+                        }
+                        for (item in result.SelectedAccountEmailCCArr) {
+                            emailCc.push(result.SelectedAccountEmailCCArr[item].EmailAddress)
+                        }
+                        //load data for dropdowns
+                        $('#email-to').val(emailTo).trigger('change');
+                        $('#email-cc').val(emailCc).trigger('change');
+                        toast_success({ title: 'Email Loaded' });
+                    })
+                    .fail(function () {
+                        toast_error({ title: 'Failed to load Template:' });
+                    });
+            });
+        });
+    </script>
+
+}

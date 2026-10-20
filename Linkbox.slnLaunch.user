@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Application.WebApi\\Application.WebApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "LinkBoxUI\\LinkBoxUI.csproj",
+        "Action": "Start",
+        "DebugTarget": "Web Server (Google Chrome)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1112 @@
+﻿@model DomainLayer.ViewModels.ProcessCreateViewModel
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_1" data-toggle="tab">Process</a></li>
+                    <li class="hidden"><a href="#tab_2" data-toggle="tab">Process [One Per Sheet]</a></li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane active" id="tab_1">
+
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Process Setup</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="feature" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Process Code</th>
+                                            <th>Process Name</th>
+                                            <th>Platform/Account </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var feat in Model.ProcessView)
+                                        {
+                                            if (feat.ProcessType != "OPS")
+                                            {
+                                                <tr>
+                                                    <td width="5%"><button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal" data-featureid="@feat.ProcessId"></button></td>
+                                                    <td>@feat.ProcessCode</td>
+                                                    <td>@feat.ProcessName</td>
+                                                    <td>@feat.ProcessType</td>
+
+                                                    @if (feat.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table><button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#create-modal">New</button>
+                            </div><!-- /.box-body -->
+
+                        </div>
+
+                    </div><!-- /.tabpane -->
+
+                    <div class="tab-pane" id="tab_2">
+
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Process Setup</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table id="opsfeature" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Edit</th>
+                                            <th>Process Code</th>
+                                            <th>Process Name</th>
+                                            <th>Platform/Account </th>>
+                                            @*<th>Field Mapping Code</th>
+                                                <th>Field Mapping Name</th>
+                                                <th>Module</th>*@
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var feat in Model.ProcessView)
+                                        {
+                                            if (feat.ProcessType != "OPS")
+                                            {
+                                                <tr>
+
+                                                    <td width="5%"><button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#opsedit-modal" opsdata-featureid="@feat.ProcessId"></button></td>
+                                                    <td>@feat.ProcessCode</td>
+                                                    <td>@feat.ProcessName</td>
+                                                    <td>@feat.ProcessType</td>
+                                                    @*<td>@feat.FieldMappingCode</td>
+                                                        <td>@feat.FieldMappingName</td>
+                                                        <td>@feat.ModName</td>*@
+                                                    @if (feat.IsActive == true)
+                                                    {
+                                                        <td><span class="label label-success">Active</span></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><span class="label label-danger">In Active</span></td>
+                                                    }
+
+                                                </tr>
+                                            }
+                                        }
+
+                                    </tbody>
+                                </table><button type="button" class="btn btn-primary btn-custom2" style="float: right;" data-toggle="modal" data-target="#ond-create-modal">New</button>
+                            </div><!-- /.box-body -->
+
+
+                        </div><!-- /.tabpane -->
+
+                    </div><!--./tabcontent-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="create-modal">
+    <div class="modal-dialog">
+        <form id="process-submit">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Process Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="featurecode-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control process" maxlength="50" placeholder="Process Code" id="featurecode" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="featureprocess-formgroup">
+                            <label>*Process:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-recycle"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" id="featureprocess" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Field Mapping Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2 featuremap" multiple="multiple" data-placeholder="Select a Module" style="width: 100%;" id="featuremap" required>
+                                    @foreach (var module in Model.MapList)
+                                    {
+                                        <option>@module.MapCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Process Type:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select Type" style="width: 100%;" id="apitype" required>
+
+                                    <option>Lazada</option>
+                                    <option>Tiktok</option>
+                                    <option>Shopee</option>
+                                    <option>Sales Order</option>
+                                    <option>Return To Vendor</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select an API" style="width: 100%;" id="apicode" required>
+                                    @foreach (var module in Model.APIList)
+                                    {
+                                        <option>@module.APICode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="add-proceedtosap" /> Post To SAP?
+                            </div>
+                        </div>
+
+                        <div class="form-group sap-formgroup" id="sap-formgroup" hidden>
+                            <label>*SAP Code: for N/A FieldMap</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a SAP code" style="width: 100%;" id="sapcode" required>
+                                    @foreach (var module in Model.SapList)
+                                    {
+                                        <option>@module.SAPCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-save">Save</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="ond-create-modal">
+    <div class="modal-dialog">
+        <form id="OPSprocess-submit">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Process Setup [One Per Sheet]</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group" id="opsfeaturecode-formgroup">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control opsprocess" maxlength="50" placeholder="Process Code" id="opsfeaturecode" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="featureprocess-formgroup">
+                            <label>*Process:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-recycle"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" id="opsfeatureprocess" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Field Mapping Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2 opsfeaturemap" multiple="multiple" data-placeholder="Select a Module" style="width: 100%;" id="opsfeaturemap" required>
+                                    @foreach (var module in Model.opsMapList)
+                                    {
+                                        <option>@module.MapCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select an API" style="width: 100%;" id="opsapicode" required>
+                                    @foreach (var module in Model.APIList)
+                                    {
+                                        <option>@module.APICode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="add-proceedtosap" /> Post To SAP?
+                            </div>
+                        </div>
+
+                        <div class="form-group opssap-formgroup" id="opssap-formgroup" hidden>
+                            <label>*SAP Code: for N/A FieldMap</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a SAP code" style="width: 100%;" id="sapcode" required>
+                                    @foreach (var module in Model.SapList)
+                                    {
+                                        <option>@module.SAPCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-save">Save</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="edit-modal">
+    <div class="modal-dialog">
+        <form id="editprocess-submit" novalidate>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Process Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" required id="edit-featurecode" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="edit-featureprocess-formgroup">
+                            <label>*Process:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-recycle"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" required id="edit-featureprocess">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Field Mapping Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2 featuremap" multiple="multiple" data-placeholder="Select a Module" style="width: 100%;" id="edit-featuremap" required>
+                                    @foreach (var module in Model.MapList)
+                                    {
+                                        <option>@module.MapCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Process Type:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select Type" style="width: 100%;" id="edit-apitype" required>
+
+                                    <option>Lazada</option>
+                                    <option>Tiktok</option>
+                                    <option>Shopee</option>
+                                    <option>Sales Order</option>
+                                    <option>Return To Vendor</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a API" style="width: 100%;" id="edit-apicode" required>
+                                    @foreach (var module in Model.APIList)
+                                    {
+                                        <option>@module.APICode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-proceedtosap" /> Post To SAP?
+                            </div>
+                        </div>
+
+                        <div class="form-group sap-formgroup" id="edit-sap-formgroup" hidden>
+                            <label>*SAP Code: for N/A FieldMap</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a SAP code" style="width: 100%;" id="edit-sapcode" required>
+                                    @foreach (var module in Model.SapList)
+                                    {
+                                        <option>@module.SAPCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="edit-featurestat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="opsedit-modal">
+    <div class="modal-dialog">
+        <form id="opseditprocess-submit" novalidate>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Process Setup</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>*Process Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" required id="opsedit-featurecode" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="opsedit-featureprocess-formgroup">
+                            <label>*Process:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-recycle"></i>
+                                </div>
+                                <input type="text" class="form-control" maxlength="50" placeholder="Process" required id="opsedit-featureprocess">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*Field Mapping Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2 featuremap" multiple="multiple" data-placeholder="Select a Module" style="width: 100%;" id="opsedit-featuremap" required>
+                                    @foreach (var module in Model.opsMapList)
+                                    {
+                                        <option>@module.MapCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>*API Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a API" style="width: 100%;" id="opsedit-apicode" required>
+                                    @foreach (var module in Model.APIList)
+                                    {
+                                        <option>@module.APICode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group hidden">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="opsedit-proceedtosap" /> Post To SAP?
+                            </div>
+                        </div>
+
+                        <div class="form-group sap-formgroup" id="opsedit-sap-formgroup" hidden>
+                            <label>*SAP Code: for N/A FieldMap</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <select class="form-control select2" data-placeholder="Select a SAP code" style="width: 100%;" id="opsedit-sapcode" required>
+                                    @foreach (var module in Model.SapList)
+                                    {
+                                        <option>@module.SAPCode</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-group">
+                                <input type="checkbox" class="flat-red" id="opsedit-featurestat" /> Is Active?
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-update">Save Changes</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts {
+    <script>
+
+        $("#featurecode").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#featurecode-formgroup').hasClass('error'))) {
+                $('#featurecode-formgroup').append('<span class="help-block text-red">Process Code is Required</span>');
+            }
+            $('#featurecode-formgroup').addClass('error');
+        });
+        $("#opsfeaturecode").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#opsfeaturecode-formgroup').hasClass('error'))) {
+                $('#opsfeaturecode-formgroup').append('<span class="help-block text-red">Process Code is Required</span>');
+            }
+            $('#opsfeaturecode-formgroup').addClass('error');
+        });
+        $("#featureprocess").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#featureprocess-formgroup').hasClass('error'))) {
+                $('#featureprocess-formgroup').append('<span class="help-block text-red">Process is Required</span>');
+            }
+            $('#featureprocess-formgroup').addClass('error');
+        });
+        $("#edit-featureprocess").on("invalid", function (e) {
+            e.preventDefault();
+            if (!($('#edit-featureprocess-formgroup').hasClass('error'))) {
+                $('#edit-featureprocess-formgroup').append('<span class="help-block text-red">Process is Required</span>');
+            }
+            $('#edit-featureprocess-formgroup').addClass('error');
+        });
+
+        $('.modal').on('hidden.bs.modal', function (e) {
+            //addon-submit
+            $('.form-group').removeClass('error');
+            $('.help-block').remove();
+        });
+    </script>
+    <script>
+        $(function () {
+            $('[data-mask]').inputmask()
+
+            $('#feature').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+
+            $('#opsfeature').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+
+
+        $('.modal').on('hidden.bs.modal', function (e) {
+            //addon-submit
+            $("#process-submit").trigger('reset');
+        });
+
+        $('#create-modal').on('shown.bs.modal', function (e) {
+            $('.featuremap').trigger('change');
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.select2').select2()
+        });
+    </script>
+
+    <script>
+
+        var validate = "", ids = 0;
+        $(document)
+            .on('submit', '#process-submit', function (e) {
+                e.preventDefault();
+                var FeatureCode = $("#featurecode").val();
+                var FeatureProcess = $("#featureprocess").val();
+                var FeatureMap = $("#featuremap").val();
+                var apicode = $("#apicode").val();
+                var apitype = $("#apitype").val();
+                var sapcode = $("#sapcode").val();
+                var PostSAP = false;
+                //var ChkboxVal = $('input:checkbox[id = add-proceedtosap]').val();
+                //if (ChkboxVal == 'checked') { PostSAP = true; }
+                //else { PostSAP = false; }
+                var Checkbox = $('input:checkbox[id = add-proceedtosap]');
+                if (Checkbox.val() == 'on') {
+                    PostSAP = true;
+                }
+                else {
+                    PostSAP = false;
+                }
+                //sList += "(" + $(this).val() + "-" + (this.checked ? "checked" : "not checked") + ")";
+                //});
+                validate = "";
+                swal({
+                    title: 'Are you sure you want to save new Process Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('CreateProcess', {
+                            ProcessCode: FeatureCode,
+                            ProcessName: FeatureProcess,
+                            FeatureMap: FeatureMap,
+                            APICode: apicode,
+                            PostSAP: PostSAP,
+                            SAPCode: sapcode,
+                            ProcessType: apitype,
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#feature").load("Process #feature");
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+
+            })
+
+
+            .on('submit', '#OPSprocess-submit', function (e) {
+                e.preventDefault();
+
+
+                var FeatureCode = $("#opsfeaturecode").val();
+                var FeatureProcess = $("#opsfeatureprocess").val();
+                var FeatureMap = $("#opsfeaturemap").val();
+                var apicode = $("#opsapicode").val();
+                var sapcode = $("#opssapcode").val();
+                var PostSAP = false;
+
+                console.log("Feature Code - " + FeatureCode)
+                console.log("Feature Map - " + FeatureMap)
+                //var ChkboxVal = $('input:checkbox[id = add-proceedtosap]').val();
+                //if (ChkboxVal == 'checked') { PostSAP = true; }
+                //else { PostSAP = false; }
+
+
+
+
+                var Checkbox = $('input:checkbox[id = add-proceedtosap]');
+                if (Checkbox.val() == 'on') {
+                    PostSAP = true;
+                }
+                else {
+                    PostSAP = false;
+                }
+                //sList += "(" + $(this).val() + "-" + (this.checked ? "checked" : "not checked") + ")";
+                //});
+                validate = "";
+                swal({
+                    title: 'Are you sure you want to save new Process Setup?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+
+                        $.post('OPSCreateProcess', {
+                            ProcessCode: FeatureCode,
+                            ProcessName: FeatureProcess,
+                            FeatureMap: FeatureMap,
+                            APICode: apicode,
+                            PostSAP: PostSAP,
+                            SAPCode: sapcode,
+                        }).done(function (data) {
+                            if (data) {
+                                //$("#feature").load("Process #feature");
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+
+            .on('click', 'button[data-featureid]', function () {
+                var id = $(this).data('featureid');
+                ids = id;
+                // alert(id)
+                $.post('FindProcess', { Id: id }).done(result => {
+                    //   console.log(result)
+                    var i = 0;
+                    var arr = [];
+                    for (var x in result.ProcessView) {
+                        arr.push(result.ProcessView[x].FieldMappingCode);
+                        $("#edit-featurecode").val(result.ProcessView[x].ProcessCode);
+                        validate = result.ProcessView[x].ProcessCode;
+                        $("#edit-featureprocess").val(result.ProcessView[x].ProcessName);
+                        //$("#edit-featuremap").val(result.ProcessView[x].FieldMappingCode);
+                        $("#edit-featuremap").val(arr);
+                        $("#edit-featuremap").trigger('change');
+                        $("#edit-apicode").val(result.ProcessView[x].APICode);
+                        $("#edit-apicode").trigger('change');
+                        $("#edit-sapcode").val(result.ProcessView[x].SAPCode);
+
+
+                        $("#edit-apitype").val(result.ProcessView[x].ProcessType);
+                        $("#edit-apitype").trigger('change')
+
+                        if (result.ProcessView[x].IsActive == true) {
+                            $('input:checkbox[id = edit-featurestat]').iCheck('check');
+                            $('input:checkbox[id = edit-featurestat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-featurestat]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-featurestat]').val('unchecked');
+                        }
+
+                        if (result.ProcessView[x].PostSAP == true) {
+                            $('input:checkbox[id = edit-proceedtosap]').iCheck('check');
+                            $('input:checkbox[id = edit-proceedtosap]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = edit-proceedtosap]').iCheck('uncheck');
+                            $('input:checkbox[id = edit-proceedtosap]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = edit-featurestat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-featurestat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-featurestat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-featurestat]').val('unchecked');
+                        });
+
+                        $('input:checkbox[id = edit-proceedtosap]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = edit-proceedtosap]').val('checked');
+                        });
+
+                        $('input:checkbox[id = edit-proceedtosap]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = edit-proceedtosap]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+            .on('click', 'button[opsdata-featureid]', function () {
+
+                var id = $(this).attr('opsdata-featureid');
+                ids = id;
+                alert(id);
+                $.post('OPSFindProcess', { Id: id }).done(result => {
+                    console.log(result);
+                    var i = 0;
+                    var arr = [];
+                    for (var x in result.ProcessView) {
+                        arr.push(result.ProcessView[x].FieldMappingCode);
+                        $("#opsedit-featurecode").val(result.ProcessView[x].ProcessCode);
+                        validate = result.ProcessView[x].ProcessCode;
+                        $("#opsedit-featureprocess").val(result.ProcessView[x].ProcessName);
+                        //$("#edit-featuremap").val(result.ProcessView[x].FieldMappingCode);
+                        $("#opsedit-featuremap").val(arr);
+                        $("#opsedit-featuremap").trigger('change');
+                        $("#opsedit-apicode").val(result.ProcessView[x].APICode);
+                        $("#opsedit-apicode").trigger('change');
+                        $("#opsedit-sapcode").val(result.ProcessView[x].SAPCode);
+
+
+                        if (result.ProcessView[x].IsActive == true) {
+                            $('input:checkbox[id = opsedit-featurestat]').iCheck('check');
+                            $('input:checkbox[id = opsedit-featurestat]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = opsedit-featurestat]').iCheck('uncheck');
+                            $('input:checkbox[id = opsedit-featurestat]').val('unchecked');
+                        }
+
+                        if (result.ProcessView[x].PostSAP == true) {
+                            $('input:checkbox[id = opsedit-proceedtosap]').iCheck('check');
+                            $('input:checkbox[id = opsedit-proceedtosap]').val('checked');
+                        }
+                        else {
+                            $('input:checkbox[id = opsedit-proceedtosap]').iCheck('uncheck');
+                            $('input:checkbox[id = opsedit-proceedtosap]').val('unchecked');
+                        }
+
+                        $('input:checkbox[id = opsedit-featurestat]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = opsedit-featurestat]').val('checked');
+                        });
+
+                        $('input:checkbox[id = opsedit-featurestat]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = opsedit-featurestat]').val('unchecked');
+                        });
+
+                        $('input:checkbox[id = opsedit-proceedtosap]').on('ifChecked', function (event) {
+                            $('input:checkbox[id = opsedit-proceedtosap]').val('checked');
+                        });
+
+                        $('input:checkbox[id = opsedit-proceedtosap]').on('ifUnchecked', function (event) {
+                            $('input:checkbox[id = opsedit-proceedtosap]').val('unchecked');
+                        });
+                    }
+                })
+            })
+
+
+
+            .on('submit', '#editprocess-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var FeatureCode = $("#edit-featurecode").val();
+                var FeatureProcess = $("#edit-featureprocess").val();
+                var FeatureMap = $("#edit-featuremap").val();
+                console.log(FeatureMap);
+                var apicode = $("#edit-apicode").val();
+                var apitype = $("#edit-apitype").val();
+
+
+                var IsActive;
+                var PostSAP;
+                var Checkbox = $('input:checkbox[id = edit-featurestat]');
+                console.log(Checkbox);
+                console.log(Checkbox.val());
+                if (Checkbox.val() == 'checked') {
+                    IsActive = true;
+                }
+                else {
+                    IsActive = false;
+                }
+                //var ChkboxVal = $('input:checkbox[id = edit-featurestat]').val();
+                //if (ChkboxVal == 'checked') { IsActive = true; }
+                //else { IsActive = false; }
+
+                //var ChkboxVal1 = $('input:checkbox[id = edit-proceedtosap]').val();
+                //if (ChkboxVal1 == 'checked') { PostSAP = true; }
+                //else { PostSAP = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "You want to update the following data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        //$.getJSON('UpdateProcess', {
+                        //    ProcessId: id,
+                        //    ProcessCode: FeatureCode,
+                        //    ProcessName: FeatureProcess,
+                        //    IsActive: IsActive,
+                        //    FeatureMap: FeatureMap,
+                        //    APICode:apicode,
+                        //    PostSAP: PostSAP,
+                        $.post('UpdateProcess', {
+                            ProcessId: id,
+                            ProcessCode: FeatureCode,
+                            ProcessName: FeatureProcess,
+                            IsActive: IsActive,
+                            FeatureMap: FeatureMap,
+                            APICode: apicode,
+                            PostSAP: PostSAP,
+                            ProcessType: apitype
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#feature").load("Process #feature");
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('submit', '#opseditprocess-submit', function (e) {
+                e.preventDefault();
+                var id = ids;
+                var FeatureCode = $("#opsedit-featurecode").val();
+                var FeatureProcess = $("#opsedit-featureprocess").val();
+                var FeatureMap = $("#opsedit-featuremap").val();
+                console.log(FeatureMap);
+                var apicode = $("#opsedit-apicode").val();
+                var IsActive;
+                var PostSAP;
+                var Checkbox = $('input:checkbox[id = opsedit-featurestat]');
+                console.log(Checkbox);
+                console.log(Checkbox.val());
+                if (Checkbox.val() == 'checked') {
+                    IsActive = true;
+                }
+                else {
+                    IsActive = false;
+                }
+                //var ChkboxVal = $('input:checkbox[id = edit-featurestat]').val();
+                //if (ChkboxVal == 'checked') { IsActive = true; }
+                //else { IsActive = false; }
+
+                //var ChkboxVal1 = $('input:checkbox[id = edit-proceedtosap]').val();
+                //if (ChkboxVal1 == 'checked') { PostSAP = true; }
+                //else { PostSAP = false; }
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "You want to update the following data?",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        //$.getJSON('UpdateProcess', {
+                        //    ProcessId: id,
+                        //    ProcessCode: FeatureCode,
+                        //    ProcessName: FeatureProcess,
+                        //    IsActive: IsActive,
+                        //    FeatureMap: FeatureMap,
+                        //    APICode:apicode,
+                        //    PostSAP: PostSAP,
+                        $.post('OPSUpdateProcess', {
+                            ProcessId: id,
+                            ProcessCode: FeatureCode,
+                            ProcessName: FeatureProcess,
+                            IsActive: IsActive,
+                            FeatureMap: FeatureMap,
+                            APICode: apicode,
+                            PostSAP: PostSAP,
+                        }).done(function (data) {
+                            if (data) {
+                                swal('Success!', '', 'success')
+                                //$("#feature").load("Process #feature");
+                                $('.modal').modal('hide');
+                                setTimeout(function () { window.location.href = ""; }, 1500);
+                            }
+                        }).fail(function () {
+                            swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                        });
+                    }
+                })
+            })
+
+            .on('change', '.featuremap', function (e) {
+                //console.log('mtf');
+                var thisval = $(this).val();
+                if (thisval == "-N/A-") {
+                    $('.sap-formgroup').removeAttr('hidden');
+                    $('.sap-formgroup').removeProp('hidden');
+                }
+                else {
+                    $('.sap-formgroup').attr('hidden', 'hidden');
+                    $('.sap-formgroup').prop('hidden', 'hidden');
+                }
+
+            })
+            .on('change', '.opsfeaturemap', function (e) {
+                //console.log('mtf');
+                var thisval = $(this).val();
+                if (thisval == "-N/A-") {
+                    $('.opssap-formgroup').removeAttr('hidden');
+                    $('.opssap-formgroup').removeProp('hidden');
+                }
+                else {
+                    $('.opssap-formgroup').attr('hidden', 'hidden');
+                    $('.opssap-formgroup').prop('hidden', 'hidden');
+                }
+
+            })
+
+        $('.modal').on('hide.bs.modal', function () {
+            $(this).find("input,textarea,select").val('').end();
+
+        });
+        $(".process").focusout(function () {
+            var Code = $(this).val();
+            $.post('ValidateProcess', { Code: Code }).done(result => {
+                for (var x in result.ProcessView) {
+
+                    if (result.ProcessView[x].ProcessCode != "") {
+                        swal('Procecss Code is already taken.', '', 'warning')
+                        $(this).val("");
+                        $(this).focus();
+                    }
+
+                }
+            })
+        });
+
+        $(".opsprocess").focusout(function () {
+            var Code = $(this).val();
+            $.post('OPSValidateProcess', { Code: Code }).done(result => {
+                for (var x in result.ProcessView) {
+
+                    if (result.ProcessView[x].ProcessCode != "") {
+                        swal('Process Code is already taken.', '', 'warning')
+                        $(this).val("");
+                        $(this).focus();
+                    }
+
+                }
+            })
+        });
+    </script>
+}

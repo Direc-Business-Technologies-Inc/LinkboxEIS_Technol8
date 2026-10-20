@@ -1,0 +1,1075 @@
+﻿@model  DomainLayer.ViewModels.MapCreateViewModel
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Query Manager</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="feature" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                              
+                                <th>Edit</th>
+                                  <th>Id</th>
+                                <th>Query Code</th>
+                                <th>Query Name</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var query in Model.QueryManagerView)
+                            {
+                                <tr>
+
+                                    <td width="5%"><button type="button" class="btn-info btn-flat fa fa-edit" data-toggle="modal" data-target="#edit-modal" id="edit-query" data-queryid="@query.Id"></button></td>
+                                    <td>@query.Id</td>
+                                    <td>@query.QueryCode</td>
+                                    <td>@query.QueryName</td>
+                                    @if (query.IsActive == true)
+                                    {
+                                        <td><span class="label label-success">Active</span></td>
+                                    }
+                                    else
+                                    {
+                                        <td><span class="label label-danger">In Active</span></td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table><button type="button" class="btn btn-primary btn-custom2" id="new-query" style="float: right;" data-toggle="modal" data-target="#create-modal">New</button>
+                </div><!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="create-modal">
+    <div class="modal-dialog modal-lg">
+        <form id="query-submit">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Query Generator</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>*Query Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <input type="text" class="form-control query" placeholder="Query Code" id="query-code" required>
+                                </div>
+                            </div>
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>Connection Type:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <select class="form-control select2" style="width: 100%;" id="connection" required>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group" id="featureprocess-formgroup">
+                                <label>*Query Name:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Query Name" id="query-name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>Connection String:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <select class="form-control select2" style="width: 100%;" id="connection-string" required>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group" id="featureprocess-formgroup">
+                                <label>Query:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></span>
+                                    <textarea style="resize: vertical; min-height:150px;" id="query-string" class="form-control" placeholder="Query String" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12" style="margin-bottom:15px;">
+                            <button type="button" class="btn btn-primary" style="float: left ;" id="addParameter" data-queryparam>Add Parameter Field</button>
+                        </div>
+
+                        <div class="box-body">
+                            <table id="Addparamtbl" data-tablename="" class="table field-table-rows table-fields table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID</th>
+                                        <th>Field</th>
+                                        <th>Data Type</th>
+                                        <th>Condition</th>
+                                        <th>Value</th>
+
+
+
+                                    </tr>
+                                </thead>
+                                <tbody class="fieldrow-tbody" data-tablesap="" id="field-row-tbody"></tbody>
+                            </table>
+                        </div> <!----End of Div box body-->
+
+                    </div>
+
+
+                    <div class="modal-body">
+                        <h4 class="modal-title">Executed Query</h4>
+                        <br />
+                        <table id="executeQueryTable" class="table table-bordered table-striped table-responsive" style="width:100%"></table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @*@<button type="button" class="btn btn-success btn-custom" style="float:left!important" id="btn-generate-query" hidden>Check Data</button>*@
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal" onclick="@("window.location.href='" + @Url.Action("QueryManager", "Configuration") + "'");">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-save">Save</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="edit-modal">
+    <div class="modal-dialog modal-lg">
+        <form id="edit-query-submit">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Edit Query</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box-body">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>*Query Code:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Query Code" id="edit-query-code" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>Connection Type:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <select class="form-control select2" style="width: 100%;" id="edit-connection" required>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label></label>
+                                <div class="input-group">
+                                    <input type="checkbox" class="flat-red" id="edit-query-active" /> Is Active?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group" id="featureprocess-formgroup">
+                                <label>*Query Name:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Query Name" id="edit-query-name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="featurecode-formgroup">
+                                <label>Connection String:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-codepen"></i>
+                                    </div>
+                                    <select class="form-control select2" style="width: 100%;" id="edit-connection-string" required>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group" id="featureprocess-formgroup">
+                                <label>Query:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-align-left"></i></span>
+                                    <textarea style="resize: vertical; min-height:150px;" id="edit-query-string" class="form-control" placeholder="Query String" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12" style="margin-bottom:15px;">
+                            <button type="button" class="btn btn-primary" style="float: left ;" id="editParameter" data-queryparam>Add Parameter Field</button>
+                        </div>
+
+                        <div class="box-body">
+                            <table id="Editparamtbl" data-tablename="" class="table field-table-rows table-fields table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID</th>
+                                        <th>Field</th>
+                                        <th>Data Type</th>
+                                        <th>Condition</th>
+                                        <th>Value</th>
+
+
+
+                                    </tr>
+                                </thead>
+                                <tbody class="fieldrow-tbody" data-tablesap="" id="field-row-tbody"></tbody>
+                            </table>
+                        </div> <!----End of Div box body-->
+
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title">Executed Query</h4>
+                        <br />
+                        <table id="edit-executeQueryTable" class="table table-bordered table-striped table-responsive" style="width:100%"></table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-custom" style="float:left!important" id="edit-btn-generate-query">Check Data</button>
+                    <button type="button" class="btn btn-default btn-custom" data-dismiss="modal" onclick="@("window.location.href='" + @Url.Action("QueryManager", "Configuration") + "'");">Close</button>
+                    <button type="submit" class="btn btn-primary btn-custom" id="btn-save">Save Changes</button>
+                </div>
+            </div>
+        </form>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('[data-mask]').inputmask()
+
+            feature_dt = $('#feature').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+
+
+        $('.modal').on('hidden.bs.modal', function (e) {
+            $("#btn-save").trigger('reset');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.select2').select2()
+        });
+
+        //for (var i = 0; i < length; i++) {
+        //    $("#connection-string").append($('<option>', {
+        //        value: "",
+        //        text: ""
+        //    }));
+        //}
+
+        //for (var i = 0; i < length; i++) {
+        //    $("#edit-connection-string").append($('<option>', {
+        //        value: "",
+        //        text: ""
+        //    }));
+        //}
+    </script>
+
+    <script>
+        
+       
+        //$(document).on('click', 'button]', function () {
+        //    alert("I clicked this");
+        //});
+        $(document).on('submit', '#query-submit', function (e) {
+
+            e.preventDefault();
+            var queryCode = $("#query-code").val();
+            var queryName = $("#query-name").val();
+            var connection = $("#connection").val();
+           
+            var connectionString = $("#connection-string").val();
+            var queryString = $("#query-string").val();
+            var headerval = [];
+            var rowCount = 1;
+
+            var lastRowValue = feature_dt.rows().count() + 1;
+            console.log(lastRowValue);
+            $('.fieldrow-tbody tr',this).each(function () {
+
+           
+                //alert("QueryManagerId " +lastRowValue);
+                //alert(rowCount);
+                //alert("PARAM SHIT : " + $('#parameter_' + lastRowValue + '_' + rowCount + ' ').val());
+                //alert("Condition SHIT : " + $('#condition_' + lastRowValue + '_' + rowCount + ' ').val());
+                //alert("Value SHIT : " + $('#value_' + lastRowValue + '_' + rowCount + ' ').val());
+                headerval.push([lastRowValue, $('#parameter_' + lastRowValue + '_' + rowCount + ' ').val(), $('#datatype_' + lastRowValue + '_' + rowCount+'').val(), $('#condition_' + lastRowValue + '_' + rowCount + ' ').val(), $('#value_' + lastRowValue + '_' + rowCount + ' ').val()]);
+                    
+
+
+                rowCount++;
+            });
+
+
+            swal({
+                title: 'Are you sure you want to save new query string?',
+                text: "",
+                type: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+               
+                if (result.value) {
+
+                    $.post('CreateQuery', {
+                        QueryCode: queryCode,
+                        QueryName: queryName,
+
+                        StoreHeaderVal: headerval,
+
+                        ConnectionString: connectionString,
+                        ConnectionType: connection,
+                        QueryString: queryString
+                    }).done(function (data) {
+                        if (data) {
+                            $("#feature").load("Process #feature");
+                            $('.modal').modal('hide');
+                            setTimeout(function () { window.location.href = ""; }, 1500);
+                        }
+                    }).fail(function () {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    });
+                }
+            })
+        }).on('click', 'button#addParameter', function () {
+
+            var lastRowValue = feature_dt.rows().count() + 1;
+            var rowCount = $('#Addparamtbl tr').length;
+
+            
+            $(`#Addparamtbl tbody`).append('<tr id=tr_'+lastRowValue+'_'+rowCount+'> ' +
+                '<td><button type="button" class=" form-control btn-info btn-flat fa fa-trash" id=delete_' + lastRowValue + '_' + rowCount +' data-paramid></button></td>' +
+                '<td id=id_' + lastRowValue + '_' + rowCount +'>' + rowCount + '</td>' +
+                '<td><input type="text" class="form-control field-param" placeholder="Field" id=parameter_' + lastRowValue + '_' + rowCount + ' ></td>' +
+
+                '<td><select class="form-control select2 datatype " name ="" data-visorder=""  style="width: 100%;" id="datatype_' + lastRowValue + '_' + rowCount + '"><option value="Text">Text</option><option value="Date">Date</option></select></td>' +
+                '<td><select class="form-control select2 " name ="" data-visorder=""  style="width: 100%;" id="condition_' + lastRowValue + '_' + rowCount + '"><option value="===">is</option><option value=">=">Starts Between</option><option value="<=">Ends Between</option></select></td>' +
+
+                //'<td><input type="text" class="form-control field-rowcondition" placeholder="Condition" id=condition_' + lastRowValue + '_' + rowCount +' ></td>' +
+                '<td><input type="text" class="form-control valuefield" placeholder="Value" id=value_' + lastRowValue + '_' + rowCount +' ></td>' +
+                '</tr>');
+
+           
+          
+
+        })
+        function AddChange() {
+            // get the current value of the datatype select
+            var dataType = $(this).val();
+
+
+            var id = $(this).attr('id');
+            console.log(id);
+            let str = id;
+            let regex = /_(\d+_\d+)$/;
+            let match = regex.exec(str);
+            if (match) {
+                let result = match[1]; // "_9_1"
+                console.log(result);
+
+
+
+                var today = new Date();
+
+                var day = today.getDate().toString().padStart(2, '0');
+                var month = (today.getMonth() + 1).toString().padStart(2, '0');
+                var year = today.getFullYear().toString();
+                var currentDate = `'${month}/${day}/${year}'`;
+
+
+
+                var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+                var first_day = firstDay.getDate().toString().padStart(2, '0');
+                var first_month = (firstDay.getMonth() + 1).toString().padStart(2, '0');
+                var first_year = firstDay.getFullYear().toString();
+                var firstDate = `'${first_month}/${first_day}/${first_year}'`;
+
+
+
+                var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                var last_day = lastDay.getDate().toString().padStart(2, '0');
+                var last_month = (lastDay.getMonth() + 1).toString().padStart(2, '0');
+                var last_year = lastDay.getFullYear().toString();
+                var lastDate = `'${last_month}/${last_day}/${last_year}'`;
+
+
+
+                // find the editvalue select in the current row
+                var editValueSelect = $(this).closest('tr').find('.valuefield');
+
+                // if the datatype is "Date", change the editvalue input to a select
+                if (dataType === 'Date') {
+                    editValueSelect.replaceWith('<select class="form-control select2 valuefield" name ="" data-visorder=""  style="width: 100%;" id="value_' + result + '"><option value="' + currentDate + '">Current Day</option><option value="' + firstDate + '">First Day of the Month</option><option value="' + lastDate + '">Last Day of the Month</option></select>');
+                } else {
+                    // if the datatype is not "Date", change the editvalue select to an input
+                    editValueSelect.replaceWith('<input class="form-control select2 valuefield" name ="" data-visorder=""  style="width: 100%;" id="value_' + result + '">');
+                }
+            }
+        }
+
+        $(document).on('change', '.datatype', AddChange)
+
+            .on('click', 'button[data-paramid]', function () {
+           
+            var id = $(this).data('paramid');
+            $(this).closest('tr').remove();
+
+            })
+            
+            .on('click', 'button[data-queryid]', function () {
+              
+                var id = $(this).data('queryid');
+              
+              
+            ids = id;
+            $.post('FindQuery', { Id: id }).done(result => {
+                var i = 0;
+               
+               
+                var ConnectionString = result.DatabaseConnectionView[0].ConnectionString;
+              
+                for (var x in result.DatabaseConnectionView) {
+                    $("#edit-query-code").val(result.DatabaseConnectionView[x].QueryCode);
+                    validate = result.DatabaseConnectionView[x].Id;
+                    $("#edit-query-name").val(result.DatabaseConnectionView[x].QueryName);
+                    var resConn = result.DatabaseConnectionView[x].ConnectionType;
+
+                    //$("#edit-connection").val(resConn);
+                    $("#edit-query-string").val(result.DatabaseConnectionView[x].QueryString);
+                    document.getElementById('edit-connection').value = resConn;
+                    $("#edit-connection-string").empty();
+                    $.post('FindConnectionString', {
+                        type: resConn
+                    }).done(result => {
+                      
+                        for (var x in result.DatabaseConnectionView) {
+
+                            var option = $('<option>', {
+                                value: result.DatabaseConnectionView[x].Id,
+                                text: result.DatabaseConnectionView[x].QueryName
+                            });
+
+                            if (ConnectionString == result.DatabaseConnectionView[x].Id.toString()) {
+                                option.prop('selected', true);
+                            }
+                         
+
+                            $("#edit-connection-string").append(option);
+                               
+
+                          
+
+                          
+                        }
+                    })
+                 
+                    $.post('FindQueryMap', { Id: id }).done(result => {
+
+                      
+                        //var index = 1;
+                        for (var x in result.QueryManagerMapView) {
+                            
+                            //var lastRowValue = parseInt($('#feature tr:last td:eq(1)').text());
+                            var rowCount = $('#Editparamtbl tr').length;
+                            $(`#Editparamtbl tbody`).append('<tr id=tr_' + id + '_' + rowCount + '> ' +
+                                '<td><button type="button" class=" form-control btn-info btn-flat fa fa-trash" id=delete_' + id + '_' + rowCount + ' data-paramid></button></td>' +
+                                '<td id=id_' + id + '_' + rowCount + ' class="form-control field-rowid">' + result.QueryManagerMapView[x].Id + '</td>' +
+                                '<td><input type="text" class="form-control field-param" placeholder="Field" id=editparameter_' + id + '_' + rowCount + ' value="' + result.QueryManagerMapView[x].Field + '" ></td>' +
+                                
+                                '<td><select class="form-control select2 editdatatype" name ="" data-visorder=""  style="width: 100%;" id="editdatatype_' + id + '_' + rowCount + '"><option value="Text">Text</option><option value="Date">Date</option></select></td>' +
+                                '<td><select class="form-control select2 conditionfield" name ="" data-visorder=""  style="width: 100%;" id="editcondition_' + id + '_' + rowCount + '"><option value="===">is</option><option value=">=">Starts Between</option><option value="<=">Ends Between</option></select></td>' +
+                                '<td><input type="text" class="form-control valuefield" placeholder="Value" id=editvalue_' + id + '_' + rowCount + ' ></td>' +
+
+                                
+                                //'<td><input type="text" class="form-control field-rowcondition" placeholder="Condition" id=condition_' + lastRowValue + '_' + rowCount + ' value="' + result.QueryManagerMapView[x].Condition + '" ></td>' +
+                                //'<td><input type="text" class="form-control field-rowvalue" placeholder="Value" id=value_' + id + '_' + rowCount + ' value="' + result.QueryManagerMapView[x].Value + '" ></td>' +
+                                '</tr>');
+                            //index++;
+
+
+                            var ValueField = $('#editvalue_' + id + '_'+rowCount);
+                            var selectConditionElement = $('#editcondition_' + id + '_' + rowCount);
+
+                            var options = selectConditionElement.find('option');
+                            for (var i = 0; i < options.length; i++) {
+                            
+
+                                if (options[i].value === result.QueryManagerMapView[x].Condition) {
+                                    options[i].selected = true;
+                                    break;
+                                }
+                            }
+
+                            var datatype = $('#editdatatype_' + id + '_' + rowCount);
+                            var datatypeOption = datatype.find('option');
+                            //console.log(result.QueryManagerMapView[x].DataType)
+                            for (var i = 0; i < datatypeOption.length; i++) {
+
+                                if (datatypeOption[i].value === result.QueryManagerMapView[x].DataType) {
+                                    datatypeOption[i].selected = true;
+                                    $('#editdatatype_' + id + '_' + rowCount).trigger('change');
+                                    //console.log(datatype.val() === 'Date');
+                                    
+                                    //if (datatype.val() === 'Date') {
+
+                                    //    var valuefield = $('#editvalue_' + id + '_' + rowCount);
+                                    //    console.log(valuefield);
+                                    //    var valueoption = valuefield.find('option');
+                                    //    for (var j = 0; j < valueoption.length; j++) {
+                                    //        if (valueoption[j].value === result.QueryManagerMapView[x].Value) {
+                                    //            valueoption[j].selected = true;
+                                    //            break;
+                                    //        }
+                                    //    }
+
+
+                                    //} else {
+                                    //    console.log(result.QueryManagerMapView[x].Value);
+                                    //    console.log("./. ")
+                                    //    $('#editvalue_' + id + '_' + rowCount).val("asdasdasdas");
+
+
+                                    //}
+
+                                    if (datatype.val() === 'Date') {
+                                        var today = new Date();
+
+                                        var day = today.getDate().toString().padStart(2, '0');
+                                        var month = (today.getMonth() + 1).toString().padStart(2, '0');
+                                        var year = today.getFullYear().toString();
+                                        var currentDate = `'${month}/${day}/${year}'`;
+
+
+
+                                        var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+                                        var first_day = firstDay.getDate().toString().padStart(2, '0');
+                                        var first_month = (firstDay.getMonth() + 1).toString().padStart(2, '0');
+                                        var first_year = firstDay.getFullYear().toString();
+                                        var firstDate = `'${first_month}/${first_day}/${first_year}'`;
+
+
+
+                                        var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                                        var last_day = lastDay.getDate().toString().padStart(2, '0');
+                                        var last_month = (lastDay.getMonth() + 1).toString().padStart(2, '0');
+                                        var last_year = lastDay.getFullYear().toString();
+                                        var lastDate = `'${last_month}/${last_day}/${last_year}'`;
+
+                                        ValueField.replaceWith('<select class="form-control select2 editvaluefield" name="" data-visorder="" style="width: 100%;" id="editvalue_' + id + '_' + rowCount + '"><option value="current_Date">Current Day</option><option value="first_Date">First Day of the Month</option><option value="last_Date">Last Day of the Month</option></select>');
+
+                                        var selectedValue = result.QueryManagerMapView[x].Value;
+                                        $('#editvalue_' + id + '_' + rowCount + ' option[value="' + selectedValue + '"]').prop('selected', true);
+
+                                     
+                                    } else {
+                                        // if the datatype is not "Date", change the editvalue select to an input
+                                        ValueField.replaceWith('<input class="form-control select2 editvaluefield" name ="" data-visorder=""  style="width: 100%;" id="editvalue_' + id + '_' + rowCount + '" value="' + result.QueryManagerMapView[x].Value + '">');
+                                       
+                                    }
+
+
+
+
+                                 
+                                    break;
+                                 
+                                }
+                            }
+                            
+                            //var selectedCondition = result.QueryManagerMapView[x].Condition;
+
+                            //var conditionOptions = selectConditionElement.options;
+
+                            //console.log("option count" + conditionOptions);
+
+                            //for (var i = 0; i < conditionOptions.length; i++) {
+                            //    if (options [i].value === selectedValue) {
+                            //        options[i].selected = true;
+                            //        break;
+                            //    }
+                           
+                            //}
+                        }
+
+                    })
+                    
+
+                    //$("#edit-connection-string").val(result.DatabaseConnectionView[x].ConnectionString);
+
+                    document.getElementById('edit-connection-string').value = result.DatabaseConnectionView[x].ConnectionString;
+                    if (result.DatabaseConnectionView[x].IsActive == true) {
+                        $('input:checkbox[id = edit-query-active]').iCheck('check');
+                        $('input:checkbox[id = edit-query-active]').val('checked');
+                    }
+                    else {
+                        $('input:checkbox[id = edit-query-active]').iCheck('uncheck');
+                        $('input:checkbox[id = edit-query-active]').val('unchecked');
+                    }
+
+
+                    $('input:checkbox[id = edit-query-active]').on('ifChecked', function (event) {
+                        $('input:checkbox[id = edit-query-active]').val('checked');
+                    });
+
+                    $('input:checkbox[id = edit-query-active]').on('ifUnchecked', function (event) {
+                        $('input:checkbox[id = edit-query-active]').val('unchecked');
+                    });
+                }
+            })
+            }).on('click', 'button#editParameter', function () {
+
+                //var lastRowValue = $('#feature tr:last td:eq(1)').text();
+                var rowCount = $('#Editparamtbl tr').length;
+
+                var lastRowSecondTdId = $('#Editparamtbl tr:last td:nth-child(3) input').attr('id');
+
+               
+
+                var idString = lastRowSecondTdId;
+                var regex = /_(\d+)/; // matches the digits after the underscore
+                var match = regex.exec(idString);
+                var id = match ? match[1] : 1; // if match is null, set id to 1
+
+
+                $(`#Editparamtbl tbody`).append('<tr id=tr_' + id + '_' + rowCount + '> ' +
+                    '<td><button type="button" class=" form-control btn-info btn-flat fa fa-trash" id=delete_' + id + '_' + rowCount + ' data-paramid></button></td>' +
+                    '<td id=id_' + id + '_' + rowCount + ' class="editId">0</td>' +
+                    '<td><input type="text" class="form-control field-param" placeholder="Field" id=editparameter_' + id + '_' + rowCount + ' ></td>' +
+
+                    '<td><select class="form-control select2 editdatatype" name ="" data-visorder=""  style="width: 100%;" id="editdatatype_' + id + '_' + rowCount + '"><option value="Text">Text</option><option value="Date">Date</option></select></td>' +
+
+                    '<td><select class="form-control select2 " name ="" data-visorder=""  style="width: 100%;" id="editcondition_' + id + '_' + rowCount + '"><option value="===">is</option><option value=">=">Starts Between</option><option value="<=">Ends Between</option></select></td>' +
+
+                      '<td><input type="text" class="form-control editvaluefield" placeholder="Value" id=value_' + id + '_' + rowCount +' ></td>' +
+
+
+                    '</tr>');
+
+            })
+        function handleChange() {
+            // get the current value of the datatype select
+            var dataType = $(this).val();
+            var id = $(this).attr('id');
+           
+            let str = id;
+            let regex = /_(\d+_\d+)$/;
+            let match = regex.exec(str);
+            if (match) {
+                let result = match[1]; // "_9_1"
+                //console.log(result);
+
+
+
+                var today = new Date();
+
+                var day = today.getDate().toString().padStart(2, '0');
+                var month = (today.getMonth() + 1).toString().padStart(2, '0');
+                var year = today.getFullYear().toString();
+                var currentDate = `'${month}/${day}/${year}'`;
+
+
+
+                var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+                var first_day = firstDay.getDate().toString().padStart(2, '0');
+                var first_month = (firstDay.getMonth() + 1).toString().padStart(2, '0');
+                var first_year = firstDay.getFullYear().toString();
+                var firstDate = `'${first_month}/${first_day}/${first_year}'`;
+
+
+
+                var lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                var last_day = lastDay.getDate().toString().padStart(2, '0');
+                var last_month = (lastDay.getMonth() + 1).toString().padStart(2, '0');
+                var last_year = lastDay.getFullYear().toString();
+                var lastDate = `'${last_month}/${last_day}/${last_year}'`;
+
+
+
+            // find the editvalue select in the current row
+            var editValueSelect = $(this).closest('tr').find('.editvaluefield');
+
+            // if the datatype is "Date", change the editvalue input to a select
+                if (dataType === 'Date') {
+                    editValueSelect.replaceWith('<select class="form-control select2 editvaluefield" name ="" data-visorder=""  style="width: 100%;" id="editvalue' + result + '"><option value="current_Date">Current Day</option><option value="first_Date">First Day of the Month</option><option value="last_Date">Last Day of the Month</option></select>');
+            } else {
+                // if the datatype is not "Date", change the editvalue select to an input
+                editValueSelect.replaceWith('<input class="form-control select2 editvaluefield" name ="" data-visorder=""  style="width: 100%;" id="editvalue'+result+'">');
+                }
+            }
+        }
+        $(document).on('change', '.editdatatype', handleChange) 
+   
+            .on('submit', '#edit-query-submit', function (e) {
+            e.preventDefault();
+                console.log("HACKDOG");
+            var id = ids;
+            var IsActive;
+            var ChkboxVal = $('input:checkbox[id = edit-query-active]').val();
+            if (ChkboxVal == 'checked') { IsActive = true; }
+            else { IsActive = false; }
+
+            var queryCode = $("#edit-query-code").val();
+            var queryName = $("#edit-query-name").val();
+            var connection = $("#edit-connection").val();
+            var connectionString = $("#edit-connection-string").val();
+                console.log("CONNECTIONSTRING : "+connectionString)
+
+            var queryString = $("#edit-query-string").val();
+            var storevar = [];
+
+                $('#Editparamtbl tbody tr', this).each(function () {
+                   
+                       console.log($('.field-param', this).val());
+                    console.log($('.field-rowcondition', this).val());
+                    
+                  
+                    var value = $(this).find('td:nth-child(2)').text();
+                    //alert(value);
+
+                    storevar.push([$('.field-param', this).val(), $('.conditionfield', this).val(), $('.editvaluefield', this).val(), $('.field-rowid', this).val(), id, value, $('.editdatatype', this).val()]);
+
+
+                    });
+
+                console.log(storevar);
+                       
+            swal({
+                title: 'Are you sure?',
+                text: "You want to update the following data?",
+                type: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+                if (result.value) {
+                    $.post('UpdateQuery', {
+                        
+                        Id: id,
+                        QueryCode: queryCode,
+                        QueryName: queryName,
+                        ConnectionString: connectionString,
+                        
+                        ConnectionType: connection,
+                        QueryString: queryString,
+                        IsActive: IsActive,
+                        StoreHeaderVal: storevar,
+
+                    }).done(function (data) {
+                        if (data) {
+                            swal('Success!', '', 'success')
+                            //$("#feature").load("Process #feature");
+                            $('.modal').modal('hide');
+                            setTimeout(function () { window.location.href = ""; }, 1500);
+                        }
+                    }).fail(function () {
+                        swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+                    });
+                }
+            })
+        }).on('click', '#new-query', function (e) {
+            console.log("1")
+            $("#connection").empty();
+
+          
+            $("#connection").append($('<option>', {
+                value: "Addon",
+                text: "Addon Connection"
+            }));
+
+            $("#connection-string").empty();
+
+            $.post('FindConnectionString', {
+                type: "Addon"
+            }).done(result => {
+                console.log(result)
+                for (var x in result.DatabaseConnectionView) {
+                    $("#connection-string").append($('<option>', {
+                        value: result.DatabaseConnectionView[x].Id,
+                        text: result.DatabaseConnectionView[x].QueryName
+                    }));
+                }
+            })
+        }).on('click', '#edit-query', function (e) {
+            console.log("EDIT QUERY FIND")
+            $('#Editparamtbl tbody tr').remove();
+            $("#edit-connection").empty();
+
+            //$("#edit-connection").append($('<option>', {
+            //    value: "SAP",
+            //    text: "SAP Connection"
+            //}));
+
+            $("#edit-connection").append($('<option>', {
+                value: "Addon",
+                text: "Addon Connection"
+            }));
+
+            console.log($('edit-connection-string').val());
+           
+            //$("#edit-connection-string").empty();
+
+            //$.post('FindConnectionString', {
+            //    type: "SAP"
+            //}).done(result => {
+            //    for (var x in result.DatabaseConnectionView) {
+            //        $("#edit-connection-string").append($('<option>', {
+            //            value: result.DatabaseConnectionView[x].Code,
+            //            text: result.DatabaseConnectionView[x].Name
+            //        }));
+            //    }
+            //})
+        });
+
+        $('.modal').on('hide.bs.modal', function () {
+            $(this).find("input,textarea,select").val('').end();
+
+        });
+
+        $("#connection").html('').select2({
+            dropdownParent: $('#doc-item-modal .modal-content'),
+            selectOnClose: true,
+            width: 'resolve'
+        });
+
+        $("#edit-connection").html('').select2({
+            dropdownParent: $('#doc-item-modal .modal-content'),
+            selectOnClose: true,
+            width: 'resolve'
+        });
+
+        $("#connection-string").html('').select2({
+            dropdownParent: $('#doc-item-modal .modal-content'),
+            selectOnClose: true,
+            width: 'resolve'
+        });
+
+        $("#edit-connection-string").html('').select2({
+            dropdownParent: $('#doc-item-modal .modal-content'),
+            selectOnClose: true,
+            width: 'resolve'
+        });
+
+
+        $("#connection").change(function () {
+            $("#connection-string").empty();
+            var conType = $("#connection").val();
+            $.post('FindConnectionString', {
+                Type: conType
+            }).done(result => {
+                for (var x in result.DatabaseConnectionView) {
+                    $("#connection-string").append($('<option>', {
+                        value: result.DatabaseConnectionView[x].Id,
+                        text: result.DatabaseConnectionView[x].QueryName
+                    }));
+                }
+            })
+        });
+
+        $("#edit-connection").change(function () {
+            $("#edit-connection-string").empty();
+            var conType = $("#edit-connection").val();
+            $.post('FindConnectionString', {
+                Type: conType
+            }).done(result => {
+                for (var x in result.DatabaseConnectionView) {
+                    $("#edit-connection-string").append($('<option>', {
+                        value: result.DatabaseConnectionView[x].Id,
+                        text: result.DatabaseConnectionView[x].QueryName
+                    }));
+                }
+            })
+        });
+
+        $("#btn-generate-query").on('click', function (e) {
+            var connType = $("#connection").val();
+            var conString = $("#connection-string").val();
+            var query = $("#query-string").val();
+           
+            $.post('ExecuteQuery', {
+                Type: connType,
+                ConString: conString,
+                Query: query
+            }).done(result => {
+               
+                dataSet = result.JSONresult;
+                var jsonobj = jQuery.parseJSON(dataSet);
+                console.log(jsonobj[0])
+                var my_columns = [];
+
+                if (jsonobj == null || jsonobj == 0) {
+                    jsonobj = null;
+                }
+
+                $.each(jsonobj[0], function (key, value) {
+                    var my_item = {};
+                    my_item.data = key;
+                    my_item.title = key;
+                    my_columns.push(my_item);
+                });
+
+                $('#executeQueryTable').DataTable({
+                    columns: my_columns,
+                    data: jsonobj,
+                    'destroy': true,
+                    'paging': true,
+                    'lengthChange': true,
+                    'searching': true,
+                    'ordering': true,
+                    'info': true,
+                    'autoWidth': false,
+                    "scrollCollapse": true,
+                    "scrollY": 200,
+                    "scrollX": true
+                });
+
+
+            }).fail(function () {
+                swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+            });
+        });
+
+        
+        $("#edit-btn-generate-query").on('click', function (e) {
+            
+            var connType = $("#edit-connection").val();
+            var conString = $("#edit-connection-string").val();
+            var query = $("#edit-query-string").val();
+            var id = ids
+           
+            $.post('ExecuteQuery', {
+                Type: connType,
+                ConString: conString,
+                Query: query,
+                Id:id
+            }).done(result => {
+                if (result == "Please contact the administrator") {
+                    swal('No Data')
+
+                } else {
+                    dataSet = result
+                    //console.log("ETO ANG TUNAY NA RESULTA");
+                    //console.log(result);
+                    var jsonobj = dataSet;
+                    //console.log(jsonobj[0])
+                    var my_columns = [];
+
+                    if (jsonobj == null || jsonobj == 0) {
+                        jsonobj = null;
+                    }
+
+                    $.each(jsonobj[0], function (key, value) {
+                        var my_item = {};
+                        my_item.data = key;
+                        my_item.title = key;
+                        my_columns.push(my_item);
+                    });
+
+                    $('#edit-executeQueryTable').DataTable({
+                        columns: my_columns,
+                        data: jsonobj,
+                        'destroy': true,
+                        'paging': true,
+                        'lengthChange': true,
+                        'searching': true,
+                        'ordering': true,
+                        'info': true,
+                        'autoWidth': false,
+                        "scrollCollapse": true,
+                        "scrollY": 200,
+                        "scrollX": true
+                    });
+                }
+               
+
+            }).fail(function () {
+                swal('Something went wrong.', 'Please contact the administrator.', 'warning')
+            });
+        });
+
+        $(".query").focusout(function () {
+
+            var Code = $(this).val();
+            $.post('ValidateQueryManager', { Code: Code }).done(result => {
+               
+                for (var x in result.QueryManagerView) {
+
+                    if (result.QueryManagerView[x].QueryCode != "") {
+                        swal('Query Code is already taken.', '', 'warning')
+                        $(this).val("");
+                        $(this).focus();
+                    }
+
+                }
+            })
+        });
+    </script>
+}

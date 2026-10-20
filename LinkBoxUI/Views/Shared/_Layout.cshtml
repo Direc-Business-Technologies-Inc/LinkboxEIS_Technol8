@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="~/images/TCG.png" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .custom-file {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: calc(2.25rem + 2px);
+            margin-bottom: 0;
+        }
+
+        .custom-file-input {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: calc(2.25rem + 2px);
+            margin: 0;
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    @Html.Partial("_PreLoaderModal")
+
+    <div class="wrapper">
+        @Html.Partial("_Header")
+        @Html.Partial("_Sidebar")
+        <div class="content-wrapper" id="body">
+            @RenderBody()
+
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 3.0.0
+            </div>
+            <strong>Copyright &copy; 2021-2022 <a href="#"> DBTI</a>.</strong> All rights
+            reserved.
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+
+    <script>
+        var mods = new Array();
+
+        window.onload = function () {
+
+             var moduleAccess = @Session["ModuleAccess"];
+            switch (moduleAccess) {
+                case 1:
+                case 2:
+                    $('li[id = userManagement]').addClass('active');
+                    break;
+                case 3:
+                case 4:
+                case 10:
+                case 11:
+                    $('li[id = configuration]').addClass('active');
+                    break;
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    $('li[id = features]').addClass('active');
+                    break;
+        }
+        $('li[id=' + moduleAccess + ']').addClass('active');
+
+        };
+
+        $(document).ready(function () {
+
+            var id = @Session["Id"];
+
+            $.post('/User/GetModule', { Id: id }).done(result => {
+                mods = result;
+                //for (var x in result) {
+                //    $('li[id=' + result[x] + ']').addClass('hidden');
+                //    console.log(result[x])
+                //}
+
+                //if (($('li#1').hasClass("hidden")) && ($('li#2').hasClass("hidden"))) {
+                //    console.log("user management")
+                //    $('li[id = userManagement]').addClass('hidden');
+                //}
+                //if (($('li[id = "3" ]').hasClass("hidden")) && ($('li[id = "4" ]').hasClass("hidden")) && ($('li[id = "10" ]').hasClass("hidden")) && ($('li[id = "11" ]').hasClass("hidden"))) {
+                //    console.log("configuration")
+                //    $('li[id = configuration]').addClass('hidden');
+                //}
+                //if (($('li[id = "5" ]').hasClass("hidden")) && ($('li[id = "6" ]').hasClass("hidden")) && ($('li[id = "7" ]').hasClass("hidden")) && ($('li[id = "8" ]').hasClass("hidden")) && ($('li[id = "9" ]').hasClass("hidden"))) {
+                //    //console.log("features");
+                //    $('li[id = features]').addClass('hidden');
+                //}
+            });
+        });
+
+        //$(document).ready(function () {
+        //    $("ul.treeview-menu a").click(function (e) {
+        //        e.preventDefault(); // prevent default link button redirect behaviour
+        //        var url = $(this).attr("href");
+        //        $('#body').load(url+" #uu");
+        //    });
+        //});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,662 @@
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe.config
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.application
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\AeroWizard.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DomainLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\GroupControls.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\InfrastructureLayer.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OOXML.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\TimeSpan2.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Mvc.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DomainLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\AeroWizard.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\GroupControls.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\TimeSpan2.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Mvc.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.AssemblyReference.cache
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.application
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.exe
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.pdb
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.ValueTuple.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\FastExcel.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\netstandard.dll
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\FastExcel.xml
+D:\ProjectFiles\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.exe.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.application
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.exe
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\UploadFTP.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\AeroWizard.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DomainLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\GroupControls.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\InfrastructureLayer.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OOXML.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\TimeSpan2.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Mvc.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Http.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Razor.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DomainLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\InfrastructureLayer.dll.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\AeroWizard.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\GroupControls.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\TimeSpan2.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ClosedXML.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Mvc.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Http.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.Razor.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.AssemblyReference.cache
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.application
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.exe
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\obj\Debug\UploadFTP.pdb
+C:\SharedFolder\Projects\DBTI\Linkbox_PL01\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\UploadFTP.exe.config
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\UploadFTP.application
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\UploadFTP.exe
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\UploadFTP.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\AeroWizard.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DataAccessLayer.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DomainLayer.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\GroupControls.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\InfrastructureLayer.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\NPOI.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\NPOI.OOXML.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\TimeSpan2.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ClosedXML.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Mvc.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Http.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Razor.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DataAccessLayer.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DomainLayer.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\AeroWizard.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\GroupControls.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\TimeSpan2.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ClosedXML.pdb
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ClosedXML.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Mvc.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Http.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.Razor.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.csprojAssemblyReference.cache
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.application
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.exe
+D:\Project\NORTHTREND\UploadFTP\obj\Debug\UploadFTP.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.config
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\UploadFTP.application
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\UploadFTP.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\AeroWizard.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DomainLayer.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\GroupControls.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\NPOI.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\NPOI.OOXML.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\TimeSpan2.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ClosedXML.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Http.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DomainLayer.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\AeroWizard.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\GroupControls.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\TimeSpan2.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ClosedXML.pdb
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ClosedXML.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Http.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.csprojAssemblyReference.cache
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.application
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe
+D:\Project\LinkBox - NTMC\UploadFTP\obj\Debug\UploadFTP.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.config
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.application
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\AeroWizard.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\GroupControls.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OOXML.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\TimeSpan2.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\AeroWizard.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\GroupControls.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\TimeSpan2.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.pdb
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csprojAssemblyReference.cache
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.application
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe
+D:\Project\Linkbox - NTMC_20220425_1359\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.config
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe.manifest
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.application
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.exe
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\UploadFTP.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\AeroWizard.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DomainLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\GroupControls.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OOXML.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Extensions.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Formatting.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Net.Http.Primitives.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\TimeSpan2.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Http.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Ionic.Utils.Zip.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DataAccessLayer.dll.config
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DomainLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\InfrastructureLayer.dll.config
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ActiveDirectoryObjectPicker.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\AeroWizard.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\GroupControls.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskScheduler.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Microsoft.Win32.TaskSchedulerEditor.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Newtonsoft.Json.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\TimeSpan2.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Sap.Data.Hana.v4.5.dll.config
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\Net.SourceForge.Koogra.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.pdb
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ClosedXML.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Mvc.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Http.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ExcelNumberFormat.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.Razor.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\de\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\es\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\fr\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\it\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\pl\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ru\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\AeroWizard.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\de\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\es\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\fr\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\it\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\pl\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ru\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\Microsoft.Win32.TaskSchedulerEditor.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ar\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\da\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\de\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\es\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\fr\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\it\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ko\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\nl\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\pl\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\pt\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\ru\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\se\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\bin\Debug\zh-CN\TimeSpan2.resources.dll
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csprojAssemblyReference.cache
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CoreCompileInputs.cache
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe.manifest
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.application
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.csproj.CopyComplete
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.exe
+D:\Project\Linkbox - NTMC\Linkbox - NTMC\UploadFTP\obj\Debug\UploadFTP.pdb

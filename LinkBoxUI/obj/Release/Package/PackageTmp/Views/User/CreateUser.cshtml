@@ -1,0 +1,179 @@
+﻿@model DomainLayer.ViewModels.UserDetailsViewModel.UserViewModel
+@*@{
+        ViewBag.Title = "createUser";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content">
+        <div class="row">
+            <div class="">
+                <div class="box" style="width:50%; margin: 0 auto;">
+                    <div class="box-header">
+                        <h3 class="box-title">New User</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="register-box-body">
+                            <form action="../../UserDetails" method="post">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group center-block">
+                                    <label>*User Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", placeholder = "User Name" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>*First Name:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.FirstName, "The First Name field is required.", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>*Last Name:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.LastName, "The Last Name field is required.", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Middle Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+                                        @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control", placeholder = "Middle Name" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>*Authorizations:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+                                        @Html.DropDownListFor(model => model.AuthorizationId, (IEnumerable<SelectListItem>)ViewBag.Authorizations, new { @class = "form-control select2", style = "width: 100%;" })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.AuthorizationId, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>*Password:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password" })
+                                        <a href="" id="passeye1"class="input-group-addon">
+                                            <div>
+                                                <i class="fa fa-eye" id="eye1"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label>*Retype Password:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-log-in"></i></span>
+                                        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password" })
+                                        <a href="" id="passeye2" class="input-group-addon">
+                                            <div>
+                                                <i class="fa fa-eye" id="eye2"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "The Retype Password field is required.", new { @class = "text-danger" })
+                                </div> 
+                                <div class="form-group">
+                                    <div>
+                                        <input type="submit" id="btn-submit" value="Create" class="btn btn-primary btn-custom pull-right" />
+                                        <button type="button" class="btn btn-default btn-custom pull-right" style="margin-right:10px" onclick="location.href='@Url.Action("UserDetails", "User")'">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            if ("@ViewBag.WarningMessage" != "") {
+
+                swal('@ViewBag.WarningMessage','', 'warning')
+            }
+
+            if ("@ViewBag.SuccessMessage" != "") {
+
+                swal('@ViewBag.SuccessMessage','', 'success')
+            }
+
+            $("a#passeye1").on('click', function (event) {
+                event.preventDefault();
+                if ($('#Password').attr("type") == "text") {
+                    $('#Password').attr('type', 'password');
+                    $('#eye1').addClass("fa-eye");
+                    $('#eye1').removeClass("fa-eye-slash");
+
+                }
+                else if ($('#Password').attr("type") == "password") {
+                    $('#Password').attr('type', 'text');
+                    $('#eye1').removeClass("fa-eye");
+                    $('#eye1').addClass("fa-eye-slash");
+                }
+            });
+            $("a#passeye2").on('click', function (event) {
+                event.preventDefault();
+                if ($('#ConfirmPassword').attr("type") == "text") {
+                    $('#ConfirmPassword').attr('type', 'password');
+                    $('#eye2').addClass("fa-eye");
+                    $('#eye2').removeClass("fa-eye-slash");
+
+                } else if ($('#ConfirmPassword').attr("type") == "password") {
+                    $('#ConfirmPassword').attr('type', 'text');
+                    $('#eye2').removeClass("fa-eye");
+                    $('#eye2').addClass("fa-eye-slash");
+                }
+            });
+
+            $('#btn-submit').on('click', function (e) {
+                e.preventDefault();
+                // stop the default behavior(navigation)
+                var _form = $(this).closest("form");
+                //get a reference to the container form
+
+                swal({
+                    title: 'Are you sure you want to save new user ?',
+                    text: "You won't be able to revert this!",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Confirm'
+                }).then( (result) => {
+                    //user selected "Yes", Let's submit the form
+                    if (result.value) {
+                        _form.submit();
+                    }
+                });
+            });
+        });
+        $('.select2').select2();
+    </script>
+}

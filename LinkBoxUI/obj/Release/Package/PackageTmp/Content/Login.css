@@ -1,0 +1,220 @@
+/*
+ * Page: Lock Screen
+ * -----------------
+ */
+/* ADD THIS CLASS TO THE <BODY> TAG */
+.lockscreen {
+    background: #d2d6de;
+}
+
+.lockscreen-logo {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+    .lockscreen-logo a {
+        color: #444;
+    }
+
+.lockscreen-logo {
+    background-image: url("../../cutom/img/Login_Logo.png");
+    background-color: transparent;
+    height: 100px;
+    margin-bottom: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.lockscreen-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+/* User name [optional] */
+.lockscreen .lockscreen-name {
+    text-align: center;
+    font-weight: 600;
+}
+/* Will contain the image and the sign in form */
+.lockscreen-item {
+    border-radius: 4px;
+    padding: 0;
+    background: #fff;
+    position: relative;
+    margin: 10px auto 30px auto;
+    width: 290px;
+}
+/* User image */
+.lockscreen-image {
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: -25px;
+    background: #fff;
+    padding: 5px;
+    z-index: 10;
+}
+
+    .lockscreen-image > img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+/* Contains the password input and the login button */
+.lockscreen-credentials {
+    margin-left: 70px;
+}
+
+    .lockscreen-credentials .form-control {
+        border: 0;
+    }
+
+    .lockscreen-credentials .btn {
+        background-color: #fff;
+        border: 0;
+        padding: 0 10px;
+    }
+
+.lockscreen-footer {
+    margin-top: 10px;
+}
+
+/*
+ * Page: Login
+ * ----------------------
+ */
+
+.login-logo {
+    background-image: url("../../dist/img/LOGO_TSS.png");
+    background-color: transparent;
+    height: 150px;
+    margin-bottom: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.login-logo2 {
+    background-color: transparent;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.login-page {
+    /*background: #d2d6de;*/
+    height: 100%;
+    background-image: url(/images/Aquabg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        background-size: cover;
+        background-repeat: no-repeat;   
+    }
+}
+
+.login-margin {
+    /*background: #d2d6de;*/
+    margin-top: 30%;
+    margin-left: 70%;
+}
+
+.login-box {
+    width: 450px;
+    margin: 7% auto;
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+.login-box-body {
+    /*background-color:transparent;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    box-shadow: 0 0 20px rgb(254 ,220, 0);*/
+    width: 40rem;
+    height: 30rem;
+    box-shadow: 0 0 1rem 0 rgba(137, 210, 215,0.6);
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+    background-color: powderblue;
+    overflow: hidden;
+}
+
+    .login-box-body:before {
+        /*background-color:transparent;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+    box-shadow: 0 0 20px rgb(254 ,220, 0);*/
+        /*width: 30rem;
+        height: 20rem;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;*/
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+        filter: blur(10px);
+        margin: -20px;
+    }
+
+/*.login-box-body {
+    color: #777;
+}*/
+
+.login-box-container {
+    position: relative;
+}
+
+.login-box-field {
+    width: 38rem;
+    height: 30rem;
+    position: absolute;
+    opacity: 1;
+    margin: 7% auto;
+    margin-left: 2%;
+}
+
+.middle > * {
+    vertical-align: middle;
+}
+.login-box-msg {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+
+.social-auth-links {
+    margin: 10px 0;
+}

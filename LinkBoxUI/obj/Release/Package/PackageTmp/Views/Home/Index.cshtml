@@ -1,0 +1,668 @@
+﻿@model DomainLayer.ViewModels.DashboardViewModel
+<section class="content-header">
+    <h1>
+        Dashboard
+    </h1>
+
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            @*<div class="box">*@
+
+            @*<div class="col-md-12">
+            <h3>Total Sales Order Process as of @DateTime.Now.ToString("MMM dd, yyyy")</h3>
+            <div class="box box-info">
+                <div class="box-header with-border" id="divOverallData">
+
+                </div>
+            </div>
+        </div>*@
+
+
+
+            <div class="col-md-12">
+                <h3>Daily SAP Sales Order Posting Summary of @DateTime.Now.ToString("MMM dd, yyyy")</h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="box box-info">
+                            <div class="box-header with-border" id="daily_divOverallData"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box box-danger">
+                            <div class="box-header with-border" id="daily_divErrorData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <h3>SAP Sales Order Posting Summary as of @DateTime.Now.ToString("MMM dd, yyyy")</h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="box box-info">
+                            <div class="box-header with-border" id="divOverallData"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box box-danger">
+                            <div class="box-header with-border" id="divErrorData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 d-none" style="display: none;">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <div class="row" id="divSAPDataCount">
+
+                            <!--<div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="info-box bg-aqua">
+                        <span class="info-box-icon"><i class="ion ion-pie-graph"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">APBW</span>
+                            <span class="info-box-text">AR Invoice</span>
+                            <span class="info-box-text">Total no. of data</span>
+                            <span class="info-box-number">41,410</span>
+
+                            <div class="progress" style="width:80%; margin:auto;">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <span class="progress-description">
+                                Completion Percentage: 50%
+                            </span>
+                        </div>-->
+                            <!-- /.info-box-content -->
+                            <!--</div>-->
+                            <!-- /.info-box -->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12" style="display: none;">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <div id="divTransferStatus">
+                            @*<div class="col-md-12">
+                            <h3>
+                                <i class="fa fa-database"></i> Database Name : APBW
+                            </h3>
+                            <h4>
+                                Completion Percentage: 69%
+                            </h4>
+                            <table id="transferstatus-table" class="table table-fields table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Module</th>
+                                        <th>No of Data - SAP</th>
+                                        <th>No of Data - Addon</th>
+                                        <th>Completion Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="transferstatus-tbody">
+                                    <tr>
+                                        <td></td>
+                                        <td>AR Invoice</td>
+                                        <td>9999</td>
+                                        <td>120000</td>
+                                        <td>70%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>*@
+                        </div>
+                        @*<button class="btn btn-info pull-right" id="btnPrint">Print</button>*@
+                        <button class="btn btn-danger pull-right hidden" id="btnClearError">Clear All Error</button>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="box-header">
+            <h3 class="box-title">
+                <i class="fa fa-database"></i> Server :
+            </h3>
+            <select class="form-control select2" style="width: 15%;" id="select-server">
+                @foreach (var item in Model.SAPList)
+                {
+                    <option value="@item.Code">@item.Code</option>
+                }
+            </select>
+        </div>
+        <div class="box-body">
+            <h3>Instock Items</h3>
+            <table id="item-table" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>ItemCode</th>
+                        <th>ItemName</th>
+                        <th>Uom</th>
+                        <th>SAP Price</th>
+                        <th>LastUpdate</th>
+                        <th>SAP Inventory</th>
+                        <th>POS Price</th>
+                        <th>Sales Qty</th>
+                        <th>Instock</th>
+                    </tr>
+                </thead>
+                <tbody id="header-tbody"></tbody>
+
+            </table>
+            <button type="button" style="float:right;" class="btn btn-info" onclick="$('#item-table_wrapper .buttons-csv').click()">Export</button>
+            <br />
+            <br />
+            <h3>POS and SAP Price Comparison</h3>
+            <table id="itemcomparison-table" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>ItemCode</th>
+                        <th>ItemName</th>
+                        <th>Uom</th>
+                        <th>SAP Price</th>
+                        <th>POS Price</th>
+                        <th>Instock</th>
+                        <th>LastUpdate</th>
+                    </tr>
+                </thead>
+                <tbody id="header-tbody"></tbody>
+
+            </table>
+            <button type="button" style="float:right;" class="btn btn-info" onclick="$('#itemcomparison-table_wrapper .buttons-csv').click()">Export</button>
+            <br />
+        </div>*@
+
+            @*</div>*@
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/export/buttons.html5.min.js")
+    @Scripts.Render("~/Scripts/export/buttons.print.min.js")
+    @Scripts.Render("~/Scripts/export/jszip.min.js")
+    @Scripts.Render("~/Scripts/export/pdfmake.min.js")
+    @Scripts.Render("~/Scripts/export/vfs_fonts.js")
+
+    <script>
+        function getProggress() {
+            $.post('/Home/GetReportProgress').done(result => {
+                var totalPercent = 0;
+                var totalSAPCount = 0;
+                var totalAddonCount = 0;
+                var dbSAPCount = 0;
+                var dbAddonCount = 0;
+                var dbPercent = 0;
+                var totalIssuesCount = 0;
+                var dbname = '';
+                for (var x in result.DashboardReportList) {
+                    conso
+                    totalIssuesCount += +result.DashboardReportList[x].IssueNo;
+                    var sap = +$('#sap' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).text();
+                    var addon = +result.DashboardReportList[x].AddonDataNo;
+                    var percentage = 0;
+                    if (addon > 0) {
+                        percentage = (addon / sap) * 100;
+                        percentage = percentage.toFixed(2);
+                    }
+
+                    if (dbname != result.DashboardReportList[x].DBName) {
+                        dbname = result.DashboardReportList[x].DBName;
+                        dbSAPCount = +$('#sap' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).text();
+                        dbAddonCount = result.DashboardReportList[x].AddonDataNo;
+                        if (dbAddonCount > 0) {
+                            dbPercent = (dbAddonCount / dbSAPCount) * 100;
+                            dbPercent = dbPercent.toFixed(2);
+                        }
+                        else {
+                            dbPercent = 0;
+                        }
+                        $('#' + dbname + '-title').text('Completion Percentage: ' + dbPercent + '%');
+                    }
+                    else {
+                        dbSAPCount += +$('#sap' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).text();
+                        dbAddonCount += result.DashboardReportList[x].AddonDataNo;
+                        if (dbAddonCount > 0) {
+                            dbPercent = (dbAddonCount / dbSAPCount) * 100;
+                            dbPercent = dbPercent.toFixed(2);
+                        }
+                        $('#' + dbname + '-title').text('Completion Percentage: ' + dbPercent + '%');
+                    }
+
+
+                    totalSAPCount += +$('#sap' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).text();
+                    totalAddonCount += result.DashboardReportList[x].AddonDataNo;
+
+                    //SAPDATA COUNT
+                    $('#sappercentage' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).text('Completion Percentage: ' + percentage + '%');
+                    $('#sapprogress' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module).css("width", percentage + "%");
+
+                    //TransferStatus
+                    $('#transferstatus-' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module + '-addondatano').text(result.DashboardReportList[x].AddonDataNo);
+                    $('#transferstatus-' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module + '-percentage').text(percentage + "%");
+                    $('#transferstatus-' + result.DashboardReportList[x].DBName + result.DashboardReportList[x].Module + '-issueno').text(result.DashboardReportList[x].IssueNo);
+                    //$('#' + result.DashboardReportList[x].DBName + '-title').text('Completion Percentage: ' + dbPercent + '%');
+
+                }
+                totalSAPCount = totalSAPCount == 0 ? 1 : totalSAPCount;
+                totalPercent = (totalAddonCount / totalSAPCount) * 100;
+                totalPercent = totalPercent.toFixed(2);
+
+                //OverallData
+                $('#overallpercentknob').val(totalPercent);
+                $('#overallpercenttext').text('Overall Completion: ' + totalPercent + '%');
+                $('#totalIssuesCountknob').val(totalIssuesCount);
+                $('#totalIssuesCounttext').text('Number of Issues ' + totalIssuesCount);
+
+                //Total Issues
+
+                window.setTimeout(getProggress, 5000);
+            })
+
+        }
+
+        $(document).ready(function () {
+
+            $('#btnClearError').click(function () {
+                swal({
+                    title: 'Are you sure you want to clear all current recorded errors?',
+                    text: "",
+                    type: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result.value) {
+                        $('#preloader-modal').modal('show');
+                        $.post('/Home/ClearCurrentRecords', { }).done(res => {
+                            if (res) {
+                                $('#preloader-modal').modal('hide');
+                                swal("Uploaded Successfully", '', 'success');
+                                window.location.href = window.location.href;
+                            }
+                            else {
+                                swal('Something went wrong.', '', 'warning')
+                                $('#preloader-modal').modal('hide');
+                            }
+                        })
+                        $('#preloader-modal').modal('hide');
+                    }
+                })
+
+
+            });
+
+            $('#btnPrint').click(function () {
+
+                var urlToSend = '/Home/Export'
+                var req = new XMLHttpRequest();
+                req.open("GET", urlToSend, true);
+                req.responseType = "blob";
+                req.onload = function (event) {
+
+                    var blob = req.response;
+                    var fileName = 'Migration_report.xlsx'; // req.getResponseHeader(itemcode + '_report.xlsx'); if you have the fileName header available
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = fileName;
+                    link.click();
+                };
+                req.send();
+
+            });
+
+            $('#preloader-modal').modal('show');
+            var table = $('#item-table').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': true,
+                'dom': 'Bfrtip',
+                'buttons': [
+                    {
+                        'extend': 'excelHtml5',
+                        'title': 'Inventory Summary Report'
+                    },
+                    {
+                        'extend': 'csv',
+                        'title': 'Inventory Summary Report'
+                    }
+                ]
+            });
+            var tablecomparison = $('#itemcomparison-table').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': true,
+                'dom': 'Bfrtip',
+                'buttons': [
+                    {
+                        'extend': 'excelHtml5',
+                        'title': 'Price Comparison Report'
+                    },
+                    {
+                        'extend': 'csv',
+                        'title': 'Price Comparison  Report'
+                    }
+                ]
+            });
+            $('.dt-buttons').hide();
+            //$.post('/Home/GetReportProgress').done(result => {
+            $.post('/Home/GetDashBoardReport').done(result => {
+                console.log(result);
+                //table.clear().draw();
+                //tablecomparison.clear().draw();
+                var dbname = '';
+                var totalSAPCount = 0;
+                var dbSAPCount = 0;
+                var totalAddonCount = 0;
+                var dbAddonCount = 0;
+                var totalPercent = 0;
+                var dbPercent = 0;
+
+                var totalIssuesCount = result.CounterView.ErrorCount;
+                var LazadaCount = result.CounterView.Lazada;
+                var TiktokCount = result.CounterView.Tiktok;
+                var ShopeeCount = result.CounterView.Shopee;
+
+                var daily_totalIssuesCount = result.dailyCounterView.ErrorCount;
+                var daily_LazadaCount = result.dailyCounterView.Lazada;
+                var daily_TiktokCount = result.dailyCounterView.Tiktok;
+                var daily_ShopeeCount = result.dailyCounterView.Shopee;
+
+
+
+                $('#daily_divOverallData').append(
+                    '<div class="row">'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#1A71FF;">' + daily_LazadaCount + '</div>'
+                    + '<p><b>Lazada</b></p>'
+                    + '</div>'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#121212;">' + daily_TiktokCount + '</div>'
+                    + '<p><b>Tiktok</b></p>'
+                    + '</div>'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#EE4D2D;">' + daily_ShopeeCount + '</div>'
+                    + '<p><b>Shopee</b></p>'
+                    + '</div>'
+                    + '</div>'
+                );
+
+                $('#daily_divErrorData').append(
+                    '<div class="text-center">'
+                    + '<div class="stat-circle" style="background-color:#8B0000;">' + daily_totalIssuesCount + '</div>'
+                    + '<p><b>Errors</b></p>'
+                    + '</div>'
+                );
+
+                $('#divOverallData').append(
+                    '<div class="row">'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#1A71FF;">' + LazadaCount + '</div>'
+                    + '<p><b>Lazada</b></p>'
+                    + '</div>'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#121212;">' + TiktokCount + '</div>'
+                    + '<p><b>Tiktok</b></p>'
+                    + '</div>'
+                    + '<div class="col-xs-4 col-md-4 text-center">'
+                    + '<div class="stat-circle" style="background-color:#EE4D2D;">' + ShopeeCount + '</div>'
+                    + '<p><b>Shopee</b></p>'
+                    + '</div>'
+                    + '</div>'
+                );
+
+                $('#divErrorData').append(
+                    '<div class="text-center">'
+                    + '<div class="stat-circle" style="background-color:#8B0000;">' + totalIssuesCount + '</div>'
+                    + '<p><b>Errors</b></p>'
+                    + '</div>'
+                );
+
+                //callKnob();
+                //$('#totalIssuesCountknob').val(totalIssuesCount);
+                $('#preloader-modal').modal('hide');
+                //window.setTimeout(getProggress, 5000);
+                //window.clearInterval(getProggress(), 3000);
+            })
+            //$.post('/Home/GetItemStock', { Code: $('#select-server').val() }).done(result => {
+            //    table.clear().draw();
+            //    tablecomparison.clear().draw();
+            //    for (var x in result.ItemList) {
+            //        table.row.add([
+            //            result.ItemList[x].ItemCode,
+            //            result.ItemList[x].ItemName,
+            //            result.ItemList[x].Uom,
+            //            result.ItemList[x].Price,
+            //            result.ItemList[x].LastUpdate,
+            //            result.ItemList[x].Stock,
+            //            result.ItemList[x].SalesPrice,
+            //            result.ItemList[x].SalesQty,
+            //            result.ItemList[x].CurrentStock,
+
+            //        ]).draw(false);
+            //        if (parseInt(result.ItemList[x].CurrentStock) <= 0) {
+
+
+            //            var rowsCount = table.data().length;
+            //            var rowsPerPage = table.page.len();
+            //            var row = table.row(rowsCount - 1);
+
+            //            row.node().classList.add('bg-danger');
+            //        }
+            //    }
+
+            //    for (var x in result.ItemComparisonList) {
+            //        tablecomparison.row.add([
+            //            result.ItemComparisonList[x].ItemCode,
+            //            result.ItemComparisonList[x].ItemName,
+            //            result.ItemComparisonList[x].Uom,
+            //            result.ItemComparisonList[x].Price,
+
+            //            result.ItemComparisonList[x].SalesPrice,
+            //            result.ItemComparisonList[x].CurrentStock,
+            //            result.ItemComparisonList[x].LastUpdate,
+
+            //        ]).draw(false);
+            //        if (parseInt(result.ItemComparisonList[x].CurrentStock) <= 0) {
+
+
+            //            var rowsCount = tablecomparison.data().length;
+            //            var rowsPerPage = tablecomparison.page.len();
+            //            var row = tablecomparison.row(rowsCount - 1);
+
+            //            row.node().classList.add('bg-danger');
+            //        }
+            //    }
+
+            //})
+
+            $(document).on('select2:select', '#select-server', function (e) {
+                var Code = $(this).val();
+                $.post('/Home/GetItemStock', { Code: Code }).done(result => {
+                    table.clear().draw();
+                    tablecomparison.clear().draw();
+                    for (var x in result.ItemList) {
+                        table.row.add([
+                            result.ItemList[x].ItemCode,
+                            result.ItemList[x].ItemName,
+                            result.ItemList[x].Uom,
+                            result.ItemList[x].Price,
+                            result.ItemList[x].LastUpdate,
+                            result.ItemList[x].Stock,
+                            result.ItemList[x].SalesPrice,
+                            result.ItemList[x].SalesQty,
+                            result.ItemList[x].CurrentStock,
+
+                        ]).draw(false);
+
+                        if (parseInt(result.ItemList[x].CurrentStock) <= 0) {
+
+
+                            var rowsCount = table.data().length;
+                            var rowsPerPage = table.page.len();
+                            var row = table.row(rowsCount - 1);
+
+                            row.node().classList.add('bg-danger');
+                        }
+
+                    }
+
+                    for (var x in result.ItemComparisonList) {
+                        tablecomparison.row.add([
+                            result.ItemComparisonList[x].ItemCode,
+                            result.ItemComparisonList[x].ItemName,
+                            result.ItemComparisonList[x].Uom,
+                            result.ItemComparisonList[x].Price,
+
+                            result.ItemComparisonList[x].SalesPrice,
+                            result.ItemComparisonList[x].CurrentStock,
+                            result.ItemComparisonList[x].LastUpdate,
+
+                        ]).draw(false);
+                        if (parseInt(result.ItemComparisonList[x].CurrentStock) <= 0) {
+
+                            var rowsCount = tablecomparison.data().length;
+                            var rowsPerPage = tablecomparison.page.len();
+                            var row = tablecomparison.row(rowsCount - 1);
+
+                            row.node().classList.add('bg-danger');
+                        }
+                    }
+                })
+            });
+
+            $('.select2').select2();
+
+            $(".knob").knob({
+                /*change : function (value) {
+                 //console.log("change : " + value);
+                 },
+                 release : function (value) {
+                 console.log("release : " + value);
+                 },
+                 cancel : function () {
+                 console.log("cancel : " + this.value);
+                 },*/
+                draw: function () {
+
+                    // "tron" case
+                    if (this.$.data('skin') == 'tron') {
+
+                        var a = this.angle(this.cv)  // Angle
+                            , sa = this.startAngle          // Previous start angle
+                            , sat = this.startAngle         // Start angle
+                            , ea                            // Previous end angle
+                            , eat = sat + a                 // End angle
+                            , r = true;
+
+                        this.g.lineWidth = this.lineWidth;
+
+                        this.o.cursor
+                            && (sat = eat - 0.3)
+                            && (eat = eat + 0.3);
+
+                        if (this.o.displayPrevious) {
+                            ea = this.startAngle + this.angle(this.value);
+                            this.o.cursor
+                                && (sa = ea - 0.3)
+                                && (ea = ea + 0.3);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.previousColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                            this.g.stroke();
+                        }
+
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                        this.g.stroke();
+
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+
+                        return false;
+                    }
+                }
+            });
+            /* END JQUERY KNOB */
+        });
+
+        function callKnob() {
+            $(".knob").knob({
+                /*change : function (value) {
+                 //console.log("change : " + value);
+                 },
+                 release : function (value) {
+                 console.log("release : " + value);
+                 },
+                 cancel : function () {
+                 console.log("cancel : " + this.value);
+                 },*/
+                draw: function () {
+
+                    // "tron" case
+                    if (this.$.data('skin') == 'tron') {
+
+                        var a = this.angle(this.cv)  // Angle
+                            , sa = this.startAngle          // Previous start angle
+                            , sat = this.startAngle         // Start angle
+                            , ea                            // Previous end angle
+                            , eat = sat + a                 // End angle
+                            , r = true;
+
+                        this.g.lineWidth = this.lineWidth;
+
+                        this.o.cursor
+                            && (sat = eat - 0.3)
+                            && (eat = eat + 0.3);
+
+                        if (this.o.displayPrevious) {
+                            ea = this.startAngle + this.angle(this.value);
+                            this.o.cursor
+                                && (sa = ea - 0.3)
+                                && (ea = ea + 0.3);
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.previousColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                            this.g.stroke();
+                        }
+
+                        this.g.beginPath();
+                        this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                        this.g.stroke();
+
+                        this.g.lineWidth = 2;
+                        this.g.beginPath();
+                        this.g.strokeStyle = this.o.fgColor;
+                        this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                        this.g.stroke();
+
+                        return false;
+                    }
+                }
+            });
+            /* END JQUERY KNOB */
+        }
+        function getKnobMax(value) {
+            // Round up to a clean ceiling above the value so the arc doesn't render maxed-out/near-full for normal counts
+            if (value <= 0) return 100;
+            var magnitude = Math.pow(10, Math.floor(Math.log10(value)));
+            return Math.ceil((value + 1) / magnitude) * magnitude;
+        }
+    </script>
+}
