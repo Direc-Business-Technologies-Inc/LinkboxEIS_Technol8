@@ -1,0 +1,8 @@
+Visual Studio
+MSsql Server Management Studio
+Sap Hana Client for 2.15
+Bartender
+Tortoise SVN
+Sophos Connect
+
+Visual SVN

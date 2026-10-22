@@ -30,6 +30,8 @@ namespace LinkBoxUI.Services
 
 
         private PrimaryAccountsController primary = new PrimaryAccountsController();
+        private EISController eis = new EISController();
+
 
 
         //public UploadViewModel Get_Authorization(int id)
@@ -757,7 +759,19 @@ namespace LinkBoxUI.Services
                 // Handle other possible IHttpActionResult types as needed
                 return string.Empty;
             }
+            else if (ProcessType.Contains("EIS"))
+            {
+                SchedCode = _context.Schedules.Where(x => x.Process == code).Select(x => x.SchedCode).FirstOrDefault();
+                var res = await eis.GenerateInvoiceJson(SchedCode);
 
+                if (res is System.Web.Http.Results.OkNegotiatedContentResult<string> okResult)
+                {
+                    return okResult.Content;
+                }
+
+                // Handle other possible IHttpActionResult types as needed
+                return string.Empty;
+            }
             return "";
         }
     }

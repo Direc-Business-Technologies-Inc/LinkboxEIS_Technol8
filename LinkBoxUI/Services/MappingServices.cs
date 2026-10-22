@@ -51,7 +51,8 @@ namespace LinkBoxUI.Services
                 ModuleName = x.ModuleName,
                 DataType = x.DataType,
                 APICode = x.APICode,
-                DestModule = x.DestModule
+                DestModule = x.DestModule,
+                QueryCode = x.QueryCode
             }).OrderBy(x=>x.ModuleName).ToList();
 
             model.PlatformFieldView = _context.FieldMappings
@@ -434,6 +435,7 @@ namespace LinkBoxUI.Services
                     MapName = x.MapName,
                     SAPCode = x.SAPCode,
                     FileName = x.FileName,
+                    QueryCode = x.QueryCode,
                     FileType = x.FileType,
                     ModuleName = x.ModuleName,
                     RowWorksheet = x.RowWorksheet,

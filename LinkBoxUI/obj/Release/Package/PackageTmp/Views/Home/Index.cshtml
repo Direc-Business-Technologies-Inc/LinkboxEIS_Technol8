@@ -21,7 +21,7 @@
 
 
 
-            <div class="col-md-12">
+            @*<div class="col-md-12">
                 <h3>Daily SAP Sales Order Posting Summary of @DateTime.Now.ToString("MMM dd, yyyy")</h3>
                 <div class="row">
                     <div class="col-md-9">
@@ -51,130 +51,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>*@
 
-            <div class="col-md-12 d-none" style="display: none;">
-                <div class="box box-info">
-                    <div class="box-header with-border">
-                        <div class="row" id="divSAPDataCount">
-
-                            <!--<div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="info-box bg-aqua">
-                        <span class="info-box-icon"><i class="ion ion-pie-graph"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">APBW</span>
-                            <span class="info-box-text">AR Invoice</span>
-                            <span class="info-box-text">Total no. of data</span>
-                            <span class="info-box-number">41,410</span>
-
-                            <div class="progress" style="width:80%; margin:auto;">
-                                <div class="progress-bar" style="width: 50%"></div>
-                            </div>
-                            <span class="progress-description">
-                                Completion Percentage: 50%
-                            </span>
-                        </div>-->
-                            <!-- /.info-box-content -->
-                            <!--</div>-->
-                            <!-- /.info-box -->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-12" style="display: none;">
-                <div class="box box-info">
-                    <div class="box-header with-border">
-                        <div id="divTransferStatus">
-                            @*<div class="col-md-12">
-                            <h3>
-                                <i class="fa fa-database"></i> Database Name : APBW
-                            </h3>
-                            <h4>
-                                Completion Percentage: 69%
-                            </h4>
-                            <table id="transferstatus-table" class="table table-fields table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Module</th>
-                                        <th>No of Data - SAP</th>
-                                        <th>No of Data - Addon</th>
-                                        <th>Completion Percentage</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="transferstatus-tbody">
-                                    <tr>
-                                        <td></td>
-                                        <td>AR Invoice</td>
-                                        <td>9999</td>
-                                        <td>120000</td>
-                                        <td>70%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>*@
-                        </div>
-                        @*<button class="btn btn-info pull-right" id="btnPrint">Print</button>*@
-                        <button class="btn btn-danger pull-right hidden" id="btnClearError">Clear All Error</button>
-                    </div>
-                </div>
-            </div>
-
-            @*<div class="box-header">
-            <h3 class="box-title">
-                <i class="fa fa-database"></i> Server :
-            </h3>
-            <select class="form-control select2" style="width: 15%;" id="select-server">
-                @foreach (var item in Model.SAPList)
-                {
-                    <option value="@item.Code">@item.Code</option>
-                }
-            </select>
-        </div>
-        <div class="box-body">
-            <h3>Instock Items</h3>
-            <table id="item-table" class="table table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th>ItemCode</th>
-                        <th>ItemName</th>
-                        <th>Uom</th>
-                        <th>SAP Price</th>
-                        <th>LastUpdate</th>
-                        <th>SAP Inventory</th>
-                        <th>POS Price</th>
-                        <th>Sales Qty</th>
-                        <th>Instock</th>
-                    </tr>
-                </thead>
-                <tbody id="header-tbody"></tbody>
-
-            </table>
-            <button type="button" style="float:right;" class="btn btn-info" onclick="$('#item-table_wrapper .buttons-csv').click()">Export</button>
-            <br />
-            <br />
-            <h3>POS and SAP Price Comparison</h3>
-            <table id="itemcomparison-table" class="table table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th>ItemCode</th>
-                        <th>ItemName</th>
-                        <th>Uom</th>
-                        <th>SAP Price</th>
-                        <th>POS Price</th>
-                        <th>Instock</th>
-                        <th>LastUpdate</th>
-                    </tr>
-                </thead>
-                <tbody id="header-tbody"></tbody>
-
-            </table>
-            <button type="button" style="float:right;" class="btn btn-info" onclick="$('#itemcomparison-table_wrapper .buttons-csv').click()">Export</button>
-            <br />
-        </div>*@
+        
+         
 
             @*</div>*@
         </div>
@@ -316,7 +196,7 @@
 
             });
 
-            $('#preloader-modal').modal('show');
+            //$('#preloader-modal').modal('show');
             var table = $('#item-table').DataTable({
                 'paging': true,
                 'lengthChange': true,
@@ -357,136 +237,89 @@
             });
             $('.dt-buttons').hide();
             //$.post('/Home/GetReportProgress').done(result => {
-            $.post('/Home/GetDashBoardReport').done(result => {
-                console.log(result);
-                //table.clear().draw();
-                //tablecomparison.clear().draw();
-                var dbname = '';
-                var totalSAPCount = 0;
-                var dbSAPCount = 0;
-                var totalAddonCount = 0;
-                var dbAddonCount = 0;
-                var totalPercent = 0;
-                var dbPercent = 0;
+            //$.post('/Home/GetDashBoardReport').done(result => {
+            //    console.log(result);
+            //    //table.clear().draw();
+            //    //tablecomparison.clear().draw();
+            //    var dbname = '';
+            //    var totalSAPCount = 0;
+            //    var dbSAPCount = 0;
+            //    var totalAddonCount = 0;
+            //    var dbAddonCount = 0;
+            //    var totalPercent = 0;
+            //    var dbPercent = 0;
 
-                var totalIssuesCount = result.CounterView.ErrorCount;
-                var LazadaCount = result.CounterView.Lazada;
-                var TiktokCount = result.CounterView.Tiktok;
-                var ShopeeCount = result.CounterView.Shopee;
+            //    var totalIssuesCount = result.CounterView.ErrorCount;
+            //    var LazadaCount = result.CounterView.Lazada;
+            //    var TiktokCount = result.CounterView.Tiktok;
+            //    var ShopeeCount = result.CounterView.Shopee;
 
-                var daily_totalIssuesCount = result.dailyCounterView.ErrorCount;
-                var daily_LazadaCount = result.dailyCounterView.Lazada;
-                var daily_TiktokCount = result.dailyCounterView.Tiktok;
-                var daily_ShopeeCount = result.dailyCounterView.Shopee;
-
-
-
-                $('#daily_divOverallData').append(
-                    '<div class="row">'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#1A71FF;">' + daily_LazadaCount + '</div>'
-                    + '<p><b>Lazada</b></p>'
-                    + '</div>'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#121212;">' + daily_TiktokCount + '</div>'
-                    + '<p><b>Tiktok</b></p>'
-                    + '</div>'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#EE4D2D;">' + daily_ShopeeCount + '</div>'
-                    + '<p><b>Shopee</b></p>'
-                    + '</div>'
-                    + '</div>'
-                );
-
-                $('#daily_divErrorData').append(
-                    '<div class="text-center">'
-                    + '<div class="stat-circle" style="background-color:#8B0000;">' + daily_totalIssuesCount + '</div>'
-                    + '<p><b>Errors</b></p>'
-                    + '</div>'
-                );
-
-                $('#divOverallData').append(
-                    '<div class="row">'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#1A71FF;">' + LazadaCount + '</div>'
-                    + '<p><b>Lazada</b></p>'
-                    + '</div>'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#121212;">' + TiktokCount + '</div>'
-                    + '<p><b>Tiktok</b></p>'
-                    + '</div>'
-                    + '<div class="col-xs-4 col-md-4 text-center">'
-                    + '<div class="stat-circle" style="background-color:#EE4D2D;">' + ShopeeCount + '</div>'
-                    + '<p><b>Shopee</b></p>'
-                    + '</div>'
-                    + '</div>'
-                );
-
-                $('#divErrorData').append(
-                    '<div class="text-center">'
-                    + '<div class="stat-circle" style="background-color:#8B0000;">' + totalIssuesCount + '</div>'
-                    + '<p><b>Errors</b></p>'
-                    + '</div>'
-                );
-
-                //callKnob();
-                //$('#totalIssuesCountknob').val(totalIssuesCount);
-                $('#preloader-modal').modal('hide');
-                //window.setTimeout(getProggress, 5000);
-                //window.clearInterval(getProggress(), 3000);
-            })
-            //$.post('/Home/GetItemStock', { Code: $('#select-server').val() }).done(result => {
-            //    table.clear().draw();
-            //    tablecomparison.clear().draw();
-            //    for (var x in result.ItemList) {
-            //        table.row.add([
-            //            result.ItemList[x].ItemCode,
-            //            result.ItemList[x].ItemName,
-            //            result.ItemList[x].Uom,
-            //            result.ItemList[x].Price,
-            //            result.ItemList[x].LastUpdate,
-            //            result.ItemList[x].Stock,
-            //            result.ItemList[x].SalesPrice,
-            //            result.ItemList[x].SalesQty,
-            //            result.ItemList[x].CurrentStock,
-
-            //        ]).draw(false);
-            //        if (parseInt(result.ItemList[x].CurrentStock) <= 0) {
+            //    var daily_totalIssuesCount = result.dailyCounterView.ErrorCount;
+            //    var daily_LazadaCount = result.dailyCounterView.Lazada;
+            //    var daily_TiktokCount = result.dailyCounterView.Tiktok;
+            //    var daily_ShopeeCount = result.dailyCounterView.Shopee;
 
 
-            //            var rowsCount = table.data().length;
-            //            var rowsPerPage = table.page.len();
-            //            var row = table.row(rowsCount - 1);
 
-            //            row.node().classList.add('bg-danger');
-            //        }
-            //    }
+            //    $('#daily_divOverallData').append(
+            //        '<div class="row">'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#1A71FF;">' + daily_LazadaCount + '</div>'
+            //        + '<p><b>Lazada</b></p>'
+            //        + '</div>'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#121212;">' + daily_TiktokCount + '</div>'
+            //        + '<p><b>Tiktok</b></p>'
+            //        + '</div>'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#EE4D2D;">' + daily_ShopeeCount + '</div>'
+            //        + '<p><b>Shopee</b></p>'
+            //        + '</div>'
+            //        + '</div>'
+            //    );
 
-            //    for (var x in result.ItemComparisonList) {
-            //        tablecomparison.row.add([
-            //            result.ItemComparisonList[x].ItemCode,
-            //            result.ItemComparisonList[x].ItemName,
-            //            result.ItemComparisonList[x].Uom,
-            //            result.ItemComparisonList[x].Price,
+            //    $('#daily_divErrorData').append(
+            //        '<div class="text-center">'
+            //        + '<div class="stat-circle" style="background-color:#8B0000;">' + daily_totalIssuesCount + '</div>'
+            //        + '<p><b>Errors</b></p>'
+            //        + '</div>'
+            //    );
 
-            //            result.ItemComparisonList[x].SalesPrice,
-            //            result.ItemComparisonList[x].CurrentStock,
-            //            result.ItemComparisonList[x].LastUpdate,
+            //    $('#divOverallData').append(
+            //        '<div class="row">'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#1A71FF;">' + LazadaCount + '</div>'
+            //        + '<p><b>Lazada</b></p>'
+            //        + '</div>'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#121212;">' + TiktokCount + '</div>'
+            //        + '<p><b>Tiktok</b></p>'
+            //        + '</div>'
+            //        + '<div class="col-xs-4 col-md-4 text-center">'
+            //        + '<div class="stat-circle" style="background-color:#EE4D2D;">' + ShopeeCount + '</div>'
+            //        + '<p><b>Shopee</b></p>'
+            //        + '</div>'
+            //        + '</div>'
+            //    );
 
-            //        ]).draw(false);
-            //        if (parseInt(result.ItemComparisonList[x].CurrentStock) <= 0) {
+            //    $('#divErrorData').append(
+            //        '<div class="text-center">'
+            //        + '<div class="stat-circle" style="background-color:#8B0000;">' + totalIssuesCount + '</div>'
+            //        + '<p><b>Errors</b></p>'
+            //        + '</div>'
+            //    );
 
-
-            //            var rowsCount = tablecomparison.data().length;
-            //            var rowsPerPage = tablecomparison.page.len();
-            //            var row = tablecomparison.row(rowsCount - 1);
-
-            //            row.node().classList.add('bg-danger');
-            //        }
-            //    }
-
+            //    //callKnob();
+            //    //$('#totalIssuesCountknob').val(totalIssuesCount);
+            //    $('#preloader-modal').modal('hide');
+            //    //window.setTimeout(getProggress, 5000);
+            //    //window.clearInterval(getProggress(), 3000);
             //})
 
+
+
+
+        
             $(document).on('select2:select', '#select-server', function (e) {
                 var Code = $(this).val();
                 $.post('/Home/GetItemStock', { Code: Code }).done(result => {

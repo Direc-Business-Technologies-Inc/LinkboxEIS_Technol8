@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SAOLinkBox-Web.config Connection String" description="SAOLinkBox Connection String used in web.config by the application to access the database." defaultValue="data source=192.168.2.32;initial catalog=LinkboxEIS_Technol8;user id=sa;password=MsSql@dm1n;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\DBTI\\Project\ Files\\LinkboxEIS_Technol8\\LinkBoxUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SAOLinkBox']/@connectionString" />
+  </parameter>
+</parameters>

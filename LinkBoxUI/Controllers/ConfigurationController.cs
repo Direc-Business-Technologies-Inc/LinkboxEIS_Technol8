@@ -1031,14 +1031,13 @@ namespace LinkBoxUI.Controllers
                         fm.MapCode = model.MapCode;
                         fm.MapName = model.MapName;
                         fm.PathCode = model.PathCode;
-                        fm.RowWorksheet = model.RowWorksheet;
-                        fm.ModuleName = model.ModuleName;
-                        fm.DestModule = model.DestModule;
-                        fm.SAPCode = model.SAPCode;
+                       
                       
+                        fm.SAPCode = model.SAPCode;
+                        fm.QueryCode = model.QueryCode;
+                        fm.FileName = model.FileName;
 
-                        //int APIid_source = context.APISetups.Where(x=>x.APICode == model.APICode).Select(x => x.APIId).FirstOrDefault();
-                        //int APIid_dest = context.APISetups.Where(x => x.APICode == model.SAPCode).Select(x => x.APIId).FirstOrDefault();
+                   
 
                         #endregion
 
@@ -1074,12 +1073,13 @@ namespace LinkBoxUI.Controllers
                                 {
                                     MapId = MapId,
                                     SourceFieldId = fms[0].ToString(),
+                                    SourceTableName = "PH",
                                     DestinationField = fms[1].ToString(),
+                                    DestinationTableName = fms[4].ToString(),
                                     ConditionalQuery = fms[2].ToString(),
                                     IsKeyValue = fms[3].ToString() == "1" ? true : false,
-                                    SourceTableName = "Sales Order",
                                     VisOrder = visorder++,
-                                    DestinationTableName = fms[4].ToString(),
+                                    
                                     CreateDate = DateTime.Now,
                                     CreateUserID = Session["Id"] != null ? Convert.ToInt32(Session["Id"]) : 1
 
@@ -1113,12 +1113,12 @@ namespace LinkBoxUI.Controllers
                                     {
                                         MapId = MapId,
                                         SourceFieldId = fms[0].ToString(),
+                                        SourceTableName = "OINV",
                                         DestinationField = fms[1].ToString(),
                                         ConditionalQuery = fms[2].ToString(),
                                         IsKeyValue = fms[3].ToString() == "1" ? true : false,
-                                        SourceTableName = "Sales Order",
                                         VisOrder = visorder++,
-                                        DestinationTableName = fms[4].ToString(),
+                                        DestinationTableName = "BIR",
                                         CreateDate = DateTime.Now,
                                         CreateUserID = Session["Id"] != null ? Convert.ToInt32(Session["Id"]) : 1
 
@@ -1137,7 +1137,7 @@ namespace LinkBoxUI.Controllers
 
                         transaction.Commit();
                     }
-                    catch (Exception ex)
+                            catch (Exception ex)
                     {
                         transaction.Rollback();
                         return Json(ex.Message);

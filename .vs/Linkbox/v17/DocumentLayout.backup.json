@@ -3,68 +3,70 @@
   "WorkspaceRootPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\partialviewmapping\\sapb1tobireis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\partialviewmapping\\sapb1tobireis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\migrations\\202610200848256_addquerycode_fm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\migrations\\202610200848256_addquerycode_fm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|LinkBoxUI||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\domainlayer\\models\\fieldmappingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\models\\fieldmappingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\mappingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\mappingservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\controllers\\configurationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\configurationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\partialviewmapping\\platformapitosapb1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\partialviewmapping\\platformapitosapb1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\bir eis\\eisservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\bir eis\\eisservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\partialviewmapping\\primarytosapb1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\partialviewmapping\\primarytosapb1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\querymanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\querymanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\controllers\\api\\eiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\api\\eiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\partialviewmapping\\shopifyapitonetsuite.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\partialviewmapping\\shopifyapitonetsuite.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\uploadservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\uploadservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\domainlayer\\viewmodels\\configurationviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\viewmodels\\configurationviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB15B1F5-265E-41DD-B6FC-6D8528459B23}|DataAccessLayer\\DataAccessLayer.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\dataaccesslayer\\class\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB15B1F5-265E-41DD-B6FC-6D8528459B23}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\class\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\controllers\\featurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\featurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\primaryaccounts\\primaryacountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\primaryaccounts\\primaryacountservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\views\\configuration\\fieldmappingconfig.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\fieldmappingconfig.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\configurationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\services\\configurationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\configurationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\controllers\\configurationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\configurationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\controllers\\api\\primaryaccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\api\\primaryaccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\views\\configuration\\partialviewmapping\\sapb1tobireis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\views\\configuration\\partialviewmapping\\sapb1tobireis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\domainlayer\\viewmodels\\postingviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81DE784B-BE61-4740-B083-306F527315D5}|DomainLayer\\DomainLayer.csproj|solutionrelative:domainlayer\\viewmodels\\postingviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +76,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,209 +85,207 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "202610200848256_AddQueryCode_FM.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Migrations\\202610200848256_AddQueryCode_FM.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Migrations\\202610200848256_AddQueryCode_FM.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Migrations\\202610200848256_AddQueryCode_FM.cs",
-              "RelativeToolTip": "LinkBoxUI\\Migrations\\202610200848256_AddQueryCode_FM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T08:48:36.227Z",
+              "Title": "LinkBoxUI",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\LinkBoxUI.csproj",
+              "RelativeDocumentMoniker": "LinkBoxUI\\LinkBoxUI.csproj",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\LinkBoxUI.csproj",
+              "RelativeToolTip": "LinkBoxUI\\LinkBoxUI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-22T07:29:09.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FieldMappingModel.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\Models\\FieldMappingModel.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Models\\FieldMappingModel.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\Models\\FieldMappingModel.cs",
-              "RelativeToolTip": "DomainLayer\\Models\\FieldMappingModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAuwDoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T08:45:10.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ConfigurationVIewModels.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\ViewModels\\ConfigurationVIewModels.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\ViewModels\\ConfigurationVIewModels.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\ViewModels\\ConfigurationVIewModels.cs",
-              "RelativeToolTip": "DomainLayer\\ViewModels\\ConfigurationVIewModels.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAAhwE0BAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T07:59:43.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlatformApitoSapB1.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PlatformApitoSapB1.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PlatformApitoSapB1.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PlatformApitoSapB1.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PlatformApitoSapB1.cshtml",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAmwLIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:49:26.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShopifyAPIToNetsuite.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\ShopifyAPIToNetsuite.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\ShopifyAPIToNetsuite.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\ShopifyAPIToNetsuite.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\ShopifyAPIToNetsuite.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:49:23.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PrimaryToSAPB1.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PrimaryToSAPB1.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PrimaryToSAPB1.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PrimaryToSAPB1.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\PrimaryToSAPB1.cshtml",
-              "ViewState": "AgIAAHsGAAAAAAAAAAAmwJIGAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:49:18.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SAPb1ToBirEIS.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAmwHUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:49:11.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FieldMappingConfig.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\FieldMappingConfig.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\FieldMappingConfig.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\FieldMappingConfig.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\FieldMappingConfig.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:44:48.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ConfigurationServices.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\ConfigurationServices.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\ConfigurationServices.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\ConfigurationServices.cs",
-              "RelativeToolTip": "LinkBoxUI\\Services\\ConfigurationServices.cs",
-              "ViewState": "AgIAAK8BAAAAAAAAAAAgwL8BAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T06:33:55.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConfigurationController.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\ConfigurationController.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\ConfigurationController.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\ConfigurationController.cs",
-              "RelativeToolTip": "LinkBoxUI\\Controllers\\ConfigurationController.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAawAEBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:47.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FeaturesController.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\FeaturesController.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\FeaturesController.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\FeaturesController.cs",
-              "RelativeToolTip": "LinkBoxUI\\Controllers\\FeaturesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:47.635Z",
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.config",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Web.config",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.config",
+              "RelativeToolTip": "LinkBoxUI\\Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-22T07:15:47.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MappingServices.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\MappingServices.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\MappingServices.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\MappingServices.cs",
-              "RelativeToolTip": "LinkBoxUI\\Services\\MappingServices.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAApwLIAAAAtAAAAAAAAAA==",
+              "Title": "Web.Release.config",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.Release.config",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Web.Release.config",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.Release.config",
+              "RelativeToolTip": "LinkBoxUI\\Views\\Web.Release.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-22T07:15:45.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.Debug.config",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.Debug.config",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Web.Debug.config",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Web.Debug.config",
+              "RelativeToolTip": "LinkBoxUI\\Views\\Web.Debug.config",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-22T07:15:42.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Web.config",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Web.config",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Web.config",
+              "RelativeToolTip": "LinkBoxUI\\Web.config",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAOcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-22T07:15:23.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DataAccessLayer\\Class\\DataAccess.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\Class\\DataAccess.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DataAccessLayer\\Class\\DataAccess.cs",
+              "RelativeToolTip": "DataAccessLayer\\Class\\DataAccess.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:47.731Z",
+              "WhenOpened": "2026-10-22T01:17:25.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "UploadController.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UploadController.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\UploadController.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UploadController.cs",
-              "RelativeToolTip": "LinkBoxUI\\Controllers\\UploadController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAwCEAAAAJAAAAAAAAAA==",
+              "Title": "UploadServices.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\UploadServices.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\UploadServices.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\UploadServices.cs",
+              "RelativeToolTip": "LinkBoxUI\\Services\\UploadServices.cs",
+              "ViewState": "AgIAAJ4CAAAAAAAAAAAgwKkCAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:50.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "LinkBoxUI\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:50.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "LinkBoxUI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T05:42:51.055Z",
+              "WhenOpened": "2026-10-22T01:50:46.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "QueryManager.cshtml",
-              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\QueryManager.cshtml",
-              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\QueryManager.cshtml",
-              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\QueryManager.cshtml",
-              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\QueryManager.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAQwH4AAAAnAAAAAAAAAA==",
+              "Title": "UploadController.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UploadController.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\UploadController.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\UploadController.cs",
+              "RelativeToolTip": "LinkBoxUI\\Controllers\\UploadController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAA+wGQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T01:50:48.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrimaryAcountServices.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\PrimaryAccounts\\PrimaryAcountServices.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\PrimaryAccounts\\PrimaryAcountServices.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\PrimaryAccounts\\PrimaryAcountServices.cs",
+              "RelativeToolTip": "LinkBoxUI\\Services\\PrimaryAccounts\\PrimaryAcountServices.cs",
+              "ViewState": "AgIAADsCAAAAAAAAAAAmwE0CAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T01:43:36.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostingViewModels.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\ViewModels\\PostingViewModels.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\ViewModels\\PostingViewModels.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\DomainLayer\\ViewModels\\PostingViewModels.cs",
+              "RelativeToolTip": "DomainLayer\\ViewModels\\PostingViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T09:29:37.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EISServices.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\BIR EIS\\EISServices.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\BIR EIS\\EISServices.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\BIR EIS\\EISServices.cs",
+              "RelativeToolTip": "LinkBoxUI\\Services\\BIR EIS\\EISServices.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAQwNEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T09:05:43.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConfigurationServices.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\ConfigurationServices.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Services\\ConfigurationServices.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Services\\ConfigurationServices.cs",
+              "RelativeToolTip": "LinkBoxUI\\Services\\ConfigurationServices.cs",
+              "ViewState": "AgIAAKwFAAAAAAAAAAAQwLsFAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T06:47:54.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ConfigurationController.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\ConfigurationController.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\ConfigurationController.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\ConfigurationController.cs",
+              "RelativeToolTip": "LinkBoxUI\\Controllers\\ConfigurationController.cs",
+              "ViewState": "AgIAAGAEAAAAAAAAAAAUwHsEAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T02:38:46.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PrimaryAccountsController.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\api\\PrimaryAccountsController.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\api\\PrimaryAccountsController.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\api\\PrimaryAccountsController.cs",
+              "RelativeToolTip": "LinkBoxUI\\Controllers\\api\\PrimaryAccountsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwB8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T02:38:50.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EISController.cs",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\api\\EISController.cs",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Controllers\\api\\EISController.cs",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Controllers\\api\\EISController.cs",
+              "RelativeToolTip": "LinkBoxUI\\Controllers\\api\\EISController.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAQwOkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T01:49:12.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SAPb1ToBirEIS.cshtml",
+              "DocumentMoniker": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
+              "RelativeDocumentMoniker": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
+              "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
+              "RelativeToolTip": "LinkBoxUI\\Views\\Configuration\\PartialViewMapping\\SAPb1ToBirEIS.cshtml",
+              "ViewState": "AgIAAFoEAAAAAAAAAAAqwHcEAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-20T06:32:41.097Z",
+              "WhenOpened": "2026-10-21T01:08:48.604Z",
               "EditorCaption": ""
             }
           ]

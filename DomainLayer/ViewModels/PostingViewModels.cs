@@ -27,7 +27,7 @@ namespace DomainLayer.ViewModels
             public string LocalPath { get; set; }
             public string BackupPath { get; set; }
             public string ErrorPath { get; set; }
-
+            public string QueryString { get; set; }
             public string HeaderName { get; set; }
             public string RowName { get; set; }
             public string HeaderWorksheet { get; set; }
