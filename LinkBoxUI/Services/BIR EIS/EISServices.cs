@@ -105,8 +105,8 @@ namespace LinkBoxUI.Services.BIR_EIS
         //private const string QuerySource = "Query";
         //private const string StaticSource = "Static Value";
 
-    //    private static readonly Regex LeadingTop1 =
-    //new Regex(@"^\s*SELECT\s+TOP\s*\(?\s*1\s*\)?\s+", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+        //    private static readonly Regex LeadingTop1 =
+        //new Regex(@"^\s*SELECT\s+TOP\s*\(?\s*1\s*\)?\s+", RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public async Task<string> GenerateInvoiceJson(string code, int[] mapIds)
         {
             var sched = _context.Schedules.FirstOrDefault(s => s.SchedCode == code);
@@ -154,9 +154,13 @@ namespace LinkBoxUI.Services.BIR_EIS
                         continue;
                     }
 
-                    // Load the mapping once per map, not once per document
+                    // Load the mapping once per map, ordered by VisOrder.
+                    // LINQ-to-Objects OrderBy is stable, so ties keep their DB order.
+                    // If VisOrder is int?, use (x.VisOrder ?? int.MaxValue) to push NULLs last.
                     var allFields = _context.Headers.AsNoTracking()
                         .Where(x => x.MapId == mapId)
+                        .ToList()
+                        .OrderBy(x => x.VisOrder)
                         .ToList();
 
                     var keyColumn = allFields
@@ -174,14 +178,13 @@ namespace LinkBoxUI.Services.BIR_EIS
                         .Where(x => !string.IsNullOrWhiteSpace(x.DestinationField) && x.DestinationField != "-")
                         .ToList();
 
-                    var arrayRoots = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "ItemList" };
-
+                    // Uses the static ArrayRoots (case-insensitive)
                     var parsed = activeFields.Select(f =>
                     {
                         var dest = f.DestinationField;
                         var dot = dest.IndexOf('.');
                         var root = dot > 0 ? dest.Substring(0, dot).Replace("[]", "") : null;
-                        var isLine = root != null && arrayRoots.Contains(root);
+                        var isLine = root != null && ArrayRoots.Contains(root);
 
                         return new
                         {
@@ -191,9 +194,11 @@ namespace LinkBoxUI.Services.BIR_EIS
                         };
                     }).ToList();
 
-                    var headerFields = parsed.Where(p => p.Root == null).Select(p => p.Field).ToList();
-
-                    var lineGroups = parsed.Where(p => p.Root != null).GroupBy(p => p.Root).ToList();
+                    // Case-insensitive so "itemlist" and "ItemList" don't become two arrays
+                    var lineGroups = parsed
+                        .Where(p => p.Root != null)
+                        .GroupBy(p => p.Root, StringComparer.OrdinalIgnoreCase)
+                        .ToList();
 
                     var queryCache = new Dictionary<string, JToken>();   // one DB hit per Query field per map
                     var successRows = new List<SyncResultRow>();
@@ -212,37 +217,51 @@ namespace LinkBoxUI.Services.BIR_EIS
                         {
                             var headerObj = new JObject();
                             var firstRow = rows[0];
+                            var lineArrays = new Dictionary<string, JArray>(StringComparer.OrdinalIgnoreCase);
 
-                            foreach (var field in headerFields)
+                            // Pass 1: walk fields in VisOrder. Header fields are written immediately;
+                            // each array root gets an empty placeholder at its first field's position.
+                            foreach (var item in parsed)
                             {
-                                var value = ResolveValue(field.SourceFieldId?.ToString(), field.ConditionalQuery?.ToString(),
-                                                         firstRow, field.DestinationField, queryCache, connectionString);
-                                SetPath(headerObj, field.DestinationField, value);
+                                if (item.Root == null)
+                                {
+                                    var f = item.Field;
+                                    var value = ResolveValue(f.SourceFieldId?.ToString(), f.ConditionalQuery?.ToString(),
+                                                             firstRow, f.DestinationField, queryCache, connectionString);
+                                    SetPath(headerObj, f.DestinationField, value);
+                                }
+                                else if (!lineArrays.ContainsKey(item.Root))
+                                {
+                                    var arr = new JArray();
+                                    headerObj[item.Root] = arr;      // position is locked in here
+                                    lineArrays[item.Root] = arr;
+                                }
                             }
 
+                            // Pass 2: fill the arrays. Properties inside each line follow VisOrder too,
+                            // because GroupBy keeps the incoming element order.
                             foreach (var lineGroup in lineGroups)
                             {
-                                var tableArray = new JArray();
+                                var tableArray = lineArrays[lineGroup.Key];
                                 foreach (var row in rows)
                                 {
                                     var lineObj = new JObject();
                                     foreach (var item in lineGroup)
                                     {
-                                        var field = item.Field;
-                                        var value = ResolveValue(field.SourceFieldId?.ToString(), field.ConditionalQuery?.ToString(),
-                                                                 row, field.DestinationField, queryCache, connectionString);
+                                        var f = item.Field;
+                                        var value = ResolveValue(f.SourceFieldId?.ToString(), f.ConditionalQuery?.ToString(),
+                                                                 row, f.DestinationField, queryCache, connectionString);
                                         SetPath(lineObj, item.Property, value);
                                     }
                                     tableArray.Add(lineObj);
                                 }
-                                headerObj[lineGroup.Key] = tableArray;
                             }
 
-                                var payload = new JArray { headerObj };
                             string jsonPayload = headerObj.ToString(Newtonsoft.Json.Formatting.Indented);
 
                             var savedPath = SaveJsonFile(localPath, creds.MapName, group.Key, jsonPayload);
-                            // TODO: post jsonPayload / write the file, then add to successRows
+                            Console.WriteLine($"{groupLabel} saved to {savedPath}");
+                            // TODO: post jsonPayload, then add to successRows
                         }
                         catch (Exception ex)
                         {
@@ -261,7 +280,6 @@ namespace LinkBoxUI.Services.BIR_EIS
 
             return "Success";
         }
-
         private static JToken ResolveValue(
             string source, string conditional, DataRow row, string destination,
             Dictionary<string, JToken> queryCache, string connectionString)
