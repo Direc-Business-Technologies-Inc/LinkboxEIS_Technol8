@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\services\\bir eis\\eisservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\services\\bir eis\\eisservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\services\\bir eis\\eisservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|c:\\dbti\\project files\\linkboxeis_technol8\\linkboxui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\linkboxui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{5B15F079-DFB3-4FC6-B0C3-CB2254D9F990}|LinkBoxUI\\LinkBoxUI.csproj|solutionrelative:linkboxui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -88,8 +88,7 @@
               "ToolTip": "C:\\DBTI\\Project Files\\LinkboxEIS_Technol8\\LinkBoxUI\\LinkBoxUI.csproj",
               "RelativeToolTip": "LinkBoxUI\\LinkBoxUI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-22T07:29:09.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T07:29:09.797Z"
             },
             {
               "$type": "Document",
@@ -150,8 +149,7 @@
               "RelativeToolTip": "DataAccessLayer\\Class\\DataAccess.cs",
               "ViewState": "AgIAAGwAAAAAAAAAAAAmwHoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T01:17:25.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T01:17:25.459Z"
             },
             {
               "$type": "Document",
@@ -163,8 +161,7 @@
               "RelativeToolTip": "LinkBoxUI\\Services\\UploadServices.cs",
               "ViewState": "AgIAAJ4CAAAAAAAAAAAgwKkCAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T01:50:46.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T01:50:46.53Z"
             },
             {
               "$type": "Document",
@@ -176,8 +173,7 @@
               "RelativeToolTip": "LinkBoxUI\\Controllers\\UploadController.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAlwGQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T01:50:48.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T01:50:48.532Z"
             },
             {
               "$type": "Document",
@@ -189,8 +185,7 @@
               "RelativeToolTip": "LinkBoxUI\\Services\\PrimaryAccounts\\PrimaryAcountServices.cs",
               "ViewState": "AgIAADsCAAAAAAAAAAAmwE0CAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T01:43:36.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T01:43:36.912Z"
             },
             {
               "$type": "Document",
@@ -239,8 +234,7 @@
               "RelativeToolTip": "LinkBoxUI\\Controllers\\ConfigurationController.cs",
               "ViewState": "AgIAAGAEAAAAAAAAAAAUwHsEAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T02:38:46.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-21T02:38:46.224Z"
             },
             {
               "$type": "Document",
@@ -252,8 +246,7 @@
               "RelativeToolTip": "LinkBoxUI\\Controllers\\api\\PrimaryAccountsController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAQwB8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T02:38:50.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-21T02:38:50.784Z"
             },
             {
               "$type": "Document",
@@ -265,8 +258,7 @@
               "RelativeToolTip": "LinkBoxUI\\Controllers\\api\\EISController.cs",
               "ViewState": "AgIAANgAAAAAAAAAAAAlwOkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T01:49:12.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-21T01:49:12.963Z"
             },
             {
               "$type": "Document",
