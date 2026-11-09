@@ -1,0 +1,11 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / IDE runtime state
+.vs/
+*.suo
+*.user
+*.vsidx
+*.resources
+*.cache
