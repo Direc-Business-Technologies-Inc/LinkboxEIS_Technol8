@@ -189,7 +189,7 @@ namespace LinkBoxUI.Controllers.api
 
         [HttpGet]
         [Route("api/GenerateInvoiceJson")]
-        public async Task<IHttpActionResult> GenerateInvoiceJson(string Code)
+        public async Task<IHttpActionResult> GenerateInvoiceJson(string Code,string DocEntry = null)
         {
             var proc = _context.Schedules.Where(x => x.SchedCode == Code).FirstOrDefault();
             var mapIds = await _context.Schedules
@@ -231,7 +231,7 @@ namespace LinkBoxUI.Controllers.api
                     proc.RunTime = DateTime.Now;
                     _context.SaveChanges();
 
-                    var response = await eis.GenerateInvoiceJson(Code, mapIds);
+                    var response = await eis.GenerateInvoiceJson(Code, mapIds, DocEntry);
 
                 }
                 proc.IsRunning = false;

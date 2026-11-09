@@ -86,6 +86,7 @@
     <Compile Include="Models\DepositModel.cs" />
     <Compile Include="Models\DocumentMap.cs" />
     <Compile Include="Models\DocumentModel.cs" />
+    <Compile Include="Models\EISExtractedDocument.cs" />
     <Compile Include="Models\EmailSetupModel.cs" />
     <Compile Include="Models\EmailLogsModel.cs" />
     <Compile Include="Models\EmailStorage.cs" />

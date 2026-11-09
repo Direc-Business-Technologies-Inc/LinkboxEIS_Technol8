@@ -87,6 +87,7 @@ namespace LinkBoxUI.Context
 
             CreateMap<UserDetailsViewModel.PasswordHistoryViewModel, PasswordHistoryModel>();
 
+            CreateMap<UserDetailsViewModel.PasswordHistoryViewModel, PasswordHistoryModel>();
 
         }
 

@@ -1050,6 +1050,9 @@ namespace LinkBoxUI.Controllers
                             {
                                 FieldMapping.MapName = model.MapName;
                                 //FieldMapping.APICode = model.APICode;
+                                FieldMapping.QueryCode = model.QueryCode;
+                                FieldMapping.FileName = model.FileName;
+                                FieldMapping.PathCode = model.PathCode;
                                 FieldMapping.SAPCode = model.SAPCode;
                                 FieldMapping.UpdateDate = DateTime.Now;
                                 FieldMapping.UpdateUserID = Convert.ToInt32(Session["Id"]);

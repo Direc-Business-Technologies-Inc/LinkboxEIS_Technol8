@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.Helpers;
 using static LinkBoxUI.Services.PrimaryAccounts.PrimaryAcountServices;
 
 namespace LinkBoxUI.Services.BIR_EIS
@@ -107,7 +108,7 @@ namespace LinkBoxUI.Services.BIR_EIS
 
         //    private static readonly Regex LeadingTop1 =
         //new Regex(@"^\s*SELECT\s+TOP\s*\(?\s*1\s*\)?\s+", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-        public async Task<string> GenerateInvoiceJson(string code, int[] mapIds)
+        public async Task<string> GenerateInvoiceJson(string code, int[] mapIds,string DocEntry = null)
         {
             var sched = _context.Schedules.FirstOrDefault(s => s.SchedCode == code);
             if (sched == null)
@@ -128,6 +129,8 @@ namespace LinkBoxUI.Services.BIR_EIS
                         continue;
                     }
 
+
+                    //var module = creds.FileName.Contains("invoice") ?? "";
                     var localPath = creds.LocalPath;
                     if (string.IsNullOrWhiteSpace(localPath) || !Directory.Exists(localPath))
                     {
@@ -141,8 +144,19 @@ namespace LinkBoxUI.Services.BIR_EIS
                         continue;
                     }
 
+                    int? docEntryId = null;
+                    if (!string.IsNullOrWhiteSpace(DocEntry))
+                    {
+                        if (!int.TryParse(DocEntry, out var id))
+                            throw new ArgumentException($"Invalid DocEntry '{DocEntry}'.");
+                        docEntryId = id;
+                    }
+
                     // Strip a leading "SELECT TOP 1" (the stored query is a single-row sample)
                     var queryString = LeadingTop1.Replace(creds.QueryString, "SELECT ", 1);
+
+                    if (docEntryId.HasValue)
+                        queryString = queryString.Replace("/*DOCFILTER*/", $"AND DocEntry in ({docEntryId.Value})");
 
                     var connectionString = DataAccess.GetConnectionString(
                         creds.SAPIPAddress, creds.SAPDBName, creds.SAPDBuser, creds.SAPDBPassword);
@@ -217,6 +231,11 @@ namespace LinkBoxUI.Services.BIR_EIS
                         {
                             var headerObj = new JObject();
                             var firstRow = rows[0];
+
+                            string fileName = dtResult.Columns.Contains("FileName")
+                                ? firstRow.Field<string>("FileName") ?? string.Empty
+                                : string.Empty;
+
                             var lineArrays = new Dictionary<string, JArray>(StringComparer.OrdinalIgnoreCase);
 
                             // Pass 1: walk fields in VisOrder. Header fields are written immediately;
@@ -258,9 +277,43 @@ namespace LinkBoxUI.Services.BIR_EIS
                             }
 
                             string jsonPayload = headerObj.ToString(Newtonsoft.Json.Formatting.Indented);
+                            var eisUniqueId = headerObj["EisUniqueId"]?.ToString();
+                           
+                            var savedPath = SaveJsonFile(localPath, creds.MapName, group.Key, jsonPayload,fileName);
 
-                            var savedPath = SaveJsonFile(localPath, creds.MapName, group.Key, jsonPayload);
-                            Console.WriteLine($"{groupLabel} saved to {savedPath}");
+                            string module = creds.FileName.Contains("invoice") ? "invoice" : "creditmemo";
+                            if (savedPath)
+                            {
+                                var existing = _context.EISExtractedDocuments
+                              .FirstOrDefault(x => x.MapId == mapId && x.DocEntry == docEntryId && x.Module == module && x.EisUniqueId == eisUniqueId);
+
+                                if (existing == null)
+                                { 
+
+                                    //Update on SAP then if success then save to ExtractedDocuments table
+
+                                    _context.EISExtractedDocuments.Add(new EISExtractedDocument
+                                    {
+                                        MapId = mapId,
+                                        Module = module,
+                                        DocEntry = docEntryId ?? 1,
+                                        EisUniqueId = eisUniqueId,
+                                        Json = jsonPayload,
+                                        Status = 0,
+                                        CreatedOn = DateTime.Now
+                                    });
+
+                                    _context.SaveChanges();
+                                }
+                                //else if (existing.Status != ExtractStatus.Sent)
+                                //{
+                                //    existing.Json = json;
+                                //    existing.EisUniqueId = eisUniqueId;
+                                //    existing.UpdatedOn = DateTime.Now;
+                                //}
+                            }
+
+                            //Console.WriteLine($"{groupLabel} saved to {savedPath}");
                             // TODO: post jsonPayload, then add to successRows
                         }
                         catch (Exception ex)
@@ -328,8 +381,11 @@ namespace LinkBoxUI.Services.BIR_EIS
             current[parts[parts.Length - 1]] = value;
         }
 
-        private static string SaveJsonFile(string localPath, string mapName, string key, string json)
+        private static bool SaveJsonFile(string localPath, string mapName, string key, string json,string NameofFile)
         {
+            //finalPath = null;
+            string tempPath = null;
+
             string Sanitize(string s)
             {
                 foreach (var c in Path.GetInvalidFileNameChars())
@@ -337,15 +393,33 @@ namespace LinkBoxUI.Services.BIR_EIS
                 return s.Trim();
             }
 
-            var fileName = $"{Sanitize(mapName)}_{Sanitize(key)}_{DateTime.Now:yyyyMMddHHmmssfff}.json";
-            var finalPath = Path.Combine(localPath, fileName);
-            var tempPath = finalPath + ".tmp";
+            try
+            {
+                var fileName = $"{NameofFile}.json";
+                var path = Path.Combine(localPath, fileName);
+                tempPath = path + ".tmp";
 
-            // UTF-8 without BOM: many APIs and parsers choke on the BOM
-            File.WriteAllText(tempPath, json, new UTF8Encoding(false));
-            File.Move(tempPath, finalPath);   // atomic rename, so readers never see a half-written file
+                // UTF-8 without BOM: many APIs and parsers choke on the BOM
+                File.WriteAllText(tempPath, json, new UTF8Encoding(false));
 
-            return finalPath;
+                if (File.Exists(path))
+                    File.Replace(tempPath, path, null);
+                else
+                    File.Move(tempPath, path);
+
+                //finalPath = path;
+                return true;
+            }
+            catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException || ex is ArgumentException)
+            {
+                Console.WriteLine($"Failed to save JSON for {mapName}/{key}: {ex.Message}");
+
+                // Don't leave a half-written .tmp behind
+                try { if (tempPath != null && File.Exists(tempPath)) File.Delete(tempPath); }
+                catch { /* best effort cleanup */ }
+
+                return false;
+            }
         }
     }
 

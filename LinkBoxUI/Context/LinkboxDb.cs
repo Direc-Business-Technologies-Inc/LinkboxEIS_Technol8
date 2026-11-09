@@ -86,6 +86,8 @@ namespace LinkBoxUI.Context
         public DbSet<PlatformItemTable> PlatformItemTable { get; set; }
         public DbSet<FileCabinetImage> FileCabinetImages { get; set; }
         public DbSet<PasswordHistoryModel> PasswordHistories { get; set; }
+        public DbSet<EISExtractedDocument> EISExtractedDocuments { get; set; }
+
 
 
     }
